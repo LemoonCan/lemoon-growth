@@ -1,0 +1,6 @@
+**/out
+!**/src/**
+
+### IntelliJ IDEA ###
+.idea
+*.iml
