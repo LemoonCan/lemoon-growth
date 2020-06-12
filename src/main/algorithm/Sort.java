@@ -9,6 +9,7 @@ public class Sort {
         int[] nums = {-2, 3, -5};
         Sort sort = new Sort();
         sort.mergeSort(nums);
+        System.out.println(nums);
     }
 
     /**
@@ -22,16 +23,16 @@ public class Sort {
     public int[] bubbleSort(int[] nums) {
         if (nums.length <= 1) return nums;
         for (int i = 0; i < nums.length; i++) {
-            boolean flag = false;
+            boolean flag = true;
             for (int j = 1; j < nums.length - i; j++) {
                 if (nums[j] < nums[j - 1]) {
                     int temp = nums[j - 1];
                     nums[j - 1] = nums[j];
                     nums[j] = temp;
-                    flag = true;
+                    flag = false;
                 }
             }
-            if (!flag) {
+            if (flag) {
                 break;
             }
         }
@@ -154,3 +155,4 @@ public class Sort {
      * 基数排序
      */
 }
+
