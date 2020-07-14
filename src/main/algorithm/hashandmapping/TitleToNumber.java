@@ -27,7 +27,7 @@ public class TitleToNumber {
      * A~Z 65-90
      * a~z 97-122
      * <p>
-     * result=(C1-'A')*26^(length-1)+(C2-'A')*26^(length-2)+...
+     * result=(C1-'A')*26^(length-1)+(C2-'A')*26^(length-2)+...(直到length-x=0)
      *
      * @param s
      * @return
