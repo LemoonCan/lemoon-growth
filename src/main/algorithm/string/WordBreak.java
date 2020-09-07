@@ -34,6 +34,12 @@ public class WordBreak {
         System.out.println(flag);
     }
 
+    /**
+     * aaaa情况超时
+     * @param s
+     * @param wordDict
+     * @return
+     */
     public boolean wordBreak(String s, List<String> wordDict) {
         return wordBreak(s, 0, new HashSet<>(wordDict));
     }
@@ -62,6 +68,12 @@ public class WordBreak {
         return dep[s.length()];
     }
 
+    /**
+     * TODO ????
+     * @param s
+     * @param wordDict
+     * @return
+     */
     public boolean wordBreak3(String s, List<String> wordDict) {
         Set<String> wordDictSet = new HashSet(wordDict);
         int len = 0;
@@ -72,7 +84,6 @@ public class WordBreak {
         dp[0] = true;
 
         for (int i = 1; i <= s.length(); i++) {
-
             for (int j = 0; j < i; j++) {
                 if(i - j > len) j = i - len;
                 if (dp[j] && wordDictSet.contains(s.substring(j, i))) {

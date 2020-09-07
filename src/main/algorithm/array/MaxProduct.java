@@ -55,7 +55,6 @@ public class MaxProduct {
                 max = 1;
             }
         }
-
         return res;
     }
 }
