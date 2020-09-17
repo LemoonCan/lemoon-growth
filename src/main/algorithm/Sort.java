@@ -1,5 +1,7 @@
 package main.algorithm;
 
+import java.util.Arrays;
+
 /**
  * @author lee
  * @date 2019/9/12
@@ -9,7 +11,11 @@ public class Sort {
         int[] nums = {-2, 3, -5};
         Sort sort = new Sort();
         sort.mergeSort(nums);
-        System.out.println(nums);
+        System.out.println(Arrays.toString(nums));
+
+        int[] nums2 ={5,2,3,1};
+        sort.selectSort(nums2);
+        System.out.println(Arrays.toString(nums2));
     }
 
     /**
@@ -43,6 +49,9 @@ public class Sort {
      * 插入排序
      * 最坏情况时间复杂度：n^2
      * 最好情况时间复杂度：n
+     * 空间复杂度：O(1)
+     * 原地排序算法
+     * (冒泡和插入对比，会选择插入，因为赋值操作更少)
      *
      * @param nums
      * @return
@@ -63,6 +72,33 @@ public class Sort {
             nums[j + 1] = value;
         }
 
+        return nums;
+    }
+
+    /**
+     * 选择排序
+     * 最坏情况时间复杂度：n^2
+     * 最好情况时间复杂度：n^2
+     *
+     * 不稳定排序算法
+     */
+    public int[] selectSort(int[] nums) {
+        if (nums.length <= 1) return nums;
+
+        int minIndex;
+        for (int i = 0; i < nums.length - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] < nums[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex != i) {
+                int temp = nums[i];
+                nums[i] = nums[minIndex];
+                nums[minIndex] = temp;
+            }
+        }
         return nums;
     }
 
@@ -131,16 +167,16 @@ public class Sort {
     int partition(int[] nums, int begin, int end) {
         int partion = begin, index = begin;
         for (; index < end; index++) {
-            if(nums[index]<=nums[end]){
-                int tmp=nums[partion];
-                nums[partion]=nums[index];
-                nums[index]=tmp;
+            if (nums[index] <= nums[end]) {
+                int tmp = nums[partion];
+                nums[partion] = nums[index];
+                nums[index] = tmp;
                 partion++;
             }
         }
-        int tmp=nums[end];
-        nums[end]=nums[partion];
-        nums[partion]=tmp;
+        int tmp = nums[end];
+        nums[end] = nums[partion];
+        nums[partion] = tmp;
         return partion;
     }
 
@@ -155,5 +191,10 @@ public class Sort {
     /**
      * 基数排序
      */
+
+    /**
+     * 堆排序
+     */
+
 }
 
