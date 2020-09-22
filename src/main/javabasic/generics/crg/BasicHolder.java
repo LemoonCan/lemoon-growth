@@ -1,4 +1,4 @@
-package main.javabasic.generics;
+package main.javabasic.generics.crg;
 
 /**
  * @author lee
