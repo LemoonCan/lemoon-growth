@@ -3,55 +3,79 @@ package main.javabasic.multithread.communication;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lee
- * @date 2020-11-29
- * sleep等待时间占有锁，模拟打蜡抛光的时间
- * 恰好也保证了Car.waxOn on变更-on读取-off变更-off读取 的线性顺序
+ * @date 2020-12-01
+ * 使用 condition.await、signal/signalAll 需获得显式的锁
  */
-public class WaxOMatic {
+public class WaxOMatic2 {
     public static void main(String[] args) throws InterruptedException {
-        Car car = new Car();
+        Car2 car = new Car2();
         ExecutorService executorService = Executors.newCachedThreadPool();
-        executorService.execute(new WaxOff(car));
-        executorService.execute(new WaxOn(car));
-        TimeUnit.SECONDS.sleep(1);
+        executorService.execute(new WaxOff2(car));
+        executorService.execute(new WaxOn2(car));
+        TimeUnit.SECONDS.sleep(5);
         executorService.shutdownNow();
     }
 }
 
-class Car {
+class Car2 {
+    private Lock lock = new ReentrantLock();
+    private Condition condition = lock.newCondition();
     private boolean waxOn = false;
 
-    public synchronized void waxed() {
-        waxOn = true;
-        notifyAll();
-    }
-
-    public synchronized void buffed() {
-        waxOn = false;
-        notifyAll();
-    }
-
-    public synchronized void waitForWaxing() throws InterruptedException {
-        while (!waxOn) {
-            wait();
+    public void waxed() {
+        lock.lock();
+        try {
+            waxOn = true;
+            condition.signalAll();
+        }finally {
+            lock.unlock();
         }
     }
 
-    public synchronized void waitForBuffing() throws InterruptedException {
-        //如何保证执行
-        while (waxOn) {
-            wait();
+    public void buffed() {
+        lock.lock();
+        try {
+            waxOn = false;
+            condition.signalAll();
+        }finally {
+            lock.unlock();
+        }
+    }
+
+    public void waitForWaxing() throws InterruptedException {
+        lock.lock();
+        try {
+            while (!waxOn) {
+                condition.await();
+            }
+        }finally {
+            lock.unlock();
+        }
+    }
+
+    public void waitForBuffing() throws InterruptedException {
+        lock.lock();
+        try {
+            //如何保证执行
+            while (waxOn) {
+                condition.await();
+            }
+        }finally {
+           lock.unlock();
         }
     }
 }
 
-class WaxOn implements Runnable {
-    private Car car;
+class WaxOn2 implements Runnable {
+    private Car2 car;
 
-    public WaxOn(Car car) {
+    public WaxOn2(Car2 car) {
         this.car = car;
     }
 
@@ -72,10 +96,10 @@ class WaxOn implements Runnable {
     }
 }
 
-class WaxOff implements Runnable {
-    private Car car;
+class WaxOff2 implements Runnable {
+    private Car2 car;
 
-    public WaxOff(Car car) {
+    public WaxOff2(Car2 car) {
         this.car = car;
     }
 
