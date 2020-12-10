@@ -1,4 +1,4 @@
-package main.javabasic.multithread.terminate;
+package main.javabasic.multithread.newcomponent;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author lee
  * @date 2020-12-08
+ *
+ * ScheduledThreadPoolExecutor 控制第一次执行延迟时间，执行间隔时间
  */
 public class GreenHouseScheduler {
     public static void main(String[] args) {

@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author lee
  * @date 2020-12-07
+ * CountDownLatch 只控制触发通知的次数
+ * CountDownLatch(触发次数)（来多次，往一次）
  */
 public class CountDownLatchDemo {
     static final int SIZE = 100;

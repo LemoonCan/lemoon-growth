@@ -12,7 +12,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author lee
  * @date 2020-12-07
- * 多次重用的CountDownLatch
+ * CyclicBarrier 控制触发的次数及到达上限的回调线程
+ * CyclicBarrier(触发次数,回调线程)（来多次，往一次并执行相应任务）
  */
 public class HorseRace {
     static final int FINISH_LINE = 75;
