@@ -12,6 +12,5 @@ public class ReentrantLockTest {
         ReentrantLock failReentrantLock = new ReentrantLock(true);
         //非公平锁
         ReentrantLock unfailReentrantLock = new ReentrantLock(false);
-
     }
 }

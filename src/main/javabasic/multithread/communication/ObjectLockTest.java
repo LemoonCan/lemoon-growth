@@ -37,4 +37,40 @@ public class ObjectLockTest {
         }
     }
 
+    /**
+     * 关键字在实例方法上，锁为当前实例，临界区为整个方法
+     */
+    public synchronized void instanceLock() {
+        // code
+    }
+
+    public void blockLockEqualsInstanceLock() {
+        synchronized (this) {
+            // code
+        }
+    }
+
+    /**
+     * 关键字在静态方法上，锁为当前Class对象，临界区为整个方法
+     * Class对象和实例的区别？
+     */
+    public static synchronized void classLock() {
+        // code
+    }
+
+    public void blockLockEqualsClassLock() {
+        synchronized (this.getClass()) {
+            // code
+        }
+    }
+
+    /**
+     * 关键字在代码块上，锁为括号里的对象，临界区为代码块内部区域
+     */
+    public void blockLock() {
+        Object o = new Object();
+        synchronized (o) {
+            // code
+        }
+    }
 }

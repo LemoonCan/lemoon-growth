@@ -6,6 +6,7 @@ import java.lang.ref.ReferenceQueue;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;
+import java.util.Stack;
 
 /**
  * @author lee
@@ -15,6 +16,7 @@ public class References {
     private static ReferenceQueue<VeryBig> rq = new ReferenceQueue<>();
 
     public static void checkQueue() {
+        Stack<VeryBig> stack = new Stack<>();
         Reference<? extends VeryBig> inq = rq.poll();
         if (inq != null) {
             System.out.println("In queue: " + inq.get());

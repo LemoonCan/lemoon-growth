@@ -1,4 +1,4 @@
-package main.javabasic.generics;
+package main.javabasic.generics.exception;
 
 import java.util.ArrayList;
 import java.util.List;

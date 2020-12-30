@@ -5,6 +5,7 @@ import java.util.WeakHashMap;
 /**
  * @author lee
  * @date 2020-09-27
+ * 允许清理元素的触发条件是不再需要此键
  */
 public class CanoicalMapping {
     public static void main(String[] args) {

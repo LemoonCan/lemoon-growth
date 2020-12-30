@@ -2,7 +2,9 @@ package main.javabasic.generics.coffee;
 
 import main.javabasic.generics.Generator;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -63,5 +65,11 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
         for (Coffee c:new CoffeeGenerator(5)) {
             System.out.println(c);
         }
+
+        List<Americano> americanos = new ArrayList<>();
+        List<? extends Coffee> clist = americanos;
+//        clist.add((Coffee)new Breve());
+        Coffee c = clist.get(0);
+//        clist.set(1,new Breve());
     }
 }

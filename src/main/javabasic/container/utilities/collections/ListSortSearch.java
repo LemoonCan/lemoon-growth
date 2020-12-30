@@ -1,4 +1,4 @@
-package main.javabasic.container.collections;
+package main.javabasic.container.utilities.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;

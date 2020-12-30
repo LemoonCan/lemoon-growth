@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2020-12-10
  * Exchanger#exchange 等待其他线程到达交换点
  * 可交换资源的信号 (来一次，往一次，可交换资源)
+ * TODO 既然有同步队列，那么Exchanger存在的意义？？？
  */
 public class ExchangerDemo {
     static int size = 10;
