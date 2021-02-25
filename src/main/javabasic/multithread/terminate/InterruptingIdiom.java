@@ -47,6 +47,7 @@ class Blocked3 implements Runnable {
                         for (int i = 0; i < 2500000; i++) {
                             d = d + (Math.PI + Math.E) / d;
                         }
+                        System.out.println("finished time consumed operation");
                     } finally {
                         n2.cleanup();
                     }
