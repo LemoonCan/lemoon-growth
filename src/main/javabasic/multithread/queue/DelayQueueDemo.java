@@ -1,4 +1,4 @@
-package main.javabasic.multithread.newcomponent;
+package main.javabasic.multithread.queue;
 
 import java.util.ArrayList;
 import java.util.List;

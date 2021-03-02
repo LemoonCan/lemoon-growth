@@ -1,4 +1,6 @@
-package main.javabasic.multithread.introduction.runnable;
+package main.javabasic.multithread.queue;
+
+import main.javabasic.multithread.introduction.runnable.LiftOff;
 
 import java.io.BufferedReader;
 import java.io.IOException;

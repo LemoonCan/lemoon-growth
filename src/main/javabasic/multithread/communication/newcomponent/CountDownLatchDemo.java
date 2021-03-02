@@ -1,4 +1,4 @@
-package main.javabasic.multithread.newcomponent;
+package main.javabasic.multithread.communication.newcomponent;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;

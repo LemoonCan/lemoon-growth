@@ -4,15 +4,14 @@ package main.javabasic.multithread.communication;
  * @author lee
  * @date 2020-07-14
  *
- * TODO 为何无锁和有锁都能按顺序执行？？？
  */
 public class ObjectLockTest {
     private static Object lock = new Object();
 
     public static void main(String[] args) throws InterruptedException {
         new Thread(new ThreadA()).start();
-        Thread.sleep(10);
         new Thread(new ThreadB()).start();
+        Thread.sleep(10);
     }
 
     static class ThreadA implements Runnable{

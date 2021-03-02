@@ -1,4 +1,4 @@
-package main.javabasic.multithread.newcomponent;
+package main.javabasic.multithread.communication.newcomponent;
 
 import main.javabasic.generics.BasicGenerator;
 import main.javabasic.generics.Generator;

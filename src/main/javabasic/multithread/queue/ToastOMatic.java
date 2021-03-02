@@ -1,4 +1,4 @@
-package main.javabasic.multithread.introduction.runnable;
+package main.javabasic.multithread.queue;
 
 import java.util.Random;
 import java.util.concurrent.ExecutorService;

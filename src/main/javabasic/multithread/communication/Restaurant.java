@@ -77,6 +77,7 @@ class Chef implements Runnable {
     @Override
     public void run() {
         try{
+            System.out.println("Chef doing");
             while (!Thread.interrupted()){
                 synchronized (this) {
                     if (restaurant.meal != null) {
@@ -87,14 +88,14 @@ class Chef implements Runnable {
                     System.out.println("Out of food! Closing...");
                     restaurant.exec.shutdownNow();
                     //waitPerson interrupted?? 可以理解为chef结束了，但waitPerson还在等待chef，所以是waitPerson抛出异常
-//                    return;
+                    return;
                 }
                 System.out.println("Order up!");
                 synchronized (restaurant.waitPerson){
                     restaurant.meal = new Meal(count);
                     restaurant.waitPerson.notifyAll();
                 }
-                //Sleep注释掉的话，程序会因为!Thread.interrupted()才停止，不会抛出异常
+                //Sleep注释掉的话，waitPerson收不到上最后一份餐的通知，
                 TimeUnit.MILLISECONDS.sleep(100);
             }
         }catch (InterruptedException e){
