@@ -1,4 +1,4 @@
-package main.javabasic.multithread.communication;
+package main.javabasic.multithread.communication.waitnotify;
 
 /**
  * @author lee

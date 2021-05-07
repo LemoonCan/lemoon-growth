@@ -1,4 +1,4 @@
-package main.javabasic.multithread.communication.newcomponent;
+package main.javabasic.multithread.communication.waitnotify;
 
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.locks.LockSupport;

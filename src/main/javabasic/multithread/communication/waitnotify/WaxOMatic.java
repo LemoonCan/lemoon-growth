@@ -1,4 +1,4 @@
-package main.javabasic.multithread.communication;
+package main.javabasic.multithread.communication.waitnotify;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2020-11-29
  * sleep等待时间占有锁，模拟打蜡抛光的时间
  * 恰好也保证了Car.waxOn on变更-on读取-off变更-off读取 的线性顺序
+ * wait/notify
  */
 public class WaxOMatic {
     public static void main(String[] args) throws InterruptedException {

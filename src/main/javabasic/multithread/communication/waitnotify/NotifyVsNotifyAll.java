@@ -1,4 +1,4 @@
-package main.javabasic.multithread.communication;
+package main.javabasic.multithread.communication.waitnotify;
 
 import java.util.Timer;
 import java.util.TimerTask;

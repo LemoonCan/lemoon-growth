@@ -1,4 +1,4 @@
-package main.javabasic.multithread.communication;
+package main.javabasic.multithread.communication.waitnotify;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
