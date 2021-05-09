@@ -1,7 +1,7 @@
 package javabasic.multithread.communication.newcomponent;
 
-import main.javabasic.generics.BasicGenerator;
-import main.javabasic.generics.Generator;
+import javabasic.generics.BasicGenerator;
+import javabasic.generics.Generator;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

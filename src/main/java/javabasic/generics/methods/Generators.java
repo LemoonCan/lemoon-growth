@@ -1,9 +1,9 @@
 package javabasic.generics.methods;
 
 import javabasic.generics.Generator;
-import main.javabasic.generics.coffee.Coffee;
-import main.javabasic.generics.coffee.CoffeeGenerator;
-import main.javabasic.generics.coffee.Fibonacci;
+import javabasic.generics.coffee.Coffee;
+import javabasic.generics.coffee.CoffeeGenerator;
+import javabasic.generics.coffee.Fibonacci;
 
 import java.util.ArrayList;
 import java.util.Collection;

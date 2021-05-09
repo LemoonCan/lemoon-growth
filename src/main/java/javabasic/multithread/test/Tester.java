@@ -1,7 +1,7 @@
 package javabasic.multithread.test;
 
-import main.javabasic.container.array.RandomGenerator;
-import main.javabasic.generics.Generated;
+import javabasic.container.array.RandomGenerator;
+import javabasic.generics.Generated;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

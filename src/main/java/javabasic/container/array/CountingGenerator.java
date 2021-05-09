@@ -2,7 +2,7 @@
 // Simple generator implementations.
 package javabasic.container.array;
 
-import main.javabasic.generics.Generator;
+import javabasic.generics.Generator;
 
 public class CountingGenerator {
     public static class Boolean implements Generator<java.lang.Boolean> {

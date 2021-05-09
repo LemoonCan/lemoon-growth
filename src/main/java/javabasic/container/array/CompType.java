@@ -1,8 +1,7 @@
 package javabasic.container.array;
 
-import main.javabasic.generics.Generator;
+import javabasic.generics.Generator;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**

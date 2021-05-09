@@ -1,7 +1,7 @@
 package javabasic.generics.bounds;
 
+
 import java.awt.*;
-import java.awt.Dimension;
 
 /**
  * @author lee
@@ -39,7 +39,7 @@ class Colored2<T extends HasColor> extends HoldItem<T> {
     }
 }
 
-class ColoredDimension2<T extends java.awt.Dimension & HasColor> extends Colored2<T> {
+class ColoredDimension2<T extends Dimension & HasColor> extends Colored2<T> {
 
     public ColoredDimension2(T item) {
         super(item);

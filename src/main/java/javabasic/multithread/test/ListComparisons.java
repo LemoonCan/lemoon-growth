@@ -1,6 +1,6 @@
 package javabasic.multithread.test;
 
-import main.javabasic.container.array.CountingIntegerList;
+import javabasic.container.array.CountingIntegerList;
 
 import java.util.ArrayList;
 import java.util.Collections;

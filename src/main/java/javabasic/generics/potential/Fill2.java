@@ -1,9 +1,9 @@
 package javabasic.generics.potential;
 
 import javabasic.generics.Generator;
-import main.javabasic.generics.coffee.Coffee;
-import main.javabasic.generics.coffee.Latte;
-import main.javabasic.generics.coffee.Mocha;
+import javabasic.generics.coffee.Coffee;
+import javabasic.generics.coffee.Latte;
+import javabasic.generics.coffee.Mocha;
 
 import java.util.ArrayList;
 import java.util.Collection;

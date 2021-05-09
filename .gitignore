@@ -1,5 +1,6 @@
 **/out
-!**/src/**
+!/src/**
+/target
 
 ### IntelliJ IDEA ###
 .idea

@@ -1,6 +1,6 @@
 package javabasic.container.collection.queue;
 
-import main.javabasic.generics.Generator;
+import javabasic.generics.Generator;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

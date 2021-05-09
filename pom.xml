@@ -16,6 +16,8 @@
         </dependency>
     </dependencies>
 
+    <!--配置优先级从高到低：pom.xml> user settings > global settings-->
+    <!--远程仓库地址-->
     <repositories>
         <repository>
             <id>mvn-repository</id>
@@ -28,4 +30,32 @@
             <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
         </repository>
     </repositories>
+    <!--插件远程仓库地址-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mvn-repository</id>
+            <name>mvn repository</name>
+            <url>http://mvnrepository.com/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>aliyun-repository</id>
+            <name>aliyun repository</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <!--配置编译的jdk版本-->
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -1,6 +1,6 @@
 package javabasic.generics;
 
-import main.javabasic.generics.methods.Generators;
+import javabasic.generics.methods.Generators;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
