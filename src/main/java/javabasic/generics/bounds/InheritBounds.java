@@ -28,6 +28,15 @@ class HoldItem<T> {
     }
 }
 
+/**
+ * HoldItem后无<>表示不使用泛型，故当前类继承于无泛型的HoldItem
+ */
+class HoldNoGeneric extends HoldItem{
+    public HoldNoGeneric(Object item) {
+        super(item);
+    }
+}
+
 class Colored2<T extends HasColor> extends HoldItem<T> {
 
     public Colored2(T item) {
@@ -37,11 +46,16 @@ class Colored2<T extends HasColor> extends HoldItem<T> {
     Color color() {
         return item.getColor();
     }
+
+    public T getT(){
+        return null;
+    }
+
 }
 
-class ColoredDimension2<T extends Dimension & HasColor> extends Colored2<T> {
+class ColoredDimension2<R extends Dimension & HasColor> extends Colored2<R> {
 
-    public ColoredDimension2(T item) {
+    public ColoredDimension2(R item) {
         super(item);
     }
 
@@ -55,6 +69,11 @@ class ColoredDimension2<T extends Dimension & HasColor> extends Colored2<T> {
 
     public int getZ() {
         return item.z;
+    }
+
+    @Override
+    public R getT() {
+        return super.getT();
     }
 }
 
