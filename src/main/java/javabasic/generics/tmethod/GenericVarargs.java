@@ -1,4 +1,4 @@
-package javabasic.generics.methods;
+package javabasic.generics.tmethod;
 
 import java.util.ArrayList;
 import java.util.List;

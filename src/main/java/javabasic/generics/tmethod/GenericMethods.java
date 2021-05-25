@@ -1,4 +1,4 @@
-package javabasic.generics.methods;
+package javabasic.generics.tmethod;
 
 /**
  * @author lee
@@ -10,8 +10,7 @@ public class GenericMethods {
     }
 
     public <T, G> void f(T x, G g) {
-        System.out.println("T:" + x.getClass().getName());
-        System.out.println("G:" + g.getClass().getName());
+        System.out.println("T:" + x.getClass().getName() + "; " + "G:" + g.getClass().getName());
     }
 
     public static void main(String[] args) {
@@ -22,5 +21,7 @@ public class GenericMethods {
         gm.f(1.0F);
         gm.f('c');
         gm.f(gm);
+
+        gm.f(6, "happy birthday");
     }
 }

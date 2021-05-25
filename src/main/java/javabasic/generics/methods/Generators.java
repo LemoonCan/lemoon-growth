@@ -3,7 +3,7 @@ package javabasic.generics.methods;
 import javabasic.generics.Generator;
 import javabasic.generics.coffee.Coffee;
 import javabasic.generics.coffee.CoffeeGenerator;
-import javabasic.generics.coffee.Fibonacci;
+import javabasic.generics.Fibonacci;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,6 +1,4 @@
-package javabasic.generics.coffee;
-
-import javabasic.generics.Generator;
+package javabasic.generics;
 
 /**
  * @author lee

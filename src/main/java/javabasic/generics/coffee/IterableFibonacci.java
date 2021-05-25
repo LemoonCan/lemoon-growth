@@ -1,5 +1,7 @@
 package javabasic.generics.coffee;
 
+import javabasic.generics.Fibonacci;
+
 import java.util.Iterator;
 
 /**

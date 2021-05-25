@@ -1,4 +1,4 @@
-package javabasic.generics.exception;
+package javabasic.generics.tclass.exception;
 
 import java.util.ArrayList;
 import java.util.List;
