@@ -1,12 +1,15 @@
-package javabasic.generics.bounds;
+package javabasic.generics.wildcard;
 
 import java.awt.*;
 
 /**
  * @author lee
  * @date 2020-09-18
+ *
+ * 泛型 extends 类需在接口前面
+ * T extends Class1 & Interface1 & Interface2
  */
-public class BasicBounds {
+public class LetterMarkInherit {
     public static void main(String[] args) {
         Solid<Bounded> solid = new Solid<>(new Bounded());
         System.out.println(solid.color());

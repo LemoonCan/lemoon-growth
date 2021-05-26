@@ -5,14 +5,14 @@ package javabasic.generics.tclass;
  * @date 5/24/21
  */
 public class Basic<T> {
-    T element;
+    protected T element;
 
     public T getElement(){
         return element;
     }
 
-    public void setElement(Class<T> element) throws IllegalAccessException, InstantiationException {
-        this.element = element.newInstance();
+    public void setElement(T element) {
+        this.element = element;
     }
 
 }
