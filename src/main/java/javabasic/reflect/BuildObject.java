@@ -1,6 +1,7 @@
 package javabasic.reflect;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * @author lee
@@ -9,16 +10,16 @@ import java.lang.reflect.Constructor;
  * 运行时构造任意一个类的对象
  */
 public class BuildObject {
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-        //1.class.newInstance
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+        //1.class.newInstance 只能调用public无参构造方法
         Class clazz = Class.forName("javabasic.reflect.Lemoon");
         Object o = Class.forName("javabasic.reflect.Lemoon").newInstance();
         System.out.println(o instanceof Lemoon);
 
         //2.Constructor
-        Constructor<?> cons[] = clazz.getConstructors();
-        for (Constructor constructor:cons) {
-
-        }
+        //getConstructors
+        Constructor cons = clazz.getConstructor(String.class,String.class);
+        Object o2 = cons.newInstance("can-o","moon-o");
+        System.out.println(o2 instanceof Lemoon);
     }
 }
