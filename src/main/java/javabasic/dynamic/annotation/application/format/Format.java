@@ -1,4 +1,4 @@
-package javabasic.dynamic.annotation;
+package javabasic.dynamic.annotation.application.format;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,11 +7,11 @@ import java.lang.annotation.Target;
 
 /**
  * @author lee
- * @date 6/2/21
+ * @date 6/3/21
  */
-@Target({ElementType.METHOD,ElementType.TYPE})
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Sunny {
-    int identity();
-    String desc() default "Sunny";
+public @interface Format {
+    String pattern() default "yyyy-MM-dd HH:mm:ss";
+    String timeZone() default "GMT+8";
 }

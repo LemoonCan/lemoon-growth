@@ -7,11 +7,10 @@ import java.lang.annotation.Target;
 
 /**
  * @author lee
- * @date 6/2/21
+ * @date 6/3/21
  */
-@Target({ElementType.METHOD,ElementType.TYPE})
+@Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Sunny {
-    int identity();
-    String desc() default "Sunny";
+public @interface Flower {
+    String[] value();
 }
