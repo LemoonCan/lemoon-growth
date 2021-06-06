@@ -20,9 +20,9 @@ public class SimpleCglibDemo {
     static class SimpleInterceptor implements MethodInterceptor {
         @Override
         public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-            System.out.println("entering "+method.getName());
+            System.out.println("entering " + method.getName());
             Object result = methodProxy.invokeSuper(o, objects);
-            System.out.println("leaving "+method.getName());
+            System.out.println("leaving " + method.getName());
             return result;
         }
     }

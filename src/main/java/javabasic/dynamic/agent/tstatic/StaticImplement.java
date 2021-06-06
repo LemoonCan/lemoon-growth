@@ -1,4 +1,4 @@
-package javabasic.dynamic.reflect.dynamic;
+package javabasic.dynamic.agent.tstatic;
 
 /**
  * @author lee

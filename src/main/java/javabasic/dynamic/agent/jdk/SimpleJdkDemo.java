@@ -1,4 +1,4 @@
-package javabasic.dynamic.reflect.dynamic;
+package javabasic.dynamic.agent.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -7,23 +7,34 @@ import java.lang.reflect.Proxy;
 /**
  * @author lee
  * @date 5/28/21
+ *
+ * vm options:-Dsun.misc.ProxyGenerator.saveGeneratedFiles=true 可保存生成的代理类
  */
-public class DynamicAgent {
+public class SimpleJdkDemo {
     public static void main(String[] args) {
-        InvocationHandler handler = new InvocationHandler() {
-            @Override
-            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                return args[0] + " " + args[1];
-            }
-        };
+        InvocationHandler handler = new MyInvocationHandler(new RealSubject());
 
         //JDK提供的动态代理方法
         Subject subject = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(), new Class[]{Subject.class}, handler);
         System.out.println(subject.say("Moon", 0));
 
-        //JDK提供的动态代理方法 相当于 JVM提供了SubjectDynamicProxy
+        //JDK提供的动态代理方法 相当于JVM提供了SubjectDynamicProxy
         SubjectDynamicProxy subjectDynamicProxy = new SubjectDynamicProxy(handler);
         System.out.println(subjectDynamicProxy.say("Moon",1));
+    }
+}
+
+class MyInvocationHandler implements InvocationHandler{
+    private Subject realObject;
+
+    public MyInvocationHandler(Subject subject) {
+        this.realObject = subject;
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("Entering agent "+method.getName());
+        return method.invoke(realObject,args);
     }
 }
 
@@ -49,16 +60,20 @@ class SubjectDynamicProxy implements Subject {
     }
 }
 
+interface Subject {
+    /**
+     * 介绍
+     *
+     * @param name
+     * @param age
+     * @return
+     */
+    String say(String name, int age);
+}
 
-//public class HelloDynamicProxy implements Hello {
-//    InvocationHandler handler;
-//    public HelloDynamicProxy(InvocationHandler handler) {
-//        this.handler = handler;
-//    }
-//    public void morning(String name) {
-//        handler.invoke(
-//                this,
-//                Hello.class.getMethod("morning", String.class),
-//                new Object[] { name });
-//    }
-//}
+class RealSubject implements Subject {
+    @Override
+    public String say(String name, int age) {
+        return name + " " + age;
+    }
+}
