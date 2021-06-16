@@ -1,5 +1,6 @@
 package javabasic.dynamic.agent.cglib;
 
+import net.sf.cglib.core.DebuggingClassWriter;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -35,6 +36,7 @@ public class SimpleCglibDemo {
     }
 
     public static void main(String[] args) {
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/lemoncandy/Desktop/WorkSpace/Demo/back-end/lemoon-growth/javabasic/dynamic/agent/cglib");
         RealService proxyService = getProxy(RealService.class);
         proxyService.sayHello();
     }

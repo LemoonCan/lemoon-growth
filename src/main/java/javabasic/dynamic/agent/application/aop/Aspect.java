@@ -1,4 +1,4 @@
-package javabasic.dynamic.agent.application;
+package javabasic.dynamic.agent.application.aop;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

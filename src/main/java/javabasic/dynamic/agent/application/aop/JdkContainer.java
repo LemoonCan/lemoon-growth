@@ -1,13 +1,7 @@
-package javabasic.dynamic.agent.application;
-
-import javabasic.dynamic.agent.jdk.Subject;
-import javabasic.dynamic.agent.jdk.Sun;
+package javabasic.dynamic.agent.application.aop;
 import javabasic.dynamic.annotation.application.inject.SimpleInject;
-import javabasic.dynamic.annotation.application.inject.SimpleSingleton;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.ArrayList;
@@ -22,7 +16,13 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date 6/6/21
  */
 public class JdkContainer {
+    /**
+     * 维护类与拦截器的关系
+     */
     static Map<Class<?>, Map<InterceptPoint, List<Method>>> interceptMethodsMap = new HashMap<>();
+    /**
+     * 扫描类
+     */
     static Class<?>[] aspects = new Class[]{ServiceLogAspect.class, ExceptionAspect.class};
 
     static {
@@ -85,17 +85,17 @@ public class JdkContainer {
 
     private static ConcurrentHashMap<Class<?>, Object> instances = new ConcurrentHashMap<>();
 
-    public static <X, Y extends X> X getInstance(Class<X> x, Class<Y> y) throws IllegalAccessException, InstantiationException {
-        X obj = (Y) createInstance(x, y);
-        Field[] fields = y.getDeclaredFields();
-        for (Field field : fields) {
-            if (field.isAnnotationPresent(SimpleInject.class)) {
-                field.setAccessible(true);
-            }
-            field.set(obj, getInstance(field.getType().getSuperclass(), field.getType()));
-        }
-        return obj;
-    }
+//    public static <X, Y extends X> X getInstance(Class<X> x, Class<Y> y) throws IllegalAccessException, InstantiationException {
+//        X obj = (Y) createInstance(x, y);
+//        Field[] fields = y.getDeclaredFields();
+//        for (Field field : fields) {
+//            if (field.isAnnotationPresent(SimpleInject.class)) {
+//                field.setAccessible(true);
+//            }
+//            field.set(obj, getInstance(field.getType().getSuperclass(), field.getType()));
+//        }
+//        return obj;
+//    }
 
     private static <X, Y extends X> X createInstance(Class<X> x, Class<Y> y) throws IllegalAccessException, InstantiationException {
         if (!interceptMethodsMap.containsKey(y)) {

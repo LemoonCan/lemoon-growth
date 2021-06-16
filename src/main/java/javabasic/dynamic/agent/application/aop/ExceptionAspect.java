@@ -1,4 +1,4 @@
-package javabasic.dynamic.agent.application;
+package javabasic.dynamic.agent.application.aop;
 
 import javabasic.dynamic.annotation.application.inject.ServiceB;
 
