@@ -1,4 +1,7 @@
-package javabasic.generics;
+package javabasic.multithread.communication.newcomponent;
+
+import javabasic.dynamic.generics.CountedObject;
+import javabasic.dynamic.generics.Generator;
 
 import java.util.Iterator;
 

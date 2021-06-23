@@ -21,6 +21,7 @@ public class SynchronizedAnalyse {
         synchronized (calculate) {
             System.out.println("偏向锁状态(含线程ID)：101 " + ClassLayout.parseInstance(calculate).toPrintable());
         }
+        System.out.println("偏向锁释放(含线程ID)：101 " + ClassLayout.parseInstance(calculate).toPrintable());
 
         new Thread(() -> {
             synchronized (calculate) {

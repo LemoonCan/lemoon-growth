@@ -16,6 +16,7 @@ public class CachedThreadPool {
         for (int i = 0; i < 5; i++) {
             exec.execute(new LiftOff());
         }
+        exec.submit(new LiftOff());
         //防止新任务提交到当前线程池
         exec.shutdown();
     }

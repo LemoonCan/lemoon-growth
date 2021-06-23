@@ -12,6 +12,5 @@ public class HashMapTest {
         for (int i = 0; i < 13; i++) {
             map.put("only"+i,"one");
         }
-
     }
 }

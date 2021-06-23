@@ -1,6 +1,6 @@
 package javabasic.container.array;
 
-import javabasic.generics.Generator;
+import javabasic.dynamic.generics.Generator;
 
 import java.util.Random;
 
