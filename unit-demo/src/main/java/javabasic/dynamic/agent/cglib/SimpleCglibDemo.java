@@ -36,7 +36,7 @@ public class SimpleCglibDemo {
     }
 
     public static void main(String[] args) {
-        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/lemoncandy/Desktop/WorkSpace/Demo/back-end/lemoon-growth/compile-class/dynamic/agent/cglib");
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/lemoncandy/Desktop/WorkSpace/Demo/back-end/cherry-growth/compile-class/dynamic/agent/cglib");
         RealService proxyService = getProxy(RealService.class);
         proxyService.sayHello();
     }

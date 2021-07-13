@@ -37,6 +37,13 @@
             <artifactId>cglib</artifactId>
         </dependency>
         <!--cglib 动态代理 end-->
+
+        <!--redis 连接 start-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+        <!--redis 连接 end-->
     </dependencies>
 
     <build>
@@ -45,12 +52,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <!--配置编译的jdk版本-->
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>

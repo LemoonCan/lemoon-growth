@@ -7,39 +7,89 @@
     <groupId>cherry</groupId>
     <artifactId>lemoon-growth</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>lemoon-growth</name>
+    <name>cherry-growth</name>
     <packaging>pom</packaging>
 
     <modules>
         <module>unit-demo</module>
+        <module>spring-demo</module>
+        <module>springboot-demo</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
-            <!--openjdk 工具包 start-->
+            <!-- openjdk 工具包 start -->
             <dependency>
                 <groupId>org.openjdk.jol</groupId>
                 <artifactId>jol-core</artifactId>
                 <version>0.10</version>
             </dependency>
-            <!--openjdk 工具包 end-->
+            <!-- openjdk 工具包 end -->
 
-            <!--fastjson start-->
+            <!-- fastjson start -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>1.2.76</version>
             </dependency>
-            <!--fastjson end-->
+            <!-- fastjson end -->
 
-            <!--cglib 动态代理 start-->
+            <!-- cglib 动态代理 start -->
             <dependency>
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
                 <version>3.3.0</version>
             </dependency>
-            <!--cglib 动态代理 end-->
+            <!-- cglib 动态代理 end -->
 
+            <!-- redis 客户端 start -->
+            <!-- jedis -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>3.6.1</version>
+            </dependency>
+
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>3.16.0</version>
+            </dependency>
+
+            <!-- RedisTemplate -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>2.5.2</version>
+            </dependency>
+            <!-- redis 客户端 end -->
+
+            <!-- Spring Boot start -->
+            <!-- Override SLF4J provided by Spring Boot -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.30</version>
+            </dependency>
+            <!-- Override Spring Data release train provided by Spring Boot -->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-releasetrain</artifactId>
+                <version>2020.0.0-SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.5.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring Boot end -->
         </dependencies>
     </dependencyManagement>
 
@@ -69,6 +119,17 @@
             <name>aliyun repository</name>
             <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
         </pluginRepository>
+
+        <!-- Spring插件远程仓库地址 start -->
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>https://repo.spring.io/snapshot</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>https://repo.spring.io/milestone</url>
+        </pluginRepository>
+        <!-- Spring插件远程仓库地址 end -->
     </pluginRepositories>
 
     <build>
@@ -83,6 +144,11 @@
                         <source>1.8</source>
                         <target>1.8</target>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>2.5.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
