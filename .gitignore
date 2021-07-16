@@ -1,6 +1,5 @@
 **/out
 !/src/**
-/target
 
 ### IntelliJ IDEA ###
 .idea
