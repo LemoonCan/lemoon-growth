@@ -23,13 +23,12 @@ public class DistributedLock {
     /**
      * 互斥
      * 防死锁(锁加有效期)
-     * 可外部判断加锁是否成功，决定是否调用解锁
      *
      * @param key
      * @return
      */
     public Boolean lock(String key) {
-        return redisTemplate.opsForValue().setIfAbsent(key, "happy", 60, TimeUnit.SECONDS);
+        return redisTemplate.opsForValue().setIfAbsent(key, "happy", 1, TimeUnit.SECONDS);
     }
 
     public void unlock(String key) {
@@ -47,7 +46,7 @@ public class DistributedLock {
         int tryCount = 3;
         while (!locked && tryCount > 0) {
             try {
-                locked = redisTemplate.opsForValue().setIfAbsent(lockEntity.getKey(), lockEntity.getRequestId(), 1, TimeUnit.MINUTES);
+                locked = redisTemplate.opsForValue().setIfAbsent(lockEntity.getKey(), lockEntity.getRequestId(), 1, TimeUnit.MILLISECONDS);
             } catch (Exception e) {
                 e.printStackTrace();
             }

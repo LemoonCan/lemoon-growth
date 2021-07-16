@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 7/15/21
  */
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/redisdemo")
 @Api(value = "测试")
 public class RedisDemo {
     @Autowired

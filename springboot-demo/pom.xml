@@ -48,6 +48,13 @@
         </dependency>
         <!-- RedisTemplate end-->
 
+        <!-- Redisson start -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+        </dependency>
+        <!-- Redisson end -->
+
         <!--lombok start-->
         <dependency>
             <groupId>org.projectlombok</groupId>

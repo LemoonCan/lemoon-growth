@@ -3,7 +3,6 @@ package cherry.bootstrap.configure;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
 
 /**
  * @author lee
@@ -20,16 +19,5 @@ public class RedisTemplateConfigure {
         JedisConnectionFactory jedisConnFactory = new JedisConnectionFactory();
         jedisConnFactory.setUsePool(true);
         return jedisConnFactory;
-    }
-
-    /**
-     * RedisTemplate 配置
-     * @return
-     */
-    @Bean
-    public RedisTemplate redisTemplate(JedisConnectionFactory jedisConnFactory){
-        RedisTemplate redisTemplate = new RedisTemplate();
-        redisTemplate.setConnectionFactory(jedisConnFactory);
-        return redisTemplate;
     }
 }
