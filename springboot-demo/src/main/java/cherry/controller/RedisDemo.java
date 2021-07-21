@@ -1,11 +1,13 @@
 package cherry.controller;
 
+import cherry.redis.redisson.RedissonDistributedLock;
 import cherry.redis.redistemplate.DistributedLock;
 import cherry.redis.redistemplate.StockService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,15 +22,26 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "测试")
 public class RedisDemo {
     @Autowired
+    @Qualifier("distributedLock")
     public DistributedLock distributedLock;
     @Autowired
     public StockService stockService;
+
+    @Autowired
+    public RedissonDistributedLock redissonDistributedLock;
 
     @RequestMapping(method = RequestMethod.POST, value = "/lock")
     @ApiOperation(value = "加锁")
     public void lock(@RequestParam @ApiParam(name = "key", value = "键值", required = true) String key) {
         distributedLock.lock(key);
     }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/redissonLock")
+    @ApiOperation(value = "加锁")
+    public void redissonLock(@RequestParam @ApiParam(name = "key", value = "键值", required = true) String key) {
+        redissonDistributedLock.lock(key);
+    }
+
 
     @RequestMapping(method = RequestMethod.POST, value = "/stockDeduct")
     @ApiOperation(value = "扣减库存")
