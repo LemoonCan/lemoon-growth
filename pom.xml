@@ -50,18 +50,18 @@
                 <version>3.6.1</version>
             </dependency>
 
-            <!-- redisson -->
-            <dependency>
-                <groupId>org.redisson</groupId>
-                <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>3.16.0</version>
-            </dependency>
-
             <!-- RedisTemplate -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>2.5.2</version>
+            </dependency>
+
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>3.16.0</version>
             </dependency>
             <!-- redis 客户端 end -->
 
@@ -107,6 +107,14 @@
                 <version>3.0.0</version>
             </dependency>
             <!--swagger end-->
+
+            <!--netty start-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.66.Final</version>
+            </dependency>
+            <!--netty end-->
         </dependencies>
     </dependencyManagement>
 

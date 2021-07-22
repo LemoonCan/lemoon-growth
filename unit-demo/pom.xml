@@ -44,6 +44,13 @@
             <artifactId>jedis</artifactId>
         </dependency>
         <!--redis 连接 end-->
+
+        <!--netty start-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+        <!--netty end-->
     </dependencies>
 
     <build>
