@@ -26,14 +26,14 @@ public class ChargenServer {
             port = DEFAULT_PORT;
         }
         System.out.println("Listening for connections on port " + port);
-        byte[] rotation = new byte[95*2];
+        byte[] rotation = new byte[95 * 2];
         for (byte i = ' '; i <= '~'; i++) {
             rotation[i - ' '] = i;
-            rotation[i+95-' '] = i;
+            rotation[i + 95 - ' '] = i;
         }
 
         ServerSocketChannel serverChannel;
-        Selector selector ;
+        Selector selector;
         try {
             serverChannel = ServerSocketChannel.open();
             ServerSocket ss = serverChannel.socket();
@@ -47,7 +47,7 @@ public class ChargenServer {
             return;
         }
 
-        while (true){
+        while (true) {
             try {
                 selector.select();
             } catch (IOException e) {
@@ -56,34 +56,38 @@ public class ChargenServer {
             }
             Set<SelectionKey> readKeys = selector.selectedKeys();
             Iterator<SelectionKey> iterator = readKeys.iterator();
-            while (iterator.hasNext()){
+            while (iterator.hasNext()) {
                 SelectionKey key = iterator.next();
                 iterator.remove();
                 try {
-                    if(key.isAcceptable()){
-                        ServerSocketChannel server = (ServerSocketChannel)key.channel();
+                    //连接事件
+                    if (key.isAcceptable()) {
+                        //Acceptor
+                        ServerSocketChannel server = (ServerSocketChannel) key.channel();
                         SocketChannel client = server.accept();
                         System.out.println("Accepted connection from " + client);
                         client.configureBlocking(false);
-                        SelectionKey key2 = client.register(selector,SelectionKey.OP_WRITE);
+                        SelectionKey key2 = client.register(selector, SelectionKey.OP_WRITE);
                         ByteBuffer buffer = ByteBuffer.allocate(74);
-                        buffer.put(rotation,0,72);
-                        buffer.put((byte)'\r');
-                        buffer.put((byte)'\n');
+                        buffer.put(rotation, 0, 72);
+                        buffer.put((byte) '\r');
+                        buffer.put((byte) '\n');
                         buffer.flip();
                         key2.attach(buffer);
-                    }else if(key.isWritable()){
-                        SocketChannel client = (SocketChannel)key.channel();
+                    //写事件
+                    } else if (key.isWritable()) {
+                        //Handler
+                        SocketChannel client = (SocketChannel) key.channel();
                         ByteBuffer buffer = (ByteBuffer) key.attachment();
-                        if(!buffer.hasRemaining()){
+                        if (!buffer.hasRemaining()) {
                             buffer.rewind();//position=0,mark=-1
                             //取 position 位置的元素，并且 position+1
                             int first = buffer.get();
                             buffer.rewind();
-                            int position = first - ' ' + 1 ;
-                            buffer.put(rotation, position,72);
-                            buffer.put((byte)'\r');
-                            buffer.put((byte)'\n');
+                            int position = first - ' ' + 1;
+                            buffer.put(rotation, position, 72);
+                            buffer.put((byte) '\r');
+                            buffer.put((byte) '\n');
                             //limit=position,position=0,mark=-1
                             buffer.flip();
                         }
@@ -93,7 +97,8 @@ public class ChargenServer {
                     key.cancel();
                     try {
                         key.channel().close();
-                    }catch (IOException cex){}
+                    } catch (IOException cex) {
+                    }
                 }
             }
         }

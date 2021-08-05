@@ -21,7 +21,7 @@ public class ChargenClient {
     public static void main(String[] args) throws InterruptedException {
         ExecutorService service = Executors.newCachedThreadPool();
         for (int i = 0; i < 4; i++) {
-            service.execute(() -> connect(args[0]));
+            service.execute(() -> connect("localhost"));
             Thread.sleep(10000);
         }
         service.shutdownNow();
