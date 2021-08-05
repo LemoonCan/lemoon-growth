@@ -17,7 +17,7 @@ import java.util.Set;
  * @author lee
  * @date 8/4/21
  */
-public class NioClient {
+public class MultiplexingClient {
     public static void main(String[] args) {
         SocketAddress remoteAddress = new InetSocketAddress("127.0.0.1", 20);
 

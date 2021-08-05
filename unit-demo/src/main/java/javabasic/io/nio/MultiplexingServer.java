@@ -17,7 +17,7 @@ import java.util.Set;
  * @author lee
  * @date 8/4/21
  */
-public class NioServer {
+public class MultiplexingServer {
     public static void main(String[] args) {
         ServerSocketChannel server;
         Selector selector;
