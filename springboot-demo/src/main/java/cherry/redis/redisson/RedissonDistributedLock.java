@@ -1,6 +1,8 @@
 package cherry.redis.redisson;
 
+import org.redisson.RedissonReadLock;
 import org.redisson.api.RLock;
+import org.redisson.api.RReadWriteLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,5 +19,11 @@ public class RedissonDistributedLock{
     public void lock(String lockKey){
         RLock redissonLock = redissonClient.getLock(lockKey);
         redissonLock.lock();
+    }
+
+    public void readWriteLock(String lockKey){
+        RReadWriteLock rwLock = redissonClient.getReadWriteLock(lockKey);
+        RLock rLock = rwLock.readLock();
+        rLock.lock();
     }
 }

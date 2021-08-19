@@ -37,6 +37,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!--Spring session redis start-->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <!--Spring session redis end-->
+
         <!-- RedisTemplate start-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
