@@ -3,6 +3,8 @@ package algorithm.find;
 /**
  * @author lee
  * @date 2021/10/9
+ *
+ * 二分查找
  */
 public class BinarySearch {
     public static void main(String[] args) {
