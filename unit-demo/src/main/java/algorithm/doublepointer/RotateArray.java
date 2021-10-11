@@ -25,7 +25,7 @@ public class RotateArray {
         System.out.println(Arrays.toString(nums2));
 
         int[] numsx1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27};
-        rotatex1(numsx1, 13);
+        rotatex1(numsx1, 8);
         System.out.println(Arrays.toString(numsx1));
 
         int[] numsx2 = {1,2,3,4,5,6,7};
@@ -128,6 +128,28 @@ public class RotateArray {
     }
 
     /**
+     * 数组翻转
+     * @param nums
+     * @param k
+     */
+    public void rotate3(int[] nums, int k) {
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
+    }
+
+    public void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start += 1;
+            end -= 1;
+        }
+    }
+
+    /**
      * @param nums
      * @param k
      */
@@ -147,6 +169,16 @@ public class RotateArray {
         }
     }
 
+    /**
+     * 27➗6=4...3 6➗3=0 无需再做移动
+     * 27➗7=3...6 7➗3=2...1 后6位(前面的余数)向右移动1(后面的余数)位
+     * 27➗8=3...3 8➗3=2...2 后3位向右移动2位
+     * 27➗9=3 无需再做移动
+     * 27➗10=2...7 10➗7=1...3 后7位向右移动3位
+     * 27➗11=2...5 11➗5=2...1 后5位向右移动1位
+     * @param nums
+     * @param k
+     */
     public static void rotatex2(int[] nums, int k) {
         int step = k % nums.length;
         int first = 0;
@@ -165,13 +197,12 @@ public class RotateArray {
             }
 
             int remainder = length % step;
-            int move = step - remainder;
-            if(move>=remainder || remainder==0){
+            first = first + step - remainder;
+            length = remainder;
+            if(remainder==0){
                 step = 0;
-            }else {
-                first = first + step - remainder;
-                length = remainder;
-                step = 1;
+            }else{
+                step = step%remainder;
             }
         }
     }
