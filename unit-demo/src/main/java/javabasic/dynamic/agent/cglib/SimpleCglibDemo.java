@@ -8,17 +8,19 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
+ * cglib代理的类需声明为public
+ *
  * @author lee
  * @date 6/3/21
  */
 public class SimpleCglibDemo {
-    static class RealService {
+    public static class RealService {
         public void sayHello() {
             System.out.println("say hello");
         }
     }
 
-    static class SimpleInterceptor implements MethodInterceptor {
+    public static class SimpleInterceptor implements MethodInterceptor {
         @Override
         public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
             System.out.println("entering " + method.getName());
@@ -36,7 +38,7 @@ public class SimpleCglibDemo {
     }
 
     public static void main(String[] args) {
-        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/lemoncandy/Desktop/WorkSpace/Demo/back-end/cherry-growth/compile-class/dynamic/agent/cglib");
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/lemoncandy/Desktop/WorkSpace/Demo/back-end/lemoon-growth/cglib");
         RealService proxyService = getProxy(RealService.class);
         proxyService.sayHello();
     }

@@ -18,7 +18,7 @@ public class SimpleJdkDemo {
         Subject subject = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(), new Class[]{Subject.class}, handler);
         System.out.println(subject.say("Moon", 0));
 
-        //JDK提供的动态代理方法 相当于JVM提供了SubjectDynamicProxy
+        //JDK提供的动态代理方法 相当于JVM提供了SubjectDynamicProxy，say方法内部调用InvocationHandler#invoke()
         SubjectDynamicProxy subjectDynamicProxy = new SubjectDynamicProxy(handler);
         System.out.println(subjectDynamicProxy.say("Moon",1));
     }
