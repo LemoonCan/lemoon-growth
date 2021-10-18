@@ -2,6 +2,9 @@
 !*/src/**
 */target
 
+/cglib
+/javabasic
+
 ### IntelliJ IDEA ###
 .idea
 *.iml
