@@ -1,5 +1,7 @@
 package algorithm.doublepointer;
 
+import algorithm.ListNode;
+
 /**
  * 头结点是第一个结点
  * 移除从后往前数第n个结点

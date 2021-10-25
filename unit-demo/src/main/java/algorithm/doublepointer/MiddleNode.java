@@ -1,5 +1,7 @@
 package algorithm.doublepointer;
 
+import algorithm.ListNode;
+
 /**
  * 头结点是第一个结点
  * 找链表的中间结点
@@ -33,22 +35,5 @@ public class MiddleNode {
             fast = fast.next.next;
         }
         return slow;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
     }
 }
