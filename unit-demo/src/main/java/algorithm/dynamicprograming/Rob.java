@@ -13,6 +13,12 @@ public class Rob {
         System.out.println(r.rob(nums));
     }
 
+    /**
+     * f(i) 表示只偷窃i位置之后的金钱，可窃取的最大金额
+     * f(i) = max( f(i+1), f(i)+max(f(i+2),f(i+3)) )
+     * @param nums
+     * @return
+     */
     public int rob(int[] nums) {
         Integer[] maxRecord = new Integer[nums.length];
         rob(nums, 0, maxRecord);
