@@ -3,6 +3,9 @@ package algorithm.dynamicprograming;
 import java.util.List;
 
 /**
+ * 三角形最小路径和
+ * https://leetcode-cn.com/problems/triangle/
+ *
  * @author lee
  * @date 2021/11/2
  */
