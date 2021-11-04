@@ -1,6 +1,9 @@
-package algorithm.bitoperation;
+package algorithm.bit;
 
 /**
+ * 只出现一次的数字
+ * https://leetcode-cn.com/problems/single-number/
+ *
  * @author lee
  * @date 2020-06-23
  *
