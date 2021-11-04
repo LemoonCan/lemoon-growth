@@ -1,5 +1,7 @@
 package algorithm.bit;
 
+import java.util.Arrays;
+
 /**
  * 只出现一次的数字
  * https://leetcode-cn.com/problems/single-number/
@@ -10,6 +12,10 @@ package algorithm.bit;
  * 异或：相同为0，不同为1
  */
 public class SingleNumber {
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(twoSingleNumber(new int[]{1,2,2,1,4,7})));
+    }
+
     /**
      * 给定一个数组，除某个元素只出现一次之外，其余元素都会出现两次，请找出只出现一次的元素
      * @param nums
@@ -26,13 +32,13 @@ public class SingleNumber {
     /**
      * 给定一个数组，除两个元素只出现一次之外，其余元素都会出现两次，请找出只出现一次的两个元素
      */
-    public int[] twoSingleNumber(int[] nums){
+    public static int[] twoSingleNumber(int[] nums){
         //取数组所有值异或后得到的值
         int xor = 0;
         for (int num:nums) {
             xor^=num;
         }
-        //xor中为1的位一定是只出现一次的两个元素的不同位，假设是第x位；
+        //xor中为1的位一定是只出现一次的两个元素的不同位，不同位可能有多位，随机找出一位，假设是第x位；
         //对数组分组，与第x位按位与为0的为一组，为1的为另一组；则两个不同元素一定会被分到不同组；
         //再对两组分别异或得到的值就是只出现一次的两个元素。
         int xorHighestOneBit = Integer.highestOneBit(xor);
