@@ -1,4 +1,4 @@
-package algorithm.find;
+package algorithm.find.binarysearch;
 
 /**
  * @author lee
