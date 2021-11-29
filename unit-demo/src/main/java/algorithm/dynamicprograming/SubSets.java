@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 子集
+ * https://leetcode-cn.com/problems/subsets/
+ *
  * @author lee
  * @date 2021/11/28
  */
