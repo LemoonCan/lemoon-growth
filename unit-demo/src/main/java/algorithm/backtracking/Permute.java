@@ -64,6 +64,4 @@ public class Permute {
         nums[j] = nums[i];
         nums[i] = temp;
     }
-
-
 }
