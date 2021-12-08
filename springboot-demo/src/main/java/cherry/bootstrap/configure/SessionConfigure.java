@@ -26,9 +26,10 @@ public class SessionConfigure implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new SecurityInterceptor())
                 //排除拦截
-                .excludePathPatterns("/session-demo/login")
-                .excludePathPatterns("/session-demo/logout")
-
+                .excludePathPatterns("/session/login")
+                .excludePathPatterns("/session/logout")
+                .excludePathPatterns("/exclude/")
+                .excludePathPatterns("/swagger-ui/index.html")
                 //拦截路径
                 .addPathPatterns("/**");
     }

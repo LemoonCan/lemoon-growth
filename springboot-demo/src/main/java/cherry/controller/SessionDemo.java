@@ -18,7 +18,7 @@ import java.io.Serializable;
  * @date 8/16/21
  */
 @RestController
-@RequestMapping("/session-demo")
+@RequestMapping("/session")
 @Api(value = "会话测试")
 public class SessionDemo {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
