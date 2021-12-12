@@ -1,103 +1,108 @@
 package javabasic.dynamic.generics.tclass;
 
+import console.ColorfulPrintln;
 import java.lang.reflect.ParameterizedType;
 
 /**
  * @author lee
  * @date 5/24/21
- * 当父类为泛型类时，子类及继承的父类可自由配置是否为泛型类，由类名后是否有声明决定；
- * 当继承的父类为泛型类时，泛型需满足父类的泛型边界；不为泛型类时，父类的原泛型元素类型变为Object；
- * 当子类为泛型类时，泛型无需满足父类的泛型边界，可自由定义；且父类的原泛型元素与子类泛型无关。
  *
- * 当父类不为泛型类时，子类也不能为泛型类
+ * 子类泛型声明不受父类影响
+ * extends 后描述的父类的泛型声明，表示父类的泛型应该在子类中如何表现
+ * 不声明：变成擦除后的类型(Object或者泛型继承的类型)，同时继承的父类会变成Class类型
+ * 声明：按声明来，同时继承的父类还是ParameterizedType
+ *
  */
-public class Inherit extends Basic{
+public class Inherit {
     public static void main(String[] args) {
-        ExtensionNoGen withSuperNoGen = new ExtensionNoGen();
-        System.out.println("继承的父类未指明泛型，子类未指明泛型");
-        withSuperNoGen.printGenericTypes();
+        Children1 children1 = new Children1(1,2);
+        ColorfulPrintln.colorfulBack("children1");
+        System.out.println(children1.getClass().getGenericSuperclass() instanceof ParameterizedType);
 
-        System.out.println("继承的父类指明泛型，子类未指明泛型");
-        ExtensionSuperGen withSuperGen = new ExtensionSuperGen();
-        withSuperGen.printGenericTypes();
 
-        System.out.println("继承的父类指明泛型，子类指明泛型");
-        ExtensionAndSuperGen withGen = new ExtensionAndSuperGen();
-        withGen.printGenericTypes();
+        Children2<Float> children2 = new Children2(1,2);
+        ColorfulPrintln.colorfulBack("children2");
+        System.out.println(children2.getClass().getGenericSuperclass() instanceof ParameterizedType);
 
-        System.out.println("子类的泛型声明不受父类限制");
-        ExtensionInherit inherit = new ExtensionInherit();
-        inherit.printGenericTypes();
+        ColorfulPrintln.colorfulBack("children3");
+        Children3<Float> children3 = new Children3<>("child3",1);
+        children3.setT(1.0f);
+        System.out.println(children3.getT());
+        System.out.println(children3.getClass().getGenericSuperclass() instanceof ParameterizedType);
+
+        ColorfulPrintln.colorfulBack("children4");
+        Children4<Float,Double> children4= new Children4<>(2.0f,2);
+        children4.setR(4.0d);
+        System.out.println(children4.getR());
+        System.out.println(children4.toString());
+        System.out.println(children4.getClass().getGenericSuperclass() instanceof ParameterizedType);
+
     }
 
 }
 
-/**
- * 继承的父类未指明泛型，子类未指明泛型
- */
-class ExtensionNoGen extends Basic{
-    public void printGenericTypes(){
-        System.out.println("NoGen: " + (this.getClass().getGenericSuperclass() instanceof ParameterizedType));
-    }
+class Basic<T,R> {
+    protected T t;
+    protected R r;
 
-    /**
-     * 继承的父类未指明泛型，element 类型变为 Object，且继承的父类不是泛型类
-     * @return
-     */
-    @Override
-    public Object getElement() {
-        return element;
-    }
-}
-
-/**
- * 继承的父类指明泛型，子类未指明泛型
- */
-class ExtensionSuperGen extends Basic<String>{
-    public void printGenericTypes(){
-        System.out.println("SuperGen: " + (this.getClass().getGenericSuperclass() instanceof ParameterizedType));
+    public Basic(T t, R r) {
+        this.t = t;
+        this.r = r;
     }
 
     @Override
-    public String getElement() {
-        return super.getElement();
+    public String toString() {
+        return "t="+t+"&r="+r;
     }
 }
 
 /**
- * 继承的父类指明泛型，子类指明泛型
+ * 不声明：变成擦除后的类型(Object或者泛型继承的类型)
+ */
+class Children1 extends Basic {
+    public Children1(Object o, Object o2) {
+        super(o, o2);
+    }
+}
+
+class Children2<T> extends Basic {
+    public Children2(Object o, Object o2) {
+        super(o, o2);
+    }
+}
+
+/**
+ * 声明：按声明来
  * @param <T>
  */
-class ExtensionAndSuperGen<T extends String> extends Basic<String>{
-    public void printGenericTypes(){
-        System.out.println("ExtensionAndSuperGen: " + (this.getClass().getGenericSuperclass() instanceof ParameterizedType));
+class Children3<T> extends Basic<String, Integer> {
+    private T t;
+
+    public Children3(String string, Integer integer) {
+        super(string, integer);
     }
 
-    @Override
-    public String getElement() {
-        return super.getElement();
-    }
-}
-
-/**
- * 子类的泛型声明不受父类限制
- * @param <T>
- */
-class ExtensionInherit<T extends Number> extends ExtensionAndSuperGen {
-    @Override
-    public void printGenericTypes(){
-        System.out.println("ExtensionInherit: " + (this.getClass().getGenericSuperclass() instanceof ParameterizedType));
+    public void setT(T t) {
+        this.t = t;
     }
 
-    @Override
-    public String getElement() {
-        return super.getElement();
+    public T getT() {
+        return t;
     }
 }
 
-//继承的父类泛型受父类泛型声明限制
-//class ExtensionSuperGenInherit extends ExtensionSuperGen<String>{
-//}
-//class ExtensionAndSuperGenInherit extends ExtensionAndSuperGen<Integer>{
-//}
+class Children4<T, R extends Number> extends Basic<T, Integer> {
+    private R r;
+    public Children4(T t, Integer integer) {
+        super(t, integer);
+    }
+
+    public R getR() {
+        return r;
+    }
+
+    public void setR(R r) {
+        this.r = r;
+    }
+}
 
