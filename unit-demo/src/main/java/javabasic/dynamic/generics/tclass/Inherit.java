@@ -32,8 +32,8 @@ public class Inherit {
 
         ColorfulPrintln.colorfulBack("children4");
         Children4<Float,Double> children4= new Children4<>(2.0f,2);
-        children4.setR(4.0d);
-        System.out.println(children4.getR());
+        children4.setS(4.0d);
+        System.out.println(children4.getS());
         System.out.println(children4.toString());
         System.out.println(children4.getClass().getGenericSuperclass() instanceof ParameterizedType);
 
@@ -82,6 +82,11 @@ class Children3<T> extends Basic<String, Integer> {
         super(string, integer);
     }
 
+    public Children3(String s, Integer integer, T t) {
+        super(s, integer);
+        this.t = t;
+    }
+
     public void setT(T t) {
         this.t = t;
     }
@@ -91,18 +96,18 @@ class Children3<T> extends Basic<String, Integer> {
     }
 }
 
-class Children4<T, R extends Number> extends Basic<T, Integer> {
-    private R r;
+class Children4<T, S extends Number> extends Basic<T, Integer> {
+    private S s;
     public Children4(T t, Integer integer) {
         super(t, integer);
     }
 
-    public R getR() {
-        return r;
+    public S getS() {
+        return s;
     }
 
-    public void setR(R r) {
-        this.r = r;
+    public void setS(S s) {
+        this.s = s;
     }
 }
 
