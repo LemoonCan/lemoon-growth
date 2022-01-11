@@ -3,9 +3,11 @@ package algorithm.doublepointer;
 import java.util.Arrays;
 
 /**
+ * 轮转数组
+ * https://leetcode-cn.com/problems/rotate-array/
  * @author lee
  * @date 2020-07-06
- * <p>
+ *
  * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
  * 输入: [1,2,3,4,5,6,7] 和 k = 3
  * 输出: [5,6,7,1,2,3,4]
@@ -28,7 +30,7 @@ public class RotateArray {
         rotatex1(numsx1, 8);
         System.out.println(Arrays.toString(numsx1));
 
-        int[] numsx2 = {1,2,3,4,5,6,7};
+        int[] numsx2 = {1, 2, 3, 4, 5, 6, 7};
         rotatex2(numsx2, 4);
         System.out.println(Arrays.toString(numsx2));
 
@@ -83,6 +85,17 @@ public class RotateArray {
     /**
      * 环状替换
      *
+     * 从0出发需要回到0，需要a圈；每次走k步，走过了b个元素。
+     * 需要满足下述公式：
+     * a*n = b*k
+     *
+     * 每次出发能遍历k个元素
+     * 需要多少次能遍历完所有元素？
+     * count = n/b
+     *
+     * b=lcm(n,k)/k
+     * count=n*k/lcm(n,k)=gcd(n,k)
+     *
      * @param nums
      * @param k
      */
@@ -100,6 +113,30 @@ public class RotateArray {
                 temp = next;
             }
             nums[i] = temp;
+        }
+    }
+
+    /**
+     * 环状替换
+     * @param nums
+     * @param k
+     */
+    public static void rotate4(int[] nums, int k) {
+        boolean[] moved = new boolean[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            if (!moved[i]) {
+                int change = (i+ k) % nums.length;
+                int cur = nums[i];
+                while (change != i) {
+                    int temp = nums[change];
+                    nums[change] = cur;
+                    moved[change] = true;
+                    cur = temp;
+                    change = (change + k) % nums.length;
+                }
+                nums[i] = cur;
+                moved[i] = true;
+            }
         }
     }
 
@@ -129,6 +166,7 @@ public class RotateArray {
 
     /**
      * 数组翻转
+     *
      * @param nums
      * @param k
      */
@@ -176,6 +214,7 @@ public class RotateArray {
      * 27➗9=3 无需再做移动
      * 27➗10=2...7 10➗7=1...3 后7位向右移动3位
      * 27➗11=2...5 11➗5=2...1 后5位向右移动1位
+     *
      * @param nums
      * @param k
      */
@@ -188,10 +227,10 @@ public class RotateArray {
             int i = 1;
             while ((base = i * step) < length) {
                 for (int j = 0; j < step; j++) {
-                    int movePosition = first+(base + j) % length;
+                    int movePosition = first + (base + j) % length;
                     int temp = nums[movePosition];
-                    nums[movePosition] = nums[first+j];
-                    nums[first+j] = temp;
+                    nums[movePosition] = nums[first + j];
+                    nums[first + j] = temp;
                 }
                 i++;
             }
@@ -199,10 +238,10 @@ public class RotateArray {
             int remainder = length % step;
             first = first + step - remainder;
             length = remainder;
-            if(remainder==0){
+            if (remainder == 0) {
                 step = 0;
-            }else{
-                step = step%remainder;
+            } else {
+                step = step % remainder;
             }
         }
     }
