@@ -3,6 +3,9 @@ package algorithm.array;
 import java.util.Arrays;
 
 /**
+ * 多数元素
+ * https://leetcode-cn.com/problems/majority-element/
+ *
  * @author lee
  * @date 2020-07-01
  */
@@ -21,19 +24,19 @@ public class MajorityElement {
      * @return
      */
     public static int majorityElement(int[] nums) {
-        int result = nums[0],count=1;
-        for(int i=1;i<nums.length;i++){
-            if(nums[i]==result){
+        int res = nums[0], count = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == res) {
                 count++;
-            }else{
+            } else {
                 count--;
-                if(count==0){
-                    result = nums[i];
-                    count=1;
+                if (count == 0) {
+                    res = nums[i];
+                    count = 1;
                 }
             }
         }
-        return result;
+        return res;
     }
 
     public static int majorityElement2(int[] nums) {

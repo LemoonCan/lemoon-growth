@@ -83,6 +83,26 @@ public class MaxProduct {
      * 正 x 正 = 正
      *
      * 负数遇到负数是可能翻身的
+     *
+     * 到前一个数(i-1)为止的最大值 fmax，到前一个数为止的最小值 fmin
+     * 到当前(i)为止的最大值 curMax，当前数的最小值 curMin
+     * curMax取值
+     * fmax>0&&nums[i]>0&&fmin>0  curMax=fmax*nums[i],curMin=nums[i]
+     * fmax>0&&nums[i]>0&&fmin<0  curMax=fmax*nums[i],curMin=fmin*nums[i]
+     * fmax>0&&nums[i]<0&&fmin>0  curMax=nums[i],curMin=fmin*nums[i]
+     * fmax>0&&nums[i]<0&&fmin<0  curMax=fmin*nums[i],curMin=fmax*nums[i]
+     * fmax>0&&nums[i]=0  curMax=0,curMin=0
+     *
+     * fmax<0&&nums[i]>0&&fmin<0  curMax=nums[i],curMin=fmin*nums[i]
+     * fmax<0&&nums[i]<0&&fmin<0  curMax=fmin*nums[i],curMin=nums[i]
+     * fmax<0&&nums[i]=0  curMax=0,curMin=0
+     *
+     * fmax=0&&fmin=0&&nums[i]>0  curMax=nums[i],curMin=0
+     * fmax=0&&fmin=0&&nums[i]<0  curMax=0,curMin=nums[i]
+     * fmax=0&&fmin<0&&nums[i]>0  curMax=0,curMin=fmin*nums[i]
+     * fmax=0&&fmin<0&&nums[i]<0  curMax=fmin*nums[i],curMin=0
+     * fmax>0&&fmin=0&&nums[i]>0  curMax=fmax*nums[i],curMin=0
+     *
      */
     public static int maxProduct2(int[] nums) {
         int res = nums[0];
