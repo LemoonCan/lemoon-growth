@@ -10,37 +10,33 @@ import java.util.*;
  * @date 2022/1/19
  */
 public class NestedIterator implements Iterator<Integer> {
-    // 存储列表的当前遍历位置
-    private Deque<Iterator<NestedInteger>> stack;
+    Stack<Iterator<NestedInteger>> stack;
 
     public NestedIterator(List<NestedInteger> nestedList) {
-        stack = new LinkedList<>();
+        stack = new Stack<>();
         stack.push(nestedList.iterator());
     }
 
     @Override
     public Integer next() {
-        // 由于保证调用 next 之前会调用 hasNext，直接返回栈顶列表的当前元素
-        return stack.peek().next().getInteger();
+        return stack.pop().next().getInteger();
     }
 
     @Override
     public boolean hasNext() {
-        while (!stack.isEmpty()) {
-            Iterator<NestedInteger> it = stack.peek();
-            if (!it.hasNext()) { // 遍历到当前列表末尾，出栈
+        while (!stack.empty()){
+            Iterator<NestedInteger> iterator = stack.peek();
+            if(!iterator.hasNext()){
                 stack.pop();
                 continue;
             }
-            // 若取出的元素是整数，则通过创建一个额外的列表将其重新放入栈中
-            NestedInteger nest = it.next();
-            if (nest.isInteger()) {
-                List<NestedInteger> list = new ArrayList<>();
-                list.add(nest);
+            NestedInteger item = iterator.next();
+            if (item.isInteger()){
+                List<NestedInteger> list = Arrays.asList(item);
                 stack.push(list.iterator());
                 return true;
             }
-            stack.push(nest.getList().iterator());
+            stack.push(item.getList().iterator());
         }
         return false;
     }
