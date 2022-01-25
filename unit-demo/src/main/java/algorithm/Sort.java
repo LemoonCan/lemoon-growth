@@ -3,6 +3,7 @@ package algorithm;
 import java.util.Arrays;
 
 /**
+ * 排序算法
  * @author lee
  * @date 2019/9/12
  */
@@ -13,9 +14,12 @@ public class Sort {
         sort.mergeSort(nums);
         System.out.println(Arrays.toString(nums));
 
-        int[] nums2 ={5,2,3,1};
+        int[] nums2 = {5, 2, 3, 1};
         sort.selectSort(nums2);
         System.out.println(Arrays.toString(nums2));
+
+        int[] a = {4, 2, 1, 5, 7, 3, 8, 9};
+        System.out.println(Arrays.toString(heapifySort(a)));
     }
 
     /**
@@ -79,7 +83,7 @@ public class Sort {
      * 选择排序
      * 最坏情况时间复杂度：n^2
      * 最好情况时间复杂度：n^2
-     *
+     * <p>
      * 不稳定排序算法
      */
     public int[] selectSort(int[] nums) {
@@ -104,6 +108,17 @@ public class Sort {
 
     /**
      * 归并排序
+     * 拆两组，直至拆分至每组1或者2个数字
+     * 对每组排序
+     * 合并再排序
+     * <p>
+     * 5 4 6 1 2
+     * 5 4 | 6 1 2
+     * 5|4   6 1|2
+     * 4,5   6 1,2
+     * 1,2,6
+     * 1,2,4,5,6
+     * <p>
      * 时间复杂度：
      */
     public int[] mergeSort(int[] nums) {
@@ -150,6 +165,9 @@ public class Sort {
 
     /**
      * 快速排序
+     * 取锚点，
+     * 遍历数组，小于锚点放于锚点左侧；大于锚点放于锚点右侧
+     * 再对左、右两侧分别取锚点进行上述过程
      */
     public int[] quickSort(int[] nums) {
         quickSortC(nums, 0, nums.length - 1);
@@ -195,6 +213,63 @@ public class Sort {
     /**
      * 堆排序
      */
+    public static int[] heapifySort(int[] a) {
+        int[] sort = Arrays.copyOf(a, a.length);
+        //升序的话，维护一个最大堆
+        heapify(sort);
+        //删除堆顶元素放至末尾
+        for (int i = a.length - 1; i > 0; i--) {
+            swap(sort, 0, i);
+            upHeapify(sort, i);
+        }
+        return sort;
+    }
 
+    private static void heapify(int[] a) {
+        /**
+         * 0
+         * 1,2
+         * 3,4,5,6
+         */
+        for (int i = 1; i < a.length; i++) {
+            int cur = i;
+            while (cur >= 1) {
+                int parent = (cur + 1) / 2 - 1;
+                if (a[parent] < a[cur]) {
+                    swap(a, parent, cur);
+                    cur = parent;
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+
+    /**
+     * 从上至下堆化
+     *
+     * @param a
+     * @param end
+     */
+    private static void upHeapify(int[] a, int end) {
+        int cur = 0;
+        while (true) {
+            int left = cur * 2 + 1;
+            int right = left + 1;
+
+            int maxPos = cur;
+            if (left < end && a[left] > a[maxPos]) maxPos = left;
+            if (right < end && a[right] > a[maxPos]) maxPos = right;
+            if (maxPos == cur) return;
+            swap(a, cur, maxPos);
+            cur = maxPos;
+        }
+    }
+
+    private static void swap(int[] a, int index1, int index2) {
+        int temp = a[index1];
+        a[index1] = a[index2];
+        a[index2] = temp;
+    }
 }
 
