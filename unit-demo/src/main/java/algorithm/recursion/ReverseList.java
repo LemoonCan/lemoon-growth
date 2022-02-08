@@ -4,6 +4,8 @@ import algorithm.ListNode;
 
 /**
  * 反转链表
+ * https://leetcode-cn.com/problems/reverse-linked-list/
+ *
  * @author lee
  * @date 2021/10/25
  */
@@ -25,7 +27,7 @@ public class ReverseList {
         }
 
         ListNode newHead = reverseList2(head.next);
-        head.next.next = head.next;
+        head.next.next = head;
         head.next = null;
         return newHead;
     }
