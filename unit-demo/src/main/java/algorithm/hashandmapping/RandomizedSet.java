@@ -20,7 +20,7 @@ public class RandomizedSet {
     public boolean insert(int val) {
         if (dict.containsKey(val)) return false;
 
-        //序号
+        //值、list中的序号
         dict.put(val, list.size());
         list.add(list.size(), val);
         return true;
