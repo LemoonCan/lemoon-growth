@@ -21,7 +21,6 @@ public class Sort {
         int[] a = {4, 2, 1, 5, 7, 3, 8, 9};
         System.out.println(Arrays.toString(heapifySort(a)));
 
-        Arrays.sort();
     }
 
     /**

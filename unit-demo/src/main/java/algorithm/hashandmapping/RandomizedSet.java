@@ -4,6 +4,8 @@ import java.util.*;
 
 /**
  * 常数时间插入、删除和随机获取元素
+ * https://leetcode-cn.com/problems/insert-delete-getrandom-o1/
+ *
  * @author lee
  * @date 2022/2/12
  */
