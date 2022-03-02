@@ -1,8 +1,8 @@
 package cherry.controller;
 
-import cherry.redis.redisson.RedissonDistributedLock;
-import cherry.redis.redistemplate.DistributedLock;
-import cherry.redis.redistemplate.StockService;
+import cherry.service.redis.redisson.RedissonDistributedLock;
+import cherry.service.redis.redistemplate.DistributedLock;
+import cherry.service.redis.redistemplate.StockService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

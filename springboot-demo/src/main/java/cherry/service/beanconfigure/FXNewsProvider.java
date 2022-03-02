@@ -1,4 +1,4 @@
-package cherry.beanconfigure;
+package cherry.service.beanconfigure;
 
 import java.util.Objects;
 

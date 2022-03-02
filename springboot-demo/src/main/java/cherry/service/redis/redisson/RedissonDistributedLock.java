@@ -1,6 +1,5 @@
-package cherry.redis.redisson;
+package cherry.service.redis.redisson;
 
-import org.redisson.RedissonReadLock;
 import org.redisson.api.RLock;
 import org.redisson.api.RReadWriteLock;
 import org.redisson.api.RedissonClient;

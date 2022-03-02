@@ -37,6 +37,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 引入JDBC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
+        <!-- mysql driver start-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- mysql driver end-->
+
         <!--Spring session redis start-->
         <dependency>
             <groupId>org.springframework.session</groupId>

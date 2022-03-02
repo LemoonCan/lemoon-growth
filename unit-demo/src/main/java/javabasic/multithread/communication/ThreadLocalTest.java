@@ -12,7 +12,7 @@ public class ThreadLocalTest {
     }
 
     static class ThreadA implements Runnable{
-        private ThreadLocal<String> threadLocal;
+        private ThreadLocal<String> threadLocal = new ThreadLocal<>();
 
         public ThreadA(ThreadLocal<String> threadLocal) {
             this.threadLocal = threadLocal;
@@ -39,6 +39,7 @@ public class ThreadLocalTest {
 
         @Override
         public void run() {
+
             threadLocal.set("B");
             try {
                 Thread.sleep(100);

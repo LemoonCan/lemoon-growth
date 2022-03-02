@@ -1,4 +1,4 @@
-package cherry.redis.redistemplate;
+package cherry.service.redis.redistemplate;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

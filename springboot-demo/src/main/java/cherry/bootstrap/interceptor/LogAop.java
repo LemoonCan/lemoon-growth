@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LogAop {
-    @Pointcut("execution(* cherry.controller.AopDemo.*(..))")
+    @Pointcut("execution(* cherry.controller.AopDemo.*(..)) " +
+            "|| execution(* cherry.service.aop.*.*(..))")
     public void intercept() {
     }
 

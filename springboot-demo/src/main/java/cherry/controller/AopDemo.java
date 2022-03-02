@@ -1,9 +1,11 @@
 package cherry.controller;
 
+import cherry.service.aop.AService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.aop.framework.AopContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,8 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/aop")
 @Api(value = "aop-测试")
 public class AopDemo {
+    @Autowired
+    private AService a;
+
     @RequestMapping(method = RequestMethod.POST, value = "/coming")
-    @ApiOperation(value = "观临")
+    @ApiOperation(value = "光临")
     public String coming(@RequestParam @ApiParam(name = "name", value = "谁", required = true) String name) {
         return name + " is coming";
     }
@@ -45,5 +50,11 @@ public class AopDemo {
     @ApiOperation(value = "嵌套方法")
     public void nest(){
         System.out.println("nest 执行中");
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/executingA")
+    @ApiOperation(value = "执行ASevice")
+    public void executingA(){
+        a.invokeB();
     }
 }

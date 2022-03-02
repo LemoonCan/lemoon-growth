@@ -14,7 +14,7 @@ public class StackTest {
 class MinStack {
     private List<Integer> elements;
 
-    /** initialize your data structure here. */
+    /** initialize your data datastructure here. */
     public MinStack() {
         elements = new ArrayList<>();
     }
