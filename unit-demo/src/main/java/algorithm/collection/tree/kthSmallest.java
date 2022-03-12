@@ -1,4 +1,4 @@
-package algorithm.collection;
+package algorithm.collection.tree;
 
 import algorithm.TreeNode;
 
@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 /**
  * 二叉搜索树中第K小的元素
  * https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/
- * <p>
+ *
  * (搜索树=查找树，当前节点的左节点小于它，右节点大于它)
  *
  * @author lee
