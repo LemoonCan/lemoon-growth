@@ -1,4 +1,4 @@
-package algorithm.collection;
+package algorithm.collection.heap;
 
 import java.util.*;
 

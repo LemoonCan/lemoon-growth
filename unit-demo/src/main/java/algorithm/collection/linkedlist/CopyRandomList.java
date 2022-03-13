@@ -1,4 +1,4 @@
-package algorithm.collection;
+package algorithm.collection.linkedlist;
 
 /**
  * 复制带随机指针的链表

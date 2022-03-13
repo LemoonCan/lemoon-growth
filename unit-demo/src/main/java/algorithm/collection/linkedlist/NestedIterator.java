@@ -1,4 +1,4 @@
-package algorithm.collection;
+package algorithm.collection.linkedlist;
 
 import java.util.*;
 
