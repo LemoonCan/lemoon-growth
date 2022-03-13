@@ -1,4 +1,4 @@
-package algorithm.array;
+package algorithm.collection.array;
 
 /**
  * @author lee
