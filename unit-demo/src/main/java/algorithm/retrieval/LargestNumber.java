@@ -118,10 +118,10 @@ public class LargestNumber {
 
         Arrays.sort(numsArr, (x, y) -> {
             int sx = 10, sy = 10;
-            while (sx < x) {
+            while (sx <= x) {
                 sx *= 10;
             }
-            while (sy < y) {
+            while (sy <= y) {
                 sy *= 10;
             }
             return x * sy - y * sx;
