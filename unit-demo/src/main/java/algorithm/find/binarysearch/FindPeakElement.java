@@ -11,6 +11,9 @@ public class FindPeakElement {
     public static void main(String[] args) {
         int[] nums = {1};
         System.out.println(findPeakElement(nums));
+
+        int[] nums2 = {2,3,1,0,3,4,4};
+        System.out.println(findPeakElement2(nums2));
     }
 
     public static int findPeakElement(int[] nums) {
@@ -31,8 +34,9 @@ public class FindPeakElement {
     }
 
     /**
-     * 1.对于任意数组而言，一定存在峰值
-     * 2.二分决定的向左或向右不会错过峰值
+     * 1.相邻值不相等
+     * 2.对于任意数组而言，一定存在峰值
+     * 3.二分决定的向左或向右不会错过峰值
      */
     public static int findPeakElement2(int[] nums) {
         int left = 0, right = nums.length - 1, mid;
