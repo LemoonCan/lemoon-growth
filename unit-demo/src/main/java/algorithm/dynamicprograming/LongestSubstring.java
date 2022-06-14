@@ -92,6 +92,9 @@ public class LongestSubstring {
         return dfs(s, 0, n -1, k);
     }
     public int dfs(String s, int l, int r, int k){
+        if(r-l+1<k){
+            return 0;
+        }
         int[] cnt = new int[26];
         for(int i = l; i <= r; i++){
             cnt[s.charAt(i) - 'a']++;
