@@ -33,6 +33,10 @@ public class LongestSubstring {
      * 出现次数< K的字符(下标mid)必然不在子串范围内
      * 所以变成递归求mid左边字符串最长子串与mid右边字符串最长子串 相比较的最大值
      * 直到无次数< K的字符，此子串是至少有K个字符的子串
+     *
+     * 最坏时间复杂度：O(n^2)
+     * 空间复杂度：O(26n)
+     *
      * @param s
      * @param k
      * @return
@@ -82,6 +86,9 @@ public class LongestSubstring {
      * 所以分隔成 bb | adeadebade | fff
      * 再对分隔后的数据分别找出小于k的元素做分隔
      * 直到子串中的元素都满足>=k位置
+     *
+     * 时间复杂度：O(n) 26*n*3
+     * 空间复杂度：O(26^2)
      *
      * @param s
      * @param k
