@@ -121,7 +121,33 @@
                 <version>8.0.27</version>
             </dependency>
             <!-- mysql driver end-->
+
+            <!-- mybatis start-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+            <!-- mybatis start-->
+
+            <!-- RocketMQ start -->
+            <dependency>
+                <groupId>com.aliyun.mq</groupId>
+                <artifactId>mq-http-sdk</artifactId>
+                <version>1.0.3.2</version>
+                <classifier>jar-with-dependencies</classifier>
+            </dependency>
+            <!-- RocketMQ end -->
+
+            <!-- Dubbo start -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>3.0.8</version>
+            </dependency>
+            <!-- Dubbo end -->
         </dependencies>
+
     </dependencyManagement>
 
     <!--配置优先级从高到低：pom.xml> user settings > global settings-->
