@@ -1,4 +1,4 @@
-package cherry.service.dubbo.spi;
+package cherry.service.dubbo.spi.common;
 
 /**
  * @author lee

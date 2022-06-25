@@ -1,0 +1,2 @@
+bmw = cherry.service.dubbo.spi.adaptive.method.BmwCarMaker
+tesla = cherry.service.dubbo.spi.adaptive.method.TeslaCarMaker

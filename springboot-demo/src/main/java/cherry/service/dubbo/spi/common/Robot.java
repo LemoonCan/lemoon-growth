@@ -1,4 +1,4 @@
-package cherry.service.dubbo.spi;
+package cherry.service.dubbo.spi.common;
 
 import org.apache.dubbo.common.extension.SPI;
 

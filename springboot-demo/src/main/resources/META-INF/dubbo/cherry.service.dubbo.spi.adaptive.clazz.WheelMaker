@@ -1,0 +1,2 @@
+circle = cherry.service.dubbo.spi.adaptive.clazz.CirleWheelMaker
+square = cherry.service.dubbo.spi.adaptive.clazz.SquareMaker
