@@ -1,4 +1,4 @@
-package designpattern.performance.storage;
+package designpattern.theory.performance.repository;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -8,11 +8,19 @@ import java.util.Date;
  * @author lee
  * @date 2022/9/29
  */
-public class InterfaceRecordInfo {
+public class RequestRecordInfo {
     private Long id;
     private String name;
     private Date startTime;
     private Date endTime;
+
+    public RequestRecordInfo(){
+    }
+    public RequestRecordInfo(String name, Date startTime, Date endTime) {
+        this.name = name;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
 
     public Long responesTime(){
         Calendar endCal = Calendar.getInstance();
@@ -24,4 +32,7 @@ public class InterfaceRecordInfo {
         return endCal.getTimeInMillis()-startCal.getTimeInMillis();
     }
 
+    public String getName() {
+        return name;
+    }
 }
