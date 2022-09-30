@@ -1,6 +1,6 @@
 package designpattern.theory.performance.view;
 
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import designpattern.theory.performance.stat.RequestStatInfo;
 
 import java.util.List;

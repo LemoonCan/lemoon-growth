@@ -9,8 +9,10 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantLockTest {
     public static void main(String[] args) {
         //公平锁
-        ReentrantLock failReentrantLock = new ReentrantLock(true);
+        ReentrantLock fairReentrantLock = new ReentrantLock(true);
         //非公平锁
-        ReentrantLock unfailReentrantLock = new ReentrantLock(false);
+        ReentrantLock unfairReentrantLock = new ReentrantLock(false);
+
+        fairReentrantLock.unlock();
     }
 }

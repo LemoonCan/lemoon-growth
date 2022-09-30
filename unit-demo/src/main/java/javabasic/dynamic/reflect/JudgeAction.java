@@ -1,6 +1,6 @@
 package javabasic.dynamic.reflect;
 
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

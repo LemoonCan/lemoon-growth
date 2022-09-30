@@ -13,4 +13,8 @@ public class DependentService {
     @Autowired
     @Lazy
     private AsyncService asyncService;
+
+    public void asyncReply(){
+        asyncService.reply();
+    }
 }
