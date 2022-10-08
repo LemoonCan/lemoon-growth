@@ -1,6 +1,7 @@
 package designpattern.creational.factory.abstractfactory;
 
 import designpattern.creational.factory.Car;
+import designpattern.creational.factory.CarEle;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class CarFactoryMap {
         throw new InstantiationException();
     }
 
-    public Car createElectricCar(String type) throws InstantiationException {
+    public CarEle createElectricCar(String type) throws InstantiationException {
         ICarFactory carFactory = cachedCarFactorys.get(type);
         if (Objects.nonNull(carFactory)) {
             return carFactory.createElectricCar();
