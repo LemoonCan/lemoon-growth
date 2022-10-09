@@ -7,20 +7,20 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author lee
  * @date 2022/10/2
  */
-public class IdGenerator_DubboCheck {
-    private volatile IdGenerator_DubboCheck instance;
+public class IdGenerator_DoubleCheck {
+    private volatile IdGenerator_DoubleCheck instance;
 
     private AtomicInteger id = new AtomicInteger();
 
-    private IdGenerator_DubboCheck() {
+    private IdGenerator_DoubleCheck() {
     }
 
-    public IdGenerator_DubboCheck getInstance(){
+    public IdGenerator_DoubleCheck getInstance(){
         if(instance == null) {
             //类级别的锁
-            synchronized (IdGenerator_DubboCheck.class) {
+            synchronized (IdGenerator_DoubleCheck.class) {
                 if (instance == null) {
-                    instance = new IdGenerator_DubboCheck();
+                    instance = new IdGenerator_DoubleCheck();
                 }
             }
         }
