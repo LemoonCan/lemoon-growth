@@ -1,7 +1,5 @@
 package designpattern.structured.flyweight.factory;
 
-import designpattern.structured.flyweight.Color;
-
 import java.util.HashMap;
 import java.util.Map;
 
