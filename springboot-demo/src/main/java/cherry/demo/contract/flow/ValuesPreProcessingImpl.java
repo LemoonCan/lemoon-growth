@@ -18,10 +18,24 @@ public class ValuesPreProcessingImpl implements ValuesPreProcessing {
     public Map<String, Object> query(String orderNo, List<ContractConfigure> contractConfigures) {
         Map<String, Object> values = new HashMap<>(16);
         buildConNum(orderNo, contractConfigures, values);
-        buildInternValues(orderNo,contractConfigures,values);
-        buildExternValues(orderNo,contractConfigures,values);
+        buildInternValues(orderNo, contractConfigures, values);
+        buildExternValues(orderNo, contractConfigures, values);
 
         return Collections.unmodifiableMap(values);
+    }
+
+    @Override
+    public Map<String, Object> query(String orderNo, ContractConfigure contractConfigure) {
+        return null;
+    }
+
+    @Override
+    public String getAContractNo(Map<String, Object> values, ContractConfigure configure) {
+        return (String) values.get(contractNoKey(configure));
+    }
+
+    private String contractNoKey(ContractConfigure configure){
+        return CONTRACT_NO_KEY + configure.getContractType();
     }
 
     private void buildConNum(String orderNo, List<ContractConfigure> contractConfigures, Map<String, Object> values) {

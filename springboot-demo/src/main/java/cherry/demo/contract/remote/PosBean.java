@@ -1,4 +1,4 @@
-package cherry.demo.contract.flow;
+package cherry.demo.contract.remote;
 
 /**
  * @author lee

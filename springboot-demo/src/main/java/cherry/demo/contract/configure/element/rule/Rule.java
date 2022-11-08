@@ -10,4 +10,6 @@ public abstract class Rule {
     private String name;
 
     public abstract List<Item> configures();
+
+    public abstract String format(Object value);
 }

@@ -11,4 +11,7 @@ import java.util.Map;
  */
 public interface ValuesPreProcessing {
     Map<String,Object> query(String orderNo, List<ContractConfigure> contractConfigures);
+    Map<String,Object> query(String orderNo, ContractConfigure contractConfigure);
+
+    String getAContractNo(Map<String,Object> values,ContractConfigure configure);
 }

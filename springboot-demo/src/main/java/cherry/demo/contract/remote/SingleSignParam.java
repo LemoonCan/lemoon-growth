@@ -1,4 +1,6 @@
-package cherry.demo.contract.flow;
+package cherry.demo.contract.remote;
+
+import lombok.Data;
 
 import java.util.Map;
 
@@ -6,7 +8,8 @@ import java.util.Map;
  * @author lee
  * @date 2022/11/4
  */
-public class SignParam {
+@Data
+public class SingleSignParam {
     private String contractNo;
     private String contractName;
     private String captcha;

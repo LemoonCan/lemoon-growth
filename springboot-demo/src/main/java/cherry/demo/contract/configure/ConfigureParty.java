@@ -1,12 +1,15 @@
 package cherry.demo.contract.configure;
 
+import lombok.Getter;
+
 import java.util.Map;
 
 /**
  * @author lee
  * @date 2022/11/4
  */
-public class Party {
+@Getter
+public class ConfigureParty {
     private Type type;
     private Position position;
 
