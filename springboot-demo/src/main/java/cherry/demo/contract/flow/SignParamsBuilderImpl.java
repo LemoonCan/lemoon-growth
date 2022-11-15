@@ -33,12 +33,6 @@ public class SignParamsBuilderImpl implements SignParamsBuilder {
     }
 
     @Override
-    public SingleSignParam buildSingle(String orderNo, ContractConfigure contractConfigure, String captcha) {
-        Map<String, Object> values = valuesPreProcessing.query(orderNo, contractConfigure);
-        return buildSingle(orderNo, contractConfigure, values, captcha);
-    }
-
-    @Override
     public Map<String, Object> buildElements(String orderNo, ContractConfigure contractConfigure) {
         Map<String, Object> values = valuesPreProcessing.query(orderNo, contractConfigure);
         return buildElements(values, contractConfigure);
@@ -83,7 +77,7 @@ public class SignParamsBuilderImpl implements SignParamsBuilder {
     private Map<String, Object> buildElements(Map<String, Object> values, ContractConfigure contractConfigure) {
         Map<String, Object> elements = new HashMap<>(16);
         contractConfigure.getElementsMap().forEach(
-                (key, value) -> elements.put(key, value.format(values.get(key)))
+                (key, rule) -> elements.put(key, rule.format(values.get(rule.key())))
         );
         return null;
     }

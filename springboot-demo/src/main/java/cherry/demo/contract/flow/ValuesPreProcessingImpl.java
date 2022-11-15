@@ -1,6 +1,7 @@
 package cherry.demo.contract.flow;
 
 import cherry.demo.contract.configure.ContractConfigure;
+import cherry.demo.contract.common.ContractNoKeyGenerator;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,7 +13,7 @@ import java.util.Map;
  * @date 2022/11/4
  */
 public class ValuesPreProcessingImpl implements ValuesPreProcessing {
-    private final String CONTRACT_NO_KEY = "conNum_";
+
 
     @Override
     public Map<String, Object> query(String orderNo, List<ContractConfigure> contractConfigures) {
@@ -31,12 +32,9 @@ public class ValuesPreProcessingImpl implements ValuesPreProcessing {
 
     @Override
     public String getAContractNo(Map<String, Object> values, ContractConfigure configure) {
-        return (String) values.get(contractNoKey(configure));
+        return (String) values.get(ContractNoKeyGenerator.build(configure.getContractType()));
     }
 
-    private String contractNoKey(ContractConfigure configure){
-        return CONTRACT_NO_KEY + configure.getContractType();
-    }
 
     private void buildConNum(String orderNo, List<ContractConfigure> contractConfigures, Map<String, Object> values) {
 

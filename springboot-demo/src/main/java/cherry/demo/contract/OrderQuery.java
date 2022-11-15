@@ -6,6 +6,6 @@ package cherry.demo.contract;
  */
 public class OrderQuery {
     public OrderEntity order(String orderNo){
-        return new OrderEntity();
+        return new OrderEntity(orderNo,"TESTING","SUN_FUND","WAIT_SIGN");
     }
 }

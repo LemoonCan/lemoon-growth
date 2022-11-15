@@ -1,4 +1,4 @@
-package cherry.demo.contract.configure;
+package cherry.demo.contract.common;
 
 /**
  * @author lee

@@ -1,15 +1,16 @@
 package cherry.demo.contract.configure.element.rule;
 
-import java.util.List;
-
 /**
  * @author lee
  * @date 2022/11/4
  */
-public abstract class Rule {
-    private String name;
+public interface Rule {
+    String key();
 
-    public abstract List<Item> configures();
-
-    public abstract String format(Object value);
+    /**
+     * 格式化
+     * @param value
+     * @return
+     */
+    String format(Object value);
 }
