@@ -79,7 +79,7 @@ public class SignParamsBuilderImpl implements SignParamsBuilder {
         contractConfigure.getElementsMap().forEach(
                 (key, rule) -> elements.put(key, rule.format(values.get(rule.key())))
         );
-        return null;
+        return elements;
     }
 
 }

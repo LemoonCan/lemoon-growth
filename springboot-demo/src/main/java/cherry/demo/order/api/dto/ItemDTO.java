@@ -1,4 +1,4 @@
-package cherry.demo.order.core.infrastructure.contract.configure.element.rule;
+package cherry.demo.order.api.dto;
 
 import lombok.AllArgsConstructor;
 
@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
  * @date 2022/11/4
  */
 @AllArgsConstructor
-public class Item {
+public class ItemDTO {
     private String value;
     private String label;
 }
