@@ -10,6 +10,6 @@ import cherry.demo.order.core.domain.repository.IOrderQuery;
 public class OrderQueryImpl implements IOrderQuery {
     @Override
     public OrderEntity order(String orderNo) {
-        return null;
+        return new OrderEntity("001","NEW_CAR","MY_BANK","SIGN_CONTRACT");
     }
 }

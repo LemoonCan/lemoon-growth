@@ -15,6 +15,15 @@ public class InternRule extends AbstractRuleAndConfigure {
     private String tableColumn;
     private Format format;
 
+    public InternRule(String tableColumn, Format format) {
+        this.tableColumn = tableColumn;
+        this.format = format;
+    }
+
+    public String getTableColumn() {
+        return tableColumn;
+    }
+
     @Override
     public List<ItemDTO> configures() {
         return Arrays.asList(

@@ -56,7 +56,7 @@ public class SignParamsBuilderImpl implements SignParamsBuilder {
 
     private List<Party> buildParty(String orderNo, ContractConfigure contractConfigure) {
         List<Party> parties = new ArrayList<>();
-        for (ConfigureParty configureParty : contractConfigure.getConfigurePartys()) {
+        for (ConfigureParty configureParty : contractConfigure.getConfigureParties()) {
             switch (configureParty.getType()) {
                 case FINANCE_LEASING_HEAD:
                     break;

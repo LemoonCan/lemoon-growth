@@ -3,7 +3,10 @@ package cherry.demo.order.core.infrastructure.contract.configure;
 import cherry.demo.order.core.infrastructure.contract.common.ContractType;
 import cherry.demo.order.core.infrastructure.contract.common.Show;
 import cherry.demo.order.core.infrastructure.contract.configure.element.rule.Rule;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Map;
@@ -14,6 +17,9 @@ import java.util.Map;
  * @author lee
  * @date 2022/11/4
  */
+@AllArgsConstructor
+@Builder
+@NoArgsConstructor
 @Getter
 public class ContractConfigure {
     private Long id;
@@ -24,6 +30,6 @@ public class ContractConfigure {
     private Show show;
 
     private Boolean blankContract;
-    private List<ConfigureParty> configurePartys;
+    private List<ConfigureParty> configureParties;
     private Map<String, Rule> elementsMap;
 }

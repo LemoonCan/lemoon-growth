@@ -42,8 +42,7 @@ public class ContractFlow {
         List<ContractConfigure> contractConfigures = contractConfigureQuery.businessContract(
                 new BizModel(orderEntity.getBusinessType(), orderEntity.getFund(), orderEntity.getState()));
         List<PreviewContractDTO> contracts = new ArrayList<>();
-        contractConfigures.forEach(item -> contracts.add(new PreviewContractDTO(item.getId(), item.getContractName()))
-        );
+        contractConfigures.forEach(item -> contracts.add(new PreviewContractDTO(item.getId(), item.getContractName())));
         return contracts;
     }
 

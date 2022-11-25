@@ -1,5 +1,6 @@
 package cherry.demo.order.core.infrastructure.contract.configure;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.Map;
@@ -8,6 +9,7 @@ import java.util.Map;
  * @author lee
  * @date 2022/11/4
  */
+@AllArgsConstructor
 @Getter
 public class ConfigureParty {
     private Type type;
@@ -22,6 +24,7 @@ public class ConfigureParty {
         ;
     }
 
+    @AllArgsConstructor
     public static class Position {
         //坐标、关键字 关联使用何类参数
         private String type;
