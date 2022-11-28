@@ -1,5 +1,9 @@
 package cherry.demo.order.core.infrastructure.contract.configure.element.format;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,7 +19,15 @@ public class DateFormat extends Format {
 
     @Override
     public String translate(Object origin) {
-        return null;
+        if(origin instanceof Date) {
+            SimpleDateFormat format = new SimpleDateFormat(this.pattern);
+            return format.format(origin);
+        }
+        if(origin instanceof LocalDateTime){
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(this.pattern);
+            return ((LocalDateTime)origin).format(formatter);
+        }
+        throw new IllegalArgumentException(String.format("非法的日期类型%s",origin));
     }
 
     @Override
