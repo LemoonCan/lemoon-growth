@@ -21,6 +21,7 @@ public class DateTimeFormatterTest {
         ZonedDateTime dateTime = ZonedDateTime.of(LocalDateTime.parse(s, inputFormatter), timeZoneJST);
 
         DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss Z");
+        System.out.println(dateTime.format(outputFormatter));
         System.out.println(timeZoneNY.getId() + " " + outputFormatter.withZone(timeZoneNY).format(dateTime));
         System.out.println(timeZoneSH.getId() + " " + outputFormatter.withZone(timeZoneSH).format(dateTime));
         System.out.println(timeZoneJST.getId() + " " + outputFormatter.withZone(timeZoneJST).format(dateTime));

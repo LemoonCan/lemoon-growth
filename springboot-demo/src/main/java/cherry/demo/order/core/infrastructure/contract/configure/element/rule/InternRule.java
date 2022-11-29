@@ -23,6 +23,9 @@ public class InternRule extends AbstractRuleAndConfigure {
     public String getTableColumn() {
         return tableColumn;
     }
+    public String getTable() {
+        return tableColumn.split("\\.")[0];
+    }
 
     @Override
     public List<ItemDTO> configures() {
