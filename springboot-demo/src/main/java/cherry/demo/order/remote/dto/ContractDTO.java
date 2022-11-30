@@ -1,5 +1,6 @@
 package cherry.demo.order.remote.dto;
 
+import lombok.Builder;
 import lombok.Getter;
 
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.util.List;
  * @author lee
  * @date 2022/11/10
  */
+@Builder
 @Getter
 public class ContractDTO implements Serializable {
     private String contractNo;

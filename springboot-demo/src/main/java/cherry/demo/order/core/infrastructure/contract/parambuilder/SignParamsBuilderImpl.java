@@ -1,10 +1,16 @@
 package cherry.demo.order.core.infrastructure.contract.parambuilder;
 
+import cherry.demo.order.core.domain.model.CustomerInfo;
+import cherry.demo.order.core.domain.model.ShopInfo;
+import cherry.demo.order.core.domain.repository.IOrderQuery;
 import cherry.demo.order.core.infrastructure.contract.configure.ConfigureParty;
 import cherry.demo.order.core.infrastructure.contract.configure.ContractConfigure;
 import cherry.demo.order.remote.dto.MultiSignParam;
 import cherry.demo.order.remote.dto.Party;
+import cherry.demo.order.remote.dto.PartyType;
 import cherry.demo.order.remote.dto.SingleSignParam;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,8 +21,12 @@ import java.util.Map;
  * @author lee
  * @date 2022/11/4
  */
+@Component
 public class SignParamsBuilderImpl implements SignParamsBuilder {
+    @Autowired
     private ValuesPreProcessing valuesPreProcessing;
+    @Autowired
+    private IOrderQuery orderQuery;
 
     @Override
     public MultiSignParam buildMulti(String orderNo, List<ContractConfigure> contractConfigures, String captcha) {
@@ -59,12 +69,38 @@ public class SignParamsBuilderImpl implements SignParamsBuilder {
         for (ConfigureParty configureParty : contractConfigure.getConfigureParties()) {
             switch (configureParty.getType()) {
                 case FINANCE_LEASING_HEAD:
+                    Party flhParty = new Party();
+                    flhParty.setName("融租总公司");
+                    flhParty.setNumber("00000");
+                    flhParty.setPartyType(PartyType.self_company);
+                    flhParty.setPlatformSign(true);
+                    parties.add(flhParty);
                     break;
                 case CAR_SERVICE:
+                    Party csParty = new Party();
+                    csParty.setName("汽服总公司");
+                    csParty.setNumber("00000");
+                    csParty.setPartyType(PartyType.self_company);
+                    csParty.setPlatformSign(true);
+                    parties.add(csParty);
                     break;
                 case SHOP:
+                    ShopInfo shopInfo = orderQuery.shop(orderNo);
+                    Party shopParty = new Party();
+                    shopParty.setName(shopInfo.getName());
+                    shopParty.setNumber(shopInfo.getCreditCode());
+                    shopParty.setCreatorMobile(shopInfo.getSalePersonMobile());
+                    shopParty.setCreatorNumber(shopInfo.getSalePersonIdCardNo());
+                    shopParty.setCreatorName(shopInfo.getSalePersonName());
+                    parties.add(shopParty);
                     break;
                 case CUSTOMER:
+                    CustomerInfo customer = orderQuery.customer(orderNo);
+                    Party cusParty = new Party();
+                    cusParty.setName(customer.getName());
+                    cusParty.setNumber(customer.getIdCardNo());
+                    cusParty.setMobile(customer.getMobile());
+                    parties.add(cusParty);
                     break;
                 case MORTGAGE:
                     break;

@@ -8,6 +8,9 @@ import cherry.demo.order.core.infrastructure.contract.common.ContractNoKeyGenera
 import cherry.demo.order.core.infrastructure.contract.configure.element.rule.ExternRule;
 import cherry.demo.order.core.infrastructure.contract.configure.element.rule.InternRule;
 import cherry.demo.order.core.infrastructure.contract.configure.element.rule.Rule;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
@@ -15,12 +18,14 @@ import java.util.*;
  * @author lee
  * @date 2022/11/4
  */
+@Slf4j
+@Component
 public class ValuesPreProcessingImpl implements ValuesPreProcessing {
-    static Map<String, Map<String, Object>> orderCacheValues = new HashMap<>(4);
-
-    private Sql sql;
-
+    private static Map<String, Map<String, Object>> orderCacheValues = new HashMap<>(4);
     private Map<String, IBuildExternValues> buildExternValuesMap;
+
+    @Autowired
+    private Sql sql;
 
     @Override
     public void cache(String orderNo, List<ContractConfigure> contractConfigures) {
@@ -114,6 +119,7 @@ public class ValuesPreProcessingImpl implements ValuesPreProcessing {
         sqlBuilder.append(orderNo);
         sqlBuilder.append(";");
 
+        log.info(sqlBuilder.toString());
         values.putAll(sql.queryExecute(sqlBuilder.toString()));
     }
 

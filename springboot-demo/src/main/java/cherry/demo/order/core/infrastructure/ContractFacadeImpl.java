@@ -6,6 +6,8 @@ import cherry.demo.order.api.dto.SignedContractDTO;
 import cherry.demo.order.core.adapter.ContractFlow;
 import cherry.demo.order.core.domain.IOrderDomainService;
 import cherry.demo.order.core.domain.model.Contract;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -13,8 +15,11 @@ import java.util.List;
  * @author lee
  * @date 2022/11/16
  */
+@Component
 public class ContractFacadeImpl implements IContractFacade {
+    @Autowired
     private ContractFlow contractFlow;
+    @Autowired
     private IOrderDomainService orderDomainService;
 
     @Override

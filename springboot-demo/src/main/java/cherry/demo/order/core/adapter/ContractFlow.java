@@ -12,6 +12,8 @@ import cherry.demo.order.remote.ContractApi;
 import cherry.demo.order.remote.dto.ContractDTO;
 import cherry.demo.order.remote.dto.ContractElementDTO;
 import cherry.demo.order.remote.dto.MultiSignParam;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -25,11 +27,16 @@ import java.util.stream.Collectors;
  * @author lee
  * @date 2022/11/7
  */
+@Component
 public class ContractFlow {
-    SignParamsBuilder signParamsBuilder;
-    ContractConfigureQuery contractConfigureQuery;
-    IOrderQuery orderQuery;
-    ContractApi contractApi;
+    @Autowired
+    private SignParamsBuilder signParamsBuilder;
+    @Autowired
+    private ContractConfigureQuery contractConfigureQuery;
+    @Autowired
+    private IOrderQuery orderQuery;
+    @Autowired
+    private ContractApi contractApi;
     /**
      * 待签合同列表
      *

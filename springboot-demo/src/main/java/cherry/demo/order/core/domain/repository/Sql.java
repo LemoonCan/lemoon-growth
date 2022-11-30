@@ -7,5 +7,10 @@ import java.util.Map;
  * @date 2022/11/29
  */
 public interface Sql {
+    /**
+     * 查询 SQL 执行
+     * @param sql
+     * @return
+     */
     Map<String,Object> queryExecute(String sql);
 }

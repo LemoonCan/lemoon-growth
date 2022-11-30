@@ -7,6 +7,7 @@ import cherry.demo.order.core.infrastructure.contract.configure.element.format.M
 import cherry.demo.order.core.infrastructure.contract.configure.element.format.NoFormat;
 import cherry.demo.order.core.infrastructure.contract.configure.element.rule.InternRule;
 import cherry.demo.order.core.infrastructure.contract.configure.element.rule.Rule;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -17,6 +18,7 @@ import java.util.Map;
  * @author lee
  * @date 2022/11/7
  */
+@Component
 public class ContractConfigureQueryImpl implements ContractConfigureQuery {
     @Override
     public List<ContractConfigure> businessContract(BizModel model) {

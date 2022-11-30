@@ -1,11 +1,14 @@
 package cherry.demo.order.remote.dto;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
  * @author lee
  * @date 2022/11/4
  */
+@Data
 public class Party {
     private String smsCode;
     private Boolean safeSign = false;
