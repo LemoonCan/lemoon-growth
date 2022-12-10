@@ -2,6 +2,7 @@ package designpattern.behavior.visitor.other;
 
 import designpattern.behavior.visitor.PdfFile;
 import designpattern.behavior.visitor.PptFile;
+import designpattern.behavior.visitor.ResourceFile;
 import designpattern.behavior.visitor.WordFile;
 
 /**

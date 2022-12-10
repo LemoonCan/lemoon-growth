@@ -19,11 +19,13 @@ public class Demo {
         List<ResourceFile> resourceFiles = Arrays.asList(pdf,word,ppt);
 
         Extractor extractor = new Extractor();
+        //extractor.visit(pdf);
         for (ResourceFile file:resourceFiles){
             file.accept(extractor);
         }
 
         Compressor compressor = new Compressor();
+        //compressor.visit(pdf);
         for (ResourceFile file:resourceFiles){
             file.accept(compressor);
         }
