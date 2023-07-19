@@ -1,4 +1,4 @@
-package com.souche.finance.trade.center.domain.datamodel.material;
+package javabasic.dynamic.reflect.demo;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -16,7 +16,7 @@ public class RuleFactory {
         ruleMap.put(FileQuantityRule.ID, FileQuantityRule.class);
     }
 
-    public static Rule<?> createRule(String identity, Object[] params) {
+    public static Rule<AbstractDataBlock<?>> createRule(String identity, Object[] params) {
         Class<?> clazz = ruleMap.get(identity);
         if(clazz == null){
             throw new RuntimeException("rule not found");
@@ -35,7 +35,7 @@ public class RuleFactory {
                         }
                     }
                     if(match){
-                        return (Rule<?>) constructor.newInstance(params);
+                        return (Rule<AbstractDataBlock<?>>) constructor.newInstance(params);
                     }
                 }
             }

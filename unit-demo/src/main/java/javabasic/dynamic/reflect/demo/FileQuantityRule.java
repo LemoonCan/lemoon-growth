@@ -1,4 +1,4 @@
-package com.souche.finance.trade.center.domain.datamodel.material;
+package javabasic.dynamic.reflect.demo;
 
 /**
  * @author lee
@@ -6,10 +6,12 @@ package com.souche.finance.trade.center.domain.datamodel.material;
  */
 public class FileQuantityRule implements Rule<FileBlock>{
     public static final String ID = "fileQuantityRule";
-    private final int quantity;
+    private final Integer lowNumber;
+    private final Integer highNumber;
 
-    public FileQuantityRule(int quantity){
-        this.quantity = quantity;
+    public FileQuantityRule(Integer lowNumber, Integer highNumber){
+        this.lowNumber = lowNumber;
+        this.highNumber = highNumber;
     }
 
     @Override
@@ -19,8 +21,6 @@ public class FileQuantityRule implements Rule<FileBlock>{
 
     @Override
     public void verify(FileBlock block) {
-        if (block.getValue().size() != quantity) {
-            throw new IllegalArgumentException(String.format("材料数量不符,应为%s",quantity));
-        }
+        System.out.printf("fileQuantityRule verify: lowNumber %s,highNumber %s", lowNumber, highNumber);
     }
 }
