@@ -15,7 +15,7 @@ public class IdGenerator_InnerStaticClass {
         private static final IdGenerator_InnerStaticClass instance = new IdGenerator_InnerStaticClass();
     }
 
-    public IdGenerator_InnerStaticClass getInstance() {
+    public static IdGenerator_InnerStaticClass getInstance() {
         return IdGeneratorHolder.instance;
     }
 
