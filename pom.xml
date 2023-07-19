@@ -156,12 +156,12 @@
         <repository>
             <id>mvn-repository</id>
             <name>mvn repository</name>
-            <url>http://mvnrepository.com/</url>
+            <url>https://mvnrepository.com/</url>
         </repository>
         <repository>
             <id>aliyun-repository</id>
             <name>aliyun repository</name>
-            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+            <url>https://maven.aliyun.com/nexus/content/repositories/central/</url>
         </repository>
     </repositories>
     <!--插件远程仓库地址-->
@@ -169,12 +169,12 @@
         <pluginRepository>
             <id>mvn-repository</id>
             <name>mvn repository</name>
-            <url>http://mvnrepository.com/</url>
+            <url>https://mvnrepository.com/</url>
         </pluginRepository>
         <pluginRepository>
             <id>aliyun-repository</id>
             <name>aliyun repository</name>
-            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+            <url>https://maven.aliyun.com/nexus/content/repositories/central/</url>
         </pluginRepository>
 
         <!-- Spring插件远程仓库地址 start -->
@@ -198,8 +198,8 @@
                     <version>3.8.0</version>
                     <!--配置编译的jdk版本-->
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
+                        <source>1.19</source>
+                        <target>1.19</target>
                     </configuration>
                 </plugin>
                 <plugin>

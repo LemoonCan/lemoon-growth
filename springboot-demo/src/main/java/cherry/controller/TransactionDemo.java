@@ -3,10 +3,8 @@ package cherry.controller;
 import cherry.service.transaction.OrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/transaction")
 @Api(value = "事务测试")
 public class TransactionDemo {
-    @Autowired
-    PlatformTransactionManager transactionManager;
+    private final PlatformTransactionManager transactionManager;
 
-    @Autowired
-    private OrderService orderService;
+    private final OrderService orderService;
+
+    public TransactionDemo(PlatformTransactionManager transactionManager, OrderService orderService) {
+        this.transactionManager = transactionManager;
+        this.orderService = orderService;
+    }
 
     void update() {
         DefaultTransactionDefinition definition = new DefaultTransactionDefinition();

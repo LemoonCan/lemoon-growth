@@ -5,7 +5,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.aop.framework.AopContext;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,8 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/aop")
 @Api(value = "aop-测试")
 public class AopDemo {
-    @Autowired
-    private AService a;
+    private final AService a;
+
+    public AopDemo(AService a) {
+        this.a = a;
+    }
 
     @RequestMapping(method = RequestMethod.POST, value = "/coming")
     @ApiOperation(value = "光临")

@@ -1,6 +1,5 @@
 package cherry.service.aop;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,8 +8,11 @@ import org.springframework.stereotype.Component;
  */
 @Component("aService")
 public class AService {
-    @Autowired
-    private BService b;
+    private final BService b;
+
+    public AService(BService b) {
+        this.b = b;
+    }
 
     public void invoke(){
         System.out.println("Executing a...");
