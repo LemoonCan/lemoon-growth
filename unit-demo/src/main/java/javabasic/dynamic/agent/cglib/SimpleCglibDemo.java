@@ -38,7 +38,7 @@ public class SimpleCglibDemo {
     }
 
     public static void main(String[] args) {
-        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/lemoncandy/Desktop/WorkSpace/Demo/back-end/lemoon-growth/cglib");
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "unit-demo/target/cglib");
         RealService proxyService = getProxy(RealService.class);
         proxyService.sayHello();
     }

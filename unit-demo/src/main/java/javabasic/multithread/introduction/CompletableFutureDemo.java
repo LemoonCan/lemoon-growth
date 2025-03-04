@@ -6,7 +6,7 @@ import java.util.concurrent.*;
  * @author lee
  * @date 2022/6/14
  */
-public class CompletableFutureTest {
+public class CompletableFutureDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //1.使用CompletableFuture内部线程
         CompletableFuture<String> cf1 = CompletableFuture.supplyAsync(() -> {
