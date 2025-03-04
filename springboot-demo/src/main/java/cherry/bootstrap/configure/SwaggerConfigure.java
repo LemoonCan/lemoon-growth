@@ -13,7 +13,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 /**
  * @author lee
  * @date 7/15/21
- * 默认访问地址：http://localhost:8080/swagger-ui/index.html
+ * 默认访问地址：/swagger-ui/index.html
  */
 @Configuration
 @EnableOpenApi
