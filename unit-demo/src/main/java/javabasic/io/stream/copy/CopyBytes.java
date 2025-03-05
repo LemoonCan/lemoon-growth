@@ -1,14 +1,19 @@
-package javabasic.io.stream;
+package javabasic.io.stream.copy;
+
+import javabasic.io.stream.Path;
 
 import java.io.*;
 
 /**
- * ByteStream 只推荐用在原始IO
+ * Byte Stream 只推荐用在原始IO,一次读1byte
+ * 继承自InputStream、OutputStream
+ *
  * @author lee
  * @since 2025/3/4
  */
 public class CopyBytes {
     public static void main(String[] args) throws IOException {
+        Path.checkOutputDir();
         //查看当前工作目录
         System.out.println(System.getProperty("user.dir"));
         FileInputStream in = null;
@@ -16,13 +21,8 @@ public class CopyBytes {
 
         try {
             //linux系统 非/开头为使用相对路径，/开头为使用绝对路径
-            in = new FileInputStream("unit-demo/src/main/resource/io/太空船.txt");
-
-            String directoryPath = "unit-demo/target/resource/io";
-            String outName = directoryPath + "/太空船副本.txt";
-            File directory = new File(directoryPath);
-            directory.mkdirs();
-            out = new FileOutputStream(outName);
+            in = new FileInputStream(Path.SPACECRAFT);
+            out = new FileOutputStream(Path.OUTPUT_DIR + "太空船副本.txt");
 
             int c;
             //循环读取：每次读1byte
