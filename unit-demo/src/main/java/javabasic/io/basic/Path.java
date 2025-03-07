@@ -1,4 +1,4 @@
-package javabasic.io.stream;
+package javabasic.io.basic;
 
 import java.io.File;
 

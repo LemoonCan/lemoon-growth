@@ -1,6 +1,6 @@
-package javabasic.io.stream.scan;
+package javabasic.io.basic.scan;
 
-import javabasic.io.stream.Path;
+import javabasic.io.basic.Path;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

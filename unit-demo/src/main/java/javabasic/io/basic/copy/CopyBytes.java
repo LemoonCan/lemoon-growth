@@ -1,6 +1,6 @@
-package javabasic.io.stream.copy;
+package javabasic.io.basic.copy;
 
-import javabasic.io.stream.Path;
+import javabasic.io.basic.Path;
 
 import java.io.*;
 
