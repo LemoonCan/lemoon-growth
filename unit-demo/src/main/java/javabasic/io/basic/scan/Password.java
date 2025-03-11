@@ -1,4 +1,4 @@
-package javabasic.io.basic;
+package javabasic.io.basic.scan;
 
 import java.io.Console;
 import java.util.Arrays;

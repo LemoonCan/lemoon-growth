@@ -1,4 +1,4 @@
-package javabasic.io.basic.copy;
+package javabasic.io.basic.diffstream;
 
 import javabasic.io.basic.Path;
 

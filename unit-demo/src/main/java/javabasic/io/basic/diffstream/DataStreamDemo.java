@@ -1,4 +1,6 @@
-package javabasic.io.basic;
+package javabasic.io.basic.diffstream;
+
+import javabasic.io.basic.Path;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
