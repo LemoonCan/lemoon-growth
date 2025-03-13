@@ -1,6 +1,6 @@
 package javabasic.io.basic.diffstream;
 
-import javabasic.io.basic.Path;
+import javabasic.io.basic.PathManager;
 
 import java.io.*;
 
@@ -13,7 +13,7 @@ import java.io.*;
  */
 public class CopyBytes {
     public static void main(String[] args) throws IOException {
-        Path.checkOutputDir();
+        PathManager.checkOutputDir();
         //查看当前工作目录
         System.out.println(System.getProperty("user.dir"));
         FileInputStream in = null;
@@ -21,8 +21,8 @@ public class CopyBytes {
 
         try {
             //linux系统 非/开头为使用相对路径，/开头为使用绝对路径
-            in = new FileInputStream(Path.SPACECRAFT);
-            out = new FileOutputStream(Path.OUTPUT_DIR + "太空船副本.txt");
+            in = new FileInputStream(PathManager.SPACECRAFT);
+            out = new FileOutputStream(PathManager.OUTPUT_DIR + "太空船副本.txt");
 
             int c;
             //循环读取：每次读1byte

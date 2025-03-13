@@ -1,6 +1,6 @@
 package javabasic.io.basic.diffstream;
 
-import javabasic.io.basic.Path;
+import javabasic.io.basic.PathManager;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -15,10 +15,10 @@ import java.io.IOException;
  */
 public class CopyCharacters {
     public static void main(String[] args) throws IOException {
-        Path.checkOutputDir();
+        PathManager.checkOutputDir();
         try (
-                FileReader fileReader = new FileReader(Path.SPACECRAFT);
-                FileWriter fileWriter = new FileWriter(Path.OUTPUT_DIR + "太空船副本char.txt")
+                FileReader fileReader = new FileReader(PathManager.SPACECRAFT);
+                FileWriter fileWriter = new FileWriter(PathManager.OUTPUT_DIR + "太空船副本char.txt")
         ) {
             int c;
             while ((c = fileReader.read()) != -1) {

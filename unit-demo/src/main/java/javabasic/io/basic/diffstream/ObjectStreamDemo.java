@@ -1,6 +1,6 @@
 package javabasic.io.basic.diffstream;
 
-import javabasic.io.basic.Path;
+import javabasic.io.basic.PathManager;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -24,11 +24,11 @@ public class ObjectStreamDemo {
         inner.put("x","xx");
         inner.put("y","yy");
 
-        try (ObjectOutputStream output = new ObjectOutputStream(Files.newOutputStream(Paths.get(Path.OUTPUT_DIR + dataFile)))) {
+        try (ObjectOutputStream output = new ObjectOutputStream(Files.newOutputStream(Paths.get(PathManager.OUTPUT_DIR + dataFile)))) {
             output.writeObject(map);
         }
 
-        try(ObjectInputStream input = new ObjectInputStream(Files.newInputStream(Paths.get(Path.OUTPUT_DIR + dataFile)))){
+        try(ObjectInputStream input = new ObjectInputStream(Files.newInputStream(Paths.get(PathManager.OUTPUT_DIR + dataFile)))){
             Map<String, Object> newMap = (Map<String, Object>) input.readObject();
             System.out.println(newMap);
         } catch (ClassNotFoundException e) {

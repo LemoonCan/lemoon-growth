@@ -1,6 +1,6 @@
 package javabasic.io.basic.diffstream;
 
-import javabasic.io.basic.Path;
+import javabasic.io.basic.PathManager;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,8 +12,8 @@ import java.io.IOException;
  */
 public class BufferedStreamDemo {
     public static void main(String[] args) throws IOException {
-        markAndReset(Path.SPACECRAFT);
-        markAndResetInvalid(Path.SPACECRAFT);
+        markAndReset(PathManager.SPACECRAFT);
+        markAndResetInvalid(PathManager.SPACECRAFT);
     }
 
     public static void markAndReset(String file) throws IOException {

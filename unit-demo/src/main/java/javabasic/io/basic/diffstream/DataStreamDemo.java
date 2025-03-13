@@ -1,6 +1,6 @@
 package javabasic.io.basic.diffstream;
 
-import javabasic.io.basic.Path;
+import javabasic.io.basic.PathManager;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -28,7 +28,7 @@ public class DataStreamDemo {
     };
 
     public static void main(String[] args) throws IOException {
-        try (DataOutputStream out = new DataOutputStream(Files.newOutputStream(Paths.get(Path.OUTPUT_DIR + dataFile)))) {
+        try (DataOutputStream out = new DataOutputStream(Files.newOutputStream(Paths.get(PathManager.OUTPUT_DIR + dataFile)))) {
             for (int i = 0; i < prices.length; i++) {
                 out.writeDouble(prices[i]);
                 out.writeInt(units[i]);
@@ -38,7 +38,7 @@ public class DataStreamDemo {
 
         DataInputStream in = null;
         try {
-            in = new DataInputStream(Files.newInputStream(Paths.get(Path.OUTPUT_DIR + dataFile)));
+            in = new DataInputStream(Files.newInputStream(Paths.get(PathManager.OUTPUT_DIR + dataFile)));
             while (true) {
                 double price = in.readDouble();
                 int unit = in.readInt();

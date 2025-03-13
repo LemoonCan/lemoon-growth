@@ -1,6 +1,6 @@
 package javabasic.io.basic.diffstream;
 
-import javabasic.io.basic.Path;
+import javabasic.io.basic.PathManager;
 
 import java.io.*;
 
@@ -12,10 +12,10 @@ import java.io.*;
  */
 public class CopyLines {
     public static void main(String[] args) throws IOException {
-        Path.checkOutputDir();
+        PathManager.checkOutputDir();
         try (
-                BufferedReader br = new BufferedReader(new FileReader(Path.SPACECRAFT));
-                PrintWriter pw = new PrintWriter(new FileWriter(Path.OUTPUT_DIR + "太空船副本line.txt"))
+                BufferedReader br = new BufferedReader(new FileReader(PathManager.SPACECRAFT));
+                PrintWriter pw = new PrintWriter(new FileWriter(PathManager.OUTPUT_DIR + "太空船副本line.txt"))
         ) {
             String s;
             while ((s = br.readLine()) != null) {

@@ -1,6 +1,6 @@
 package javabasic.io.basic.scan;
 
-import javabasic.io.basic.Path;
+import javabasic.io.basic.PathManager;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class ScanSum {
     public static void main(String[] args) throws FileNotFoundException {
-        try (Scanner scanner = new Scanner(new BufferedReader(new FileReader(Path.NUMS)))) {
+        try (Scanner scanner = new Scanner(new BufferedReader(new FileReader(PathManager.NUMS)))) {
             scanner.useLocale(Locale.US);
             double sum = 0;
             while (scanner.hasNext()) {
