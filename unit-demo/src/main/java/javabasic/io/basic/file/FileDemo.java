@@ -3,17 +3,22 @@ package javabasic.io.basic.file;
 import com.alibaba.fastjson2.JSON;
 import javabasic.io.basic.PathManager;
 
+import java.io.BufferedOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.PosixFileAttributes;
 import java.nio.file.attribute.PosixFilePermissions;
 
+import static java.nio.file.StandardOpenOption.APPEND;
+import static java.nio.file.StandardOpenOption.CREATE;
+
 /**
  * @author lee
  * @since 2025/3/15
  */
-public class FileCopy {
+public class FileDemo {
     public static void main(String[] args) throws IOException, InterruptedException {
         Path file = Paths.get(PathManager.SPACECRAFT);
         //零拷贝实现文件复制
@@ -44,6 +49,14 @@ public class FileCopy {
         System.out.println("Total space: " + total + " GB");
         System.out.println("Used space: " + used + " GB");
         System.out.println("Available space: " + avail + " GB");
+
+        byte[] data = "Hello World! ".getBytes();
+        Path p = Paths.get(PathManager.OUTPUT_DIR + "logfile.txt");
+        //文件不存在新建，存在追加
+        try (OutputStream out = new BufferedOutputStream(
+                Files.newOutputStream(p, CREATE, APPEND))) {
+            out.write(data, 0, data.length);
+        }
     }
 
     private static long byteToGB(long bytes) {
