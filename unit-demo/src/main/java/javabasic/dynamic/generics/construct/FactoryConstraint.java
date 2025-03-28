@@ -2,7 +2,7 @@ package javabasic.dynamic.generics.construct;
 
 /**
  * @author lee
- * @date 2020-09-17
+ * @since 2020-09-17
  *
  * 场景？
  * 这样需要为类再创建一个工厂实现

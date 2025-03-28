@@ -2,7 +2,7 @@ package javabasic.multithread;
 
 /**
  * @author lee
- * @date 2020-07-13
+ * @since 2020-07-13
  */
 public class BlockedTest {
     public static void main(String[] args) throws InterruptedException {

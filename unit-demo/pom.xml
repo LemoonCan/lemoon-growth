@@ -61,10 +61,4 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-        <finalName>unit-demo</finalName>
-        <plugins>
-        </plugins>
-    </build>
 </project>

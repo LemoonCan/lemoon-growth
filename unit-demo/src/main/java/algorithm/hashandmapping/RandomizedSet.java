@@ -7,7 +7,7 @@ import java.util.*;
  * https://leetcode-cn.com/problems/insert-delete-getrandom-o1/
  *
  * @author lee
- * @date 2022/2/12
+ * @since 2022/2/12
  */
 public class RandomizedSet {
     Map<Integer, Integer> dict;

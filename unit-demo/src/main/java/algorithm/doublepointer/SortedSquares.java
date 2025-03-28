@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 2021/10/10
+ * @since 2021/10/10
  *
  * 升序排序的整数数组nums，
  * 平方后仍按按递增排序。

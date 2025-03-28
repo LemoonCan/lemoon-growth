@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 6/6/21
+ * @since 6/6/21
  */
 @Aspect({ServiceA.class, ServiceB.class})
 public class ServiceLogAspect {

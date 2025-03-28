@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 /**
  * @author lee
- * @date 2020-07-06
+ * @since 2020-07-06
  */
 public class ArrayListTest {
     private static List<String> list = new ArrayList<>();

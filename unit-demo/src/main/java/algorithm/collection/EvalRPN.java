@@ -7,7 +7,7 @@ import java.util.Stack;
  * https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/
  *
  * @author lee
- * @date 2022/1/20
+ * @since 2022/1/20
  */
 public class EvalRPN {
     public static void main(String[] args) {

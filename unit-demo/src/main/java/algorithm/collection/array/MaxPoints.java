@@ -7,7 +7,7 @@ import java.util.Map;
  * 直线上最多的点数
  * https://leetcode-cn.com/problems/max-points-on-a-line/
  * @author lee
- * @date 2022/1/4
+ * @since 2022/1/4
  */
 public class MaxPoints {
     public static void main(String[] args) {

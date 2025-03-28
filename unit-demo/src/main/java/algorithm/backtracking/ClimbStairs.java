@@ -11,7 +11,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/climbing-stairs/
  *
  * @author lee
- * @date 2021/10/29
+ * @since 2021/10/29
  */
 public class ClimbStairs {
     public static void main(String[] args) {

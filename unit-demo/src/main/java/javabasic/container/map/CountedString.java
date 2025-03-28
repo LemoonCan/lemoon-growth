@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @author lee
- * @date 2020-09-24
+ * @since 2020-09-24
  */
 public class CountedString {
     private static List<String> created = new ArrayList<>();

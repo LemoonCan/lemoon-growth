@@ -2,7 +2,7 @@ package designpattern.behavior.callback.async;
 
 /**
  * @author lee
- * @date 2022/10/13
+ * @since 2022/10/13
  */
 public class AClass {
     public static void main(String[] args) {

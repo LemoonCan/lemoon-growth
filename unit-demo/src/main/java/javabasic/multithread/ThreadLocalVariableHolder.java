@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-11-25
+ * @since 2020-11-25
  * ThreadLocal 可以使用相同变量为不同线程创建不同的存储，根除对变量的共享。
  */
 public class ThreadLocalVariableHolder {

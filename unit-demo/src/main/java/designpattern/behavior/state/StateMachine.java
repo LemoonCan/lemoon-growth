@@ -4,7 +4,7 @@ import designpattern.behavior.state.classify.IMario;
 
 /**
  * @author lee
- * @date 2022/10/18
+ * @since 2022/10/18
  */
 public class StateMachine {
     private IMario curState;

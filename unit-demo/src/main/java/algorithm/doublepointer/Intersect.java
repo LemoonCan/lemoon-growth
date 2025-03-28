@@ -7,7 +7,7 @@ import java.util.Arrays;
  * https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/
  *
  * @author lee
- * @date 2022/1/7
+ * @since 2022/1/7
  */
 public class Intersect {
     public static void main(String[] args) {

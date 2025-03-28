@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
  * @author lee
- * @date 2022/10/25
+ * @since 2022/10/25
  */
 public class ExpressionInterpreter {
     private Deque<Expression> nums = new LinkedList<>();

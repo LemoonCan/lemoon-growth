@@ -8,7 +8,7 @@ import static javabasic.container.map.EnumMapTest.Size.SMALL;
 
 /**
  * @author lee
- * @date 6/28/21
+ * @since 6/28/21
  */
 public class EnumMapTest {
     public static void main(String[] args) {

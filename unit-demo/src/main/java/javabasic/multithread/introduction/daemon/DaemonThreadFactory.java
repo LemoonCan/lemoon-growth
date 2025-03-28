@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadFactory;
 
 /**
  * @author lee
- * @date 2020-11-09
+ * @since 2020-11-09
  */
 public class DaemonThreadFactory implements ThreadFactory {
     @Override

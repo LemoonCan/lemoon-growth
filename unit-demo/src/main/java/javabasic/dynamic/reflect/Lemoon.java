@@ -2,7 +2,7 @@ package javabasic.dynamic.reflect;
 
 /**
  * @author lee
- * @date 5/27/21
+ * @since 5/27/21
  */
 public class Lemoon {
     private String can;

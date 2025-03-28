@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @author lee
- * @date 2020-09-22
+ * @since 2020-09-22
  */
 public class CheckedList {
     public static void oldStyleMethod(List probablyDogs){

@@ -2,7 +2,7 @@ package javabasic.exception;
 
 /**
  * @author lee
- * @date 2020-09-04
+ * @since 2020-09-04
  */
 public class StormyInning extends Inning implements Stormy {
     public static void main(String[] args) {

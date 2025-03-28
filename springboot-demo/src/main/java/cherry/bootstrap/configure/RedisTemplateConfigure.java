@@ -6,7 +6,7 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 
 /**
  * @author lee
- * @date 7/14/21
+ * @since 7/14/21
  */
 @Configuration
 public class RedisTemplateConfigure {

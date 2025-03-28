@@ -5,7 +5,7 @@ import designpattern.creational.factory.Car;
 
 /**
  * @author lee
- * @date 2022/10/3
+ * @since 2022/10/3
  */
 public class BenzCarFactory implements ICarFactory {
     @Override

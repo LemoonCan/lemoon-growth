@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/edit-distance/
  *
  * @author lee
- * @date 2021/12/24
+ * @since 2021/12/24
  */
 public class MinDistance2 {
     public static void main(String[] args) {

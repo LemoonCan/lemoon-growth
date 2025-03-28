@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/integer-break/
  *
  * @author lee
- * @date 2021/12/28
+ * @since 2021/12/28
  */
 public class IntegerBreak {
     public static void main(String[] args) {

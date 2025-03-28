@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 枚举
  * @author lee
- * @date 2022/10/2
+ * @since 2022/10/2
  */
 public enum IdGenerator_Enum {
     INSTANCE;

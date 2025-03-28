@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 摆动排序2
  *
  * @author lee
- * @date 2022/3/16
+ * @since 2022/3/16
  */
 public class WiggleSort {
     public static void main(String[] args) {

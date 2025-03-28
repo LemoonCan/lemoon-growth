@@ -5,7 +5,7 @@ package algorithm.doublepointer;
  * 输入：s = ["h","e","l","l","o"]
  * 输出：["o","l","l","e","h"]
  * @author lee
- * @date 2021/10/13
+ * @since 2021/10/13
  */
 public class reverseString {
     public void reverseString(char[] s) {

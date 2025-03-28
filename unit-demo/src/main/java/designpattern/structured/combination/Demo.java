@@ -3,7 +3,7 @@ package designpattern.structured.combination;
 /**
  * 组合模式构建文件系统
  * @author lee
- * @date 2022/10/10
+ * @since 2022/10/10
  */
 public class Demo {
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ package algorithm.backtracking;
  * https://leetcode-cn.com/problems/word-search/
  *
  * @author lee
- * @date 2021/12/10
+ * @since 2021/12/10
  */
 public class Exist {
     public static void main(String[] args) {

@@ -7,7 +7,7 @@ import algorithm.ListNode;
  * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
  *
  * @author lee
- * @date 2021/11/7
+ * @since 2021/11/7
  */
 public class DeleteDuplicates {
     public static void main(String[] args) {

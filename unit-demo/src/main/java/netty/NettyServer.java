@@ -11,7 +11,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * @author lee
- * @date 7/22/21
+ * @since 7/22/21
  */
 public class NettyServer {
     public static void main(String[] args) throws Exception{

@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 /**
  * @author lee
- * @date 2022/6/14
+ * @since 2022/6/14
  */
 public class CompletableFutureDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {

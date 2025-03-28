@@ -2,7 +2,7 @@ package console;
 
 /**
  * @author lee
- * @date 6/1/21
+ * @since 6/1/21
  * 彩色打印
  * https://cloud.tencent.com/developer/article/1142372
  */

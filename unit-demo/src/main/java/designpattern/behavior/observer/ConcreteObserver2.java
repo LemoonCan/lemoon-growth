@@ -2,7 +2,7 @@ package designpattern.behavior.observer;
 
 /**
  * @author lee
- * @date 2022/10/12
+ * @since 2022/10/12
  */
 public class ConcreteObserver2 implements Observer{
     @Override

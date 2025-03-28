@@ -5,7 +5,7 @@ import algorithm.ListNode;
 /**
  * 合并有序链表
  * @author lee
- * @date 2021/10/22
+ * @since 2021/10/22
  */
 public class MergeTwoLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

@@ -5,7 +5,7 @@ package algorithm.bit;
  * https://leetcode-cn.com/problems/number-of-1-bits/
  *
  * @author lee
- * @date 2021/11/3
+ * @since 2021/11/3
  */
 public class HammingWeight {
     public int hammingWeight(int n) {

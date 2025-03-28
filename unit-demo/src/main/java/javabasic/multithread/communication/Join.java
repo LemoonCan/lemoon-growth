@@ -2,7 +2,7 @@ package javabasic.multithread.communication;
 
 /**
  * @author lee
- * @date 2020-07-14
+ * @since 2020-07-14
  * 1.线程A调用线程B的join方法，线程A需等待线程B执行完毕
  * 2.线程A调用线程B的join方法，若线程A被中断，线程A会抛出 InterruptedException 而结束
  */

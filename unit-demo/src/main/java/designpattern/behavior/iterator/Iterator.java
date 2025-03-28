@@ -2,7 +2,7 @@ package designpattern.behavior.iterator;
 
 /**
  * @author lee
- * @date 2022/10/19
+ * @since 2022/10/19
  */
 public interface Iterator<E> {
     boolean hasNext();

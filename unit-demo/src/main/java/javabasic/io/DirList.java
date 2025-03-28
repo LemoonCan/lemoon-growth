@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 /**
  * @author lee
- * @date 3/31/21
+ * @since 3/31/21
  */
 public class DirList {
     public static void main(String[] args) {

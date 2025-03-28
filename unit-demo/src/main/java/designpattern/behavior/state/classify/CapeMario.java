@@ -5,7 +5,7 @@ import designpattern.behavior.state.StateMachine;
 
 /**
  * @author lee
- * @date 2022/10/18
+ * @since 2022/10/18
  */
 public class CapeMario implements IMario{
     private State state = State.CAPE;

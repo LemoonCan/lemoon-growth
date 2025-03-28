@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 /**
  * @author lee
- * @date 2020-09-23
+ * @since 2020-09-23
  */
 public class TypeForSet {
     static <T> Set<T> fill(Set<T> set, Class<T> type) {

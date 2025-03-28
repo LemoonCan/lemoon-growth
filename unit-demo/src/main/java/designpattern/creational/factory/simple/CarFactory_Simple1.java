@@ -7,7 +7,7 @@ import designpattern.creational.factory.Lamborghini;
 
 /**
  * @author lee
- * @date 2022/10/3
+ * @since 2022/10/3
  */
 public class CarFactory_Simple1 {
     public Car createCar(String type) throws InstantiationException {

@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 排序算法
  *
  * @author lee
- * @date 2019/9/12
+ * @since 2019/9/12
  */
 public class Sort {
     public static void main(String[] args) {

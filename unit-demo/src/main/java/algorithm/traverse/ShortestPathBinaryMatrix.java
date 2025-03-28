@@ -8,7 +8,7 @@ import java.util.Queue;
  * https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/
  *
  * @author lee
- * @date 2021/11/22
+ * @since 2021/11/22
  */
 public class ShortestPathBinaryMatrix {
     public static void main(String[] args) {

@@ -4,7 +4,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lee
- * @date 2020-07-06
+ * @since 2020-07-06
  */
 public class ReentrantLockTest {
     public static void main(String[] args) {

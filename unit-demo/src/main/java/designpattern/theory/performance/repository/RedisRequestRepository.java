@@ -5,7 +5,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author lee
- * @date 2022/9/29
+ * @since 2022/9/29
  */
 public class RedisRequestRepository implements IRequestRepository {
     private List<RequestRecordInfo> requestRecordInfos = new CopyOnWriteArrayList<>();

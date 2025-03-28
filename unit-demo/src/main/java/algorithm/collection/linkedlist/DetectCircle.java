@@ -9,7 +9,7 @@ import java.util.Set;
  * 环形链表2
  * https://leetcode-cn.com/problems/linked-list-cycle-ii/
  * @author lee
- * @date 2022/1/22
+ * @since 2022/1/22
  */
 public class DetectCircle {
     public ListNode detectCycle(ListNode head) {

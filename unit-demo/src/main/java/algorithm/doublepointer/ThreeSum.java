@@ -10,7 +10,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/3sum/
  *
  * @author lee
- * @date 2021/11/7
+ * @since 2021/11/7
  */
 public class ThreeSum {
     public static void main(String[] args) {

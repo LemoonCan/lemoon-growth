@@ -8,7 +8,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/all-paths-from-source-to-target/
  *
  * @author lee
- * @date 2021/11/24
+ * @since 2021/11/24
  */
 public class AllPathsSourceTarget {
     public static void main(String[] args) {

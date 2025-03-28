@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/arithmetic-slices/
  *
  * @author lee
- * @date 2021/12/16
+ * @since 2021/12/16
  */
 public class NumberOfArithmeticSlices {
     public static void main(String[] args) {

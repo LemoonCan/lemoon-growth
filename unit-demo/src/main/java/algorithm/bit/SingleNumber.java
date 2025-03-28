@@ -7,7 +7,7 @@ import java.util.Arrays;
  * https://leetcode-cn.com/problems/single-number/
  *
  * @author lee
- * @date 2020-06-23
+ * @since 2020-06-23
  *
  * 异或：相同为0，不同为1
  */

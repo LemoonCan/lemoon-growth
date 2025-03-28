@@ -10,7 +10,7 @@ import java.util.Vector;
 
 /**
  * @author lee
- * @date 2020-09-24
+ * @since 2020-09-24
  */
 public class Utilities {
     static List<String> list = Arrays.asList("one Two three Four five six one".split(" "));

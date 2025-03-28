@@ -5,7 +5,7 @@ package algorithm.find.binarysearch;
  * https://leetcode-cn.com/problems/find-the-duplicate-number/
  *
  * @author lee
- * @date 2022/4/22
+ * @since 2022/4/22
  */
 public class FindDuplicate {
     public static void main(String[] args) {

@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lee
- * @date 2020-12-01
+ * @since 2020-12-01
  * 使用 condition.await、signal/signalAll 需获得显式的锁
  */
 public class WaxOMatic2 {

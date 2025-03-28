@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-12-11
+ * @since 2020-12-11
  */
 public class BankTellerSimulation {
     static final int MAX_LINE_SIZE = 50;

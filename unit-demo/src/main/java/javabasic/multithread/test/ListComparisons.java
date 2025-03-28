@@ -9,7 +9,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author lee
- * @date 12/30/20
+ * @since 12/30/20
  * 比较SynchronizedArrayList与CopyOnWriteList性能
  */
 public class ListComparisons {

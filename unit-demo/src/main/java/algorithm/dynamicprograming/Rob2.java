@@ -6,7 +6,7 @@ package algorithm.dynamicprograming;
  * (官方答案是从前往后偷)
  *
  * @author lee
- * @date 2021/12/11
+ * @since 2021/12/11
  */
 public class Rob2 {
     public static void main(String[] args) {

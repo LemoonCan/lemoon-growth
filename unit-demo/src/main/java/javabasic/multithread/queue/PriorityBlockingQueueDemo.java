@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-12-08
+ * @since 2020-12-08
  */
 public class PriorityBlockingQueueDemo {
     public static void main(String[] args) {

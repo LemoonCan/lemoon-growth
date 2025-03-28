@@ -9,7 +9,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/flatten-nested-list-iterator/
  *
  * @author lee
- * @date 2022/1/20
+ * @since 2022/1/20
  */
 public class NestedIterator2 implements Iterator<Integer> {
     List<Integer> list;

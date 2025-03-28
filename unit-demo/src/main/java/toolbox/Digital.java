@@ -3,7 +3,7 @@ package toolbox;
 /**
  * 数字工具
  * @author lee
- * @date 2022/2/9
+ * @since 2022/2/9
  */
 public class Digital {
     /**

@@ -2,7 +2,7 @@ package algorithm;
 
 /**
  * @author lee
- * @date 2022/2/13
+ * @since 2022/2/13
  */
 public class TreeNode {
     public int val;

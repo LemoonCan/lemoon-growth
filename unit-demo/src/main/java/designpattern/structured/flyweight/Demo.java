@@ -3,7 +3,7 @@ package designpattern.structured.flyweight;
 /**
  * Integer 缓存了-128~127的数据，应用了享元模式
  * @author lee
- * @date 2022/10/11
+ * @since 2022/10/11
  */
 public class Demo {
     public static void main(String[] args) {

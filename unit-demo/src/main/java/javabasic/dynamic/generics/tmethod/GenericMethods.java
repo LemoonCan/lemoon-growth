@@ -2,7 +2,7 @@ package javabasic.dynamic.generics.tmethod;
 
 /**
  * @author lee
- * @date 2020-09-11
+ * @since 2020-09-11
  */
 public class GenericMethods {
     public <T> void f(T x) {

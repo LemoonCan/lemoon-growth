@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @author lee
- * @date 6/1/21
+ * @since 6/1/21
  */
 public class GenericArrayTypeTest<T> {
     List<String>[] genClassArray;

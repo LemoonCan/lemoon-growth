@@ -9,7 +9,7 @@ package designpattern.structured.bridge;
  * 使用时可由使用方自由指定
  *
  * @author lee
- * @date 2022/10/8
+ * @since 2022/10/8
  */
 public abstract class Notification {
     private MsgSender msgSender;

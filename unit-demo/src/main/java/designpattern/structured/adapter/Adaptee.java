@@ -2,7 +2,7 @@ package designpattern.structured.adapter;
 
 /**
  * @author lee
- * @date 2022/10/9
+ * @since 2022/10/9
  */
 public class Adaptee {
     public void fa(){

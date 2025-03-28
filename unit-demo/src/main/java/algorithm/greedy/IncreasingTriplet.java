@@ -5,7 +5,7 @@ package algorithm.greedy;
  * https://leetcode-cn.com/problems/increasing-triplet-subsequence/
  *
  * @author lee
- * @date 2022/1/7
+ * @since 2022/1/7
  */
 public class IncreasingTriplet {
     public static void main(String[] args) {

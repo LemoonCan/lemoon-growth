@@ -10,7 +10,7 @@ import java.util.Set;
  * https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
  *
  * @author lee
- * @date 2022/2/7
+ * @since 2022/2/7
  */
 public class GetIntersectionNode {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

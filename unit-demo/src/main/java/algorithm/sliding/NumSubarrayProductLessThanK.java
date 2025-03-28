@@ -4,7 +4,7 @@ package algorithm.sliding;
  * 乘积小于K的子数组
  * https://leetcode-cn.com/problems/subarray-product-less-than-k/
  * @author lee
- * @date 2021/11/12
+ * @since 2021/11/12
  */
 public class NumSubarrayProductLessThanK {
     public static void main(String[] args) {

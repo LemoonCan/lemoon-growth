@@ -5,7 +5,7 @@ package algorithm.traverse;
  * https://leetcode-cn.com/problems/subtree-of-another-tree/
  *
  * @author lee
- * @date 2021/11/19
+ * @since 2021/11/19
  */
 public class SubTree {
     public static void main(String[] args) {

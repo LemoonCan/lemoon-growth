@@ -2,7 +2,7 @@ package algorithm.string;
 
 /**
  * @author lee
- * @date 2020-06-29
+ * @since 2020-06-29
  * 是否回文字符(只有数字和字母为有效字符)
  */
 public class IsPalindrome {

@@ -7,7 +7,7 @@ import java.util.Random;
  * https://leetcode-cn.com/problems/shuffle-an-array/
  *
  * @author lee
- * @date 2021/12/30
+ * @since 2021/12/30
  */
 public class Solution {
     int[] nums;

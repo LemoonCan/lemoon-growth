@@ -7,7 +7,7 @@ import algorithm.ListNode;
  * https://leetcode-cn.com/problems/7WHec2/
  *
  * @author lee
- * @date 2022/1/23
+ * @since 2022/1/23
  */
 public class SortList {
     /**

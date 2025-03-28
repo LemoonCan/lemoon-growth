@@ -2,7 +2,7 @@ package javabasic.multithread.communication.waitnotify;
 
 /**
  * @author lee
- * @date 2020-07-14
+ * @since 2020-07-14
  */
 public class WaitAndNotify {
     public static void main(String[] args) throws InterruptedException {

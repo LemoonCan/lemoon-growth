@@ -4,7 +4,7 @@ import java.awt.*;
 
 /**
  * @author lee
- * @date 2020-09-18
+ * @since 2020-09-18
  *
  * 泛型 extends 类需在接口前面
  * T extends Class1 & Interface1 & Interface2

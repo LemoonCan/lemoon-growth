@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * 接口记录
  * @author lee
- * @date 2022/9/29
+ * @since 2022/9/29
  */
 public class RequestRecordInfo {
     private Long id;

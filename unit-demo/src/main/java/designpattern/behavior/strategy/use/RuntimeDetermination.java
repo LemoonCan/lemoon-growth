@@ -6,7 +6,7 @@ import designpattern.behavior.strategy.Strategy;
 
 /**
  * @author lee
- * @date 2022/10/14
+ * @since 2022/10/14
  */
 public class RuntimeDetermination {
     public static void main(String[] args) {

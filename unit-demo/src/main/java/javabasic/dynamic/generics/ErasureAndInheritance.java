@@ -2,7 +2,7 @@ package javabasic.dynamic.generics;
 
 /**
  * @author lee
- * @date 2020-09-17
+ * @since 2020-09-17
  */
 public class ErasureAndInheritance {
     public static void main(String[] args) {

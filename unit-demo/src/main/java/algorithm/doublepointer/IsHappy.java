@@ -8,7 +8,7 @@ import java.util.Set;
  * https://leetcode-cn.com/problems/happy-number/
  *
  * @author lee
- * @date 2021/12/31
+ * @since 2021/12/31
  */
 public class IsHappy {
     public static void main(String[] args) {

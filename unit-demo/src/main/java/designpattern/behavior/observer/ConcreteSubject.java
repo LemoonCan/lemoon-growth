@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author lee
- * @date 2022/10/12
+ * @since 2022/10/12
  */
 public class ConcreteSubject implements Subject{
     List<Observer> observers = new ArrayList<>();

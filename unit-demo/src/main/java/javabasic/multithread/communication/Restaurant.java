@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-12-01
+ * @since 2020-12-01
  */
 public class Restaurant {
     Meal meal;

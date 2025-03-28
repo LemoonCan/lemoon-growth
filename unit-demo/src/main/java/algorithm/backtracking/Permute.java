@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
  * https://leetcode-cn.com/problems/permutations/submissions/
  * 全排列
  * @author lee
- * @date 2021/10/27
+ * @since 2021/10/27
  */
 public class Permute {
     public static void main(String[] args) {

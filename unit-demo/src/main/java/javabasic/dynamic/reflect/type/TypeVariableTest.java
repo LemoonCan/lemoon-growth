@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 6/1/21
+ * @since 6/1/21
  */
 public class TypeVariableTest<T, Y extends Number> {
     T t;

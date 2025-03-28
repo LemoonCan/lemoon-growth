@@ -8,7 +8,7 @@ import java.util.List;
  * 字母大小写全排列
  *
  * @author lee
- * @date 2021/10/28
+ * @since 2021/10/28
  */
 public class LetterCasePermutation {
     public static void main(String[] args) {

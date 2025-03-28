@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * @author lee
- * @date 6/1/21
+ * @since 6/1/21
  */
 public class ParameterizedTypeTest {
     List<String> list;

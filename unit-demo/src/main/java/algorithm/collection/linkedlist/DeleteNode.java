@@ -7,7 +7,7 @@ import algorithm.ListNode;
  * https://leetcode-cn.com/problems/delete-node-in-a-linked-list/
  *
  * @author lee
- * @date 2022/2/9
+ * @since 2022/2/9
  */
 public class DeleteNode {
     /**

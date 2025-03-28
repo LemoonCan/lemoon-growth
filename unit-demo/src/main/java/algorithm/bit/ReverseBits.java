@@ -5,7 +5,7 @@ package algorithm.bit;
  * https://leetcode-cn.com/problems/reverse-bits/
  *
  * @author lee
- * @date 2021/11/3
+ * @since 2021/11/3
  */
 public class ReverseBits {
     public static void main(String[] args) {

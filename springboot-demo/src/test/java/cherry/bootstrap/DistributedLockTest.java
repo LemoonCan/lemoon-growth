@@ -8,7 +8,7 @@ import org.springframework.test.annotation.Rollback;
 
 /**
  * @author lee
- * @date 7/15/21
+ * @since 7/15/21
  */
 @SpringBootTest
 public class DistributedLockTest {

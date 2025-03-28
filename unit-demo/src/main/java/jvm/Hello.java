@@ -2,7 +2,7 @@ package jvm;
 
 /**
  * @author lee
- * @date 2022/7/22
+ * @since 2022/7/22
  */
 public class Hello {
     public static void main(String[] args) {

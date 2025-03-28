@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-12-14
+ * @since 2020-12-14
  * 同步队列
  */
 public class RestaurantWithQueues {

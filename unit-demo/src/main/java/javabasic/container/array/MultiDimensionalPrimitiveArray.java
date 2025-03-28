@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * @author lee
- * @date 2020-09-09
+ * @since 2020-09-09
  */
 public class MultiDimensionalPrimitiveArray {
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package cherry.service.beanconfigure;
 
 /**
  * @author lee
- * @date 8/31/21
+ * @since 8/31/21
  */
 public class DowJonesNewsPersistener implements IFXNewsPersistener {
     @Override

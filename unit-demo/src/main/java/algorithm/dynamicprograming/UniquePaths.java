@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/unique-paths/
  *
  * @author lee
- * @date 2021/12/14
+ * @since 2021/12/14
  */
 public class UniquePaths {
     public static void main(String[] args) {

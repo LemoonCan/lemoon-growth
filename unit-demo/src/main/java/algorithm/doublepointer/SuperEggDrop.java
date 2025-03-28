@@ -2,7 +2,7 @@ package algorithm.doublepointer;
 
 /**
  * @author lee
- * @date 2022/1/5
+ * @since 2022/1/5
  */
 public class SuperEggDrop {
     public static void main(String[] args) {

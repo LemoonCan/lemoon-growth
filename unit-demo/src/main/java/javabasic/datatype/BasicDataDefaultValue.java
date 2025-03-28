@@ -2,7 +2,7 @@ package javabasic.datatype;
 
 /**
  * @author lee
- * @date 2020-09-09
+ * @since 2020-09-09
  */
 public class BasicDataDefaultValue {
     private static int i;

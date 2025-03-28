@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * @author lee
- * @date 2020-09-15
+ * @since 2020-09-15
  */
 public class ErasedTypeEquivalence {
     public static void main(String[] args) {

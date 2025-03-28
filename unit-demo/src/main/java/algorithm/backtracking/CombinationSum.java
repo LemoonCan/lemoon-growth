@@ -9,7 +9,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/combination-sum/
  *
  * @author lee
- * @date 2021/12/6
+ * @since 2021/12/6
  */
 public class CombinationSum {
     public static void main(String[] args) {

@@ -13,7 +13,7 @@ import algorithm.ListNode;
  * 输出：[3,4]
  *
  * @author lee
- * @date 2021/10/14
+ * @since 2021/10/14
  */
 public class MiddleNode {
     public ListNode middleNode(ListNode head) {

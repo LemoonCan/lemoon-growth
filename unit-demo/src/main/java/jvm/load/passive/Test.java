@@ -4,7 +4,7 @@ package jvm.load.passive;
  * 被动引用测试
  *
  * @author lee
- * @date 2022/3/7
+ * @since 2022/3/7
  */
 public class Test {
     public static void main(String[] args) {

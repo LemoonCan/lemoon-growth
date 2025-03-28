@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-11-09
+ * @since 2020-11-09
  */
 public class DaemonFromFactory implements Runnable {
     @Override

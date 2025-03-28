@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * 相比于全排列1 增加一个重复数字的判断
  *
  * @author lee
- * @date 2021/12/3
+ * @since 2021/12/3
  */
 public class PermuteUnique {
     public static void main(String[] args) {

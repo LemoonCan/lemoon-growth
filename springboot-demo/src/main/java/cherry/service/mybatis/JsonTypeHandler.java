@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 /**
  * @author lee
- * @date 2022/3/20
+ * @since 2022/3/20
  */
 @MappedJdbcTypes(JdbcType.VARCHAR)
 public class JsonTypeHandler<T> extends BaseTypeHandler<T>{

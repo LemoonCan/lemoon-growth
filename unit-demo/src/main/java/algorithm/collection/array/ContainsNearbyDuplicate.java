@@ -10,7 +10,7 @@ import java.util.Set;
  * https://leetcode-cn.com/problems/contains-duplicate-ii/
  *
  * @author lee
- * @date 2022/1/12
+ * @since 2022/1/12
  */
 public class ContainsNearbyDuplicate {
     public static void main(String[] args) {

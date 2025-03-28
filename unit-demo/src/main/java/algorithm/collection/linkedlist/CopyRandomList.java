@@ -5,7 +5,7 @@ package algorithm.collection.linkedlist;
  * https://leetcode-cn.com/problems/copy-list-with-random-pointer/
  *
  * @author lee
- * @date 2022/1/21
+ * @since 2022/1/21
  */
 public class CopyRandomList {
     public static void main(String[] args) {

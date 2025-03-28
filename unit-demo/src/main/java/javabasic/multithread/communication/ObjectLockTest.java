@@ -2,7 +2,7 @@ package javabasic.multithread.communication;
 
 /**
  * @author lee
- * @date 2020-07-14
+ * @since 2020-07-14
  *
  */
 public class ObjectLockTest {

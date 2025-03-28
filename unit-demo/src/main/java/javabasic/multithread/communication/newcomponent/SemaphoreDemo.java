@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-12-09
+ * @since 2020-12-09
  *
  * 信号灯 允许n个任务同时访问这个资源
  * Semaphore 控制n个任务访问某个资源，可加，可减 (来多次，往多次，有来的次数的最高限制)

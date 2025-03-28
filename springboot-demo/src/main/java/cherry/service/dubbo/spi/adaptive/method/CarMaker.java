@@ -6,7 +6,7 @@ import org.apache.dubbo.common.extension.SPI;
 
 /**
  * @author lee
- * @date 2022/6/25
+ * @since 2022/6/25
  */
 @SPI("carMaker")
 public interface CarMaker {

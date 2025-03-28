@@ -9,7 +9,7 @@ import java.util.Stack;
  * https://leetcode-cn.com/problems/palindrome-linked-list/
  *
  * @author lee
- * @date 2022/2/8
+ * @since 2022/2/8
  */
 public class IsPalindrome {
     /**

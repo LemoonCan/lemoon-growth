@@ -4,7 +4,7 @@ import org.openjdk.jol.info.ClassLayout;
 
 /**
  * @author lee
- * @date 5/9/21
+ * @since 5/9/21
  */
 public class SynchronizedAnalyse {
     public static void main(String[] args) throws InterruptedException {

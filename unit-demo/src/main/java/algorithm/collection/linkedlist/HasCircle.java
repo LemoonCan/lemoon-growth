@@ -6,7 +6,7 @@ import algorithm.ListNode;
  * 环形链表
  * https://leetcode-cn.com/problems/linked-list-cycle/
  * @author lee
- * @date 2022/1/22
+ * @since 2022/1/22
  */
 public class HasCircle {
     public boolean hasCycle(ListNode head) {

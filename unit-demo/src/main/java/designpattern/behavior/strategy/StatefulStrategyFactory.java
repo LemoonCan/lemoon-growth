@@ -8,7 +8,7 @@ import java.util.Map;
  * 可采取反射创建的方式，这只是无参构造的一个简单示范
  *
  * @author lee
- * @date 2022/10/14
+ * @since 2022/10/14
  */
 public class StatefulStrategyFactory {
     private static final Map<String, Class<? extends Strategy>> strategys = new HashMap<>();

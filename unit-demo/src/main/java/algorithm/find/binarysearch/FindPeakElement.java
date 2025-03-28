@@ -5,7 +5,7 @@ package algorithm.find.binarysearch;
  * https://leetcode-cn.com/problems/find-peak-element/
  *
  * @author lee
- * @date 2021/11/6
+ * @since 2021/11/6
  */
 public class FindPeakElement {
     public static void main(String[] args) {

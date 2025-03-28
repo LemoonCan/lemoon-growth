@@ -4,7 +4,7 @@ package algorithm.collection.array;
  * https://leetcode-cn.com/problems/maximum-product-subarray/
  * 找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积
  * @author lee
- * @date 2020-07-01
+ * @since 2020-07-01
  *
  */
 public class MaxProduct {

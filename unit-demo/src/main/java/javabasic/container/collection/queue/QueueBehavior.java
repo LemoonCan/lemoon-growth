@@ -12,7 +12,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * @author lee
- * @date 2020-09-23
+ * @since 2020-09-23
  */
 public class QueueBehavior {
     private static int count = 10;

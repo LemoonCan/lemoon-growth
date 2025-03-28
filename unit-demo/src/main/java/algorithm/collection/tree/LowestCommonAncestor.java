@@ -9,7 +9,7 @@ import java.util.*;
  * https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
  *
  * @author lee
- * @date 2022/2/16
+ * @since 2022/2/16
  */
 public class LowestCommonAncestor {
     public static void main(String[] args) {

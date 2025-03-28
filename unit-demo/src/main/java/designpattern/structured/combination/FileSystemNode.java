@@ -2,7 +2,7 @@ package designpattern.structured.combination;
 
 /**
  * @author lee
- * @date 2022/10/10
+ * @since 2022/10/10
  */
 public abstract class FileSystemNode {
     protected String path;

@@ -7,7 +7,7 @@ import java.util.Arrays;
  * https://leetcode-cn.com/problems/majority-element/
  *
  * @author lee
- * @date 2020-07-01
+ * @since 2020-07-01
  */
 public class MajorityElement {
     public static void main(String[] args) {

@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
  * cglib代理的类需声明为public，方法为final
  *
  * @author lee
- * @date 6/3/21
+ * @since 6/3/21
  */
 public class SimpleCglibDemo {
     public static class RealService {

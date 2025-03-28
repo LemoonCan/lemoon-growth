@@ -9,7 +9,7 @@ import java.util.Set;
  * https://leetcode.cn/problems/longest-consecutive-sequence/
  *
  * @author lee
- * @date 2022/7/7
+ * @since 2022/7/7
  */
 public class LongestConsecutive {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ package algorithm.traverse;
  * https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/
  *
  * @author lee
- * @date 2021/10/18
+ * @since 2021/10/18
  */
 public class Connect {
     /**

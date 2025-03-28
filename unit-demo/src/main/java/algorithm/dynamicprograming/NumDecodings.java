@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/decode-ways/
  *
  * @author lee
- * @date 2021/12/17
+ * @since 2021/12/17
  * <p>
  * 1020312
  * 10 20 3 1 2

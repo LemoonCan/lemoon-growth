@@ -8,7 +8,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/generate-parentheses/
  *
  * @author lee
- * @date 2021/12/9
+ * @since 2021/12/9
  */
 public class GenerateParenthesis {
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package javabasic.container.test;
 
 /**
  * @author lee
- * @date 2020-09-24
+ * @since 2020-09-24
  */
 public abstract class Test<C> {
     String name;

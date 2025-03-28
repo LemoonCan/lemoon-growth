@@ -7,7 +7,7 @@ import java.util.Arrays;
  * https://leetcode-cn.com/problems/product-of-array-except-self/
  *
  * @author lee
- * @date 2022/1/9
+ * @since 2022/1/9
  */
 public class ProductExceptSelf {
     public static void main(String[] args) {

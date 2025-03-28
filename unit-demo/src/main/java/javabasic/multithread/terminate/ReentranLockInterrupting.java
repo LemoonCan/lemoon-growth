@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lee
- * @date 2/25/21
+ * @since 2/25/21
  */
 public class ReentranLockInterrupting {
     public static void main(String[] args) throws InterruptedException {

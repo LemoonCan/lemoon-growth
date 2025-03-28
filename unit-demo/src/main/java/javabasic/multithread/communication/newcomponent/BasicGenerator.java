@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 /**
  * @author lee
- * @date 2020-09-11
+ * @since 2020-09-11
  */
 public class BasicGenerator<T> implements Generator<T>, Iterable<T> {
     private Class<T> type;

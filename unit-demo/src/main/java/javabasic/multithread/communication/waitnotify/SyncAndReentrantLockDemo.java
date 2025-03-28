@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lee
- * @date 5/8/21
+ * @since 5/8/21
  * A:5,B:10,C:15
  * A,B,C依次干活，重复10次
  */

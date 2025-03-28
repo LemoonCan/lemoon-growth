@@ -7,7 +7,7 @@ import java.util.TimeZone;
 
 /**
  * @author lee
- * @date 2022/10/8
+ * @since 2022/10/8
  */
 public class SimpleDateFormatTest {
     public static void main(String[] args) throws ParseException {

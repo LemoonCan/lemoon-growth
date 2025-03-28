@@ -13,7 +13,7 @@ import java.util.PriorityQueue;
  * (搜索树=查找树，当前节点的左节点小于它，右节点大于它)
  *
  * @author lee
- * @date 2022/2/13
+ * @since 2022/2/13
  */
 public class kthSmallest {
     public int kthSmallest(TreeNode root, int k) {

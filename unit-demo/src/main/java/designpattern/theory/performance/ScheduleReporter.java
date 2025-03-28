@@ -12,7 +12,7 @@ import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * @author lee
- * @date 2022/9/29
+ * @since 2022/9/29
  */
 public abstract class ScheduleReporter {
     protected IRequestRepository requestRepository;

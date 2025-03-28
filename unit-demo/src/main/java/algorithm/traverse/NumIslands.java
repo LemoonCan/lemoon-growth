@@ -2,7 +2,7 @@ package algorithm.traverse;
 
 /**
  * @author lee
- * @date 2021/11/13
+ * @since 2021/11/13
  */
 public class NumIslands {
     public static void main(String[] args) {

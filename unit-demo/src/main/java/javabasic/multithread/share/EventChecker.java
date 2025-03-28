@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 /**
  * @author lee
- * @date 2020-11-12
+ * @since 2020-11-12
  */
 public class EventChecker implements Runnable {
     private IntGenerator intGenerator;

@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * @author lee
- * @date 2020-06-12
+ * @since 2020-06-12
  *
  * 至少有K个重复字符的最长子串
  * 1.子串所有字符出现次数>=K

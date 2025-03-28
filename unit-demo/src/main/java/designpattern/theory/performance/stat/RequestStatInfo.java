@@ -2,7 +2,7 @@ package designpattern.theory.performance.stat;
 
 /**
  * @author lee
- * @date 2022/9/29
+ * @since 2022/9/29
  */
 public class RequestStatInfo {
     private String name;

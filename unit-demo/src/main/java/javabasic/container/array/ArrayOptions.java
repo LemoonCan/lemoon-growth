@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 2020-09-09
+ * @since 2020-09-09
  */
 public class ArrayOptions {
     public static void main(String[] args) {

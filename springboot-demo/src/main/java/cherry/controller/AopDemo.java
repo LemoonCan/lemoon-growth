@@ -1,9 +1,9 @@
 package cherry.controller;
 
-import cherry.service.aop.AService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,32 +12,27 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author lee
- * @date 2021/11/19
+ * @since  2021/11/19
  */
 @RestController
 @RequestMapping("/aop")
-@Api(value = "aop-测试")
+@Tag(name = "aop-测试")
+@RequiredArgsConstructor
 public class AopDemo {
-    private final AService a;
-
-    public AopDemo(AService a) {
-        this.a = a;
-    }
-
     @RequestMapping(method = RequestMethod.POST, value = "/coming")
-    @ApiOperation(value = "光临")
-    public String coming(@RequestParam @ApiParam(name = "name", value = "谁", required = true) String name) {
+    @Operation(description = "光临")
+    public String coming(@RequestParam @Parameter(name = "name", description = "谁", required = true) String name) {
         return name + " is coming";
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/exception")
-    @ApiOperation(value = "异常了")
+    @Operation(description = "异常了")
     public void exception() {
         throw new RuntimeException("Oh...这是个错误");
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/nestTrigger")
-    @ApiOperation(value = "嵌套调用")
+    @Operation(description = "嵌套调用")
     public void nestTrigger(){
         System.out.println("nestTrigger 执行中");
 
@@ -49,14 +44,8 @@ public class AopDemo {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/nest")
-    @ApiOperation(value = "嵌套方法")
+    @Operation(description = "嵌套方法")
     public void nest(){
         System.out.println("nest 执行中");
-    }
-
-    @RequestMapping(method = RequestMethod.POST, value = "/executingA")
-    @ApiOperation(value = "执行ASevice")
-    public void executingA(){
-        a.invokeB();
     }
 }

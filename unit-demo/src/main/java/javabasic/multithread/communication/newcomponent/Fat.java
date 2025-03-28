@@ -2,7 +2,7 @@ package javabasic.multithread.communication.newcomponent;
 
 /**
  * @author lee
- * @date 2020-12-09
+ * @since 2020-12-09
  */
 public class Fat {
     private volatile double d;

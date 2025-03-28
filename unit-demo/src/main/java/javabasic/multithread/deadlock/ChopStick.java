@@ -2,7 +2,7 @@ package javabasic.multithread.deadlock;
 
 /**
  * @author lee
- * @date 2020-12-06
+ * @since 2020-12-06
  */
 public class ChopStick {
     private boolean taken = false;

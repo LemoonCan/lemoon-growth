@@ -6,7 +6,7 @@ import java.util.Random;
 
 /**
  * @author lee
- * @date 2020-09-10
+ * @since 2020-09-10
  */
 public class CompType implements Comparable<CompType> {
     int i;

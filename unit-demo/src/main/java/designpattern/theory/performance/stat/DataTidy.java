@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author lee
- * @date 2022/9/29
+ * @since 2022/9/29
  */
 public class DataTidy {
     public List<RequestStatInfo> generateReports(List<RequestRecordInfo> records) {

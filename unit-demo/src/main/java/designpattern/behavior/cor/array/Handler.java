@@ -2,7 +2,7 @@ package designpattern.behavior.cor.array;
 
 /**
  * @author lee
- * @date 2022/10/17
+ * @since 2022/10/17
  */
 public abstract class Handler {
     protected Handler next;

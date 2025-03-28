@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 /**
  * @author lee
- * @date 6/30/21
+ * @since 6/30/21
  */
 public class MyCollection<E> extends AbstractCollection<E> {
     DynamicArray<E> darr;

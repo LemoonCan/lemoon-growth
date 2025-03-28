@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @author lee
- * @date 2022/10/21
+ * @since 2022/10/21
  */
 public class Demo {
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ package algorithm.sliding;
  * https://leetcode-cn.com/problems/minimum-size-subarray-sum/
  *
  * @author lee
- * @date 2021/11/12
+ * @since 2021/11/12
  */
 public class MinSubArrayLen {
     public int minSubArrayLen(int target, int[] nums) {

@@ -4,7 +4,7 @@ package algorithm.greedy;
  * 跳跃游戏2
  * https://leetcode-cn.com/problems/jump-game-ii/
  * @author lee
- * @date 2021/12/13
+ * @since 2021/12/13
  */
 public class Jump {
     /**

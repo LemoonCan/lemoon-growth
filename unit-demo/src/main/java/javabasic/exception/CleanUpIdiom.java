@@ -2,7 +2,7 @@ package javabasic.exception;
 
 /**
  * @author lee
- * @date 2020-09-07
+ * @since 2020-09-07
  */
 public class CleanUpIdiom {
     public static void main(String[] args) {

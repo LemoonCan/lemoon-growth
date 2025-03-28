@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 静态内部类
  *
  * @author lee
- * @date 2022/10/2
+ * @since 2022/10/2
  */
 public class IdGenerator_InnerStaticClass {
     private AtomicInteger id = new AtomicInteger();

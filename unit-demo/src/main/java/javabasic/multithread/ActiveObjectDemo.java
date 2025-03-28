@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 1/4/21
+ * @since 1/4/21
  */
 public class ActiveObjectDemo {
     private ExecutorService exec = Executors.newSingleThreadExecutor();

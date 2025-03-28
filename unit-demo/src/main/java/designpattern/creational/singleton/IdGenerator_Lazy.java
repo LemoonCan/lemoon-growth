@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 懒汉式
  * @author lee
- * @date 2022/10/2
+ * @since 2022/10/2
  */
 public class IdGenerator_Lazy {
     private IdGenerator_Lazy instance;

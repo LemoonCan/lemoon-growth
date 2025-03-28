@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 2020-11-02
+ * @since 2020-11-02
  */
 public class AdapterMethodIdiom {
     public static void main(String[] args) {

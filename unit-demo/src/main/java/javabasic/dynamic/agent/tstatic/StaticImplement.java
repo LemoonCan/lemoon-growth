@@ -2,7 +2,7 @@ package javabasic.dynamic.agent.tstatic;
 
 /**
  * @author lee
- * @date 5/30/21
+ * @since 5/30/21
  */
 public class StaticImplement {
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-12-06
+ * @since 2020-12-06
  */
 public class Philosopher implements Runnable {
     private ChopStick left;

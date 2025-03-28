@@ -6,7 +6,7 @@ import java.util.Queue;
 
 /**
  * @author lee
- * @date 2020-11-09
+ * @since 2020-11-09
  * 数据流中的中位数
  */
 public class MedianFinder {

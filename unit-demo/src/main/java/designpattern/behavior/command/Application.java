@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /**
  * @author lee
- * @date 2022/10/24
+ * @since 2022/10/24
  */
 public class Application {
     private Queue<Command> queue = new LinkedList<>();

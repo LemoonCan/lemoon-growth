@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 数据连接池测试
  * @author lee
- * @date 2022/12/8
+ * @since 2022/12/8
  */
 public class ConnectionPoolTest {
     static ConnectionPool pool = new ConnectionPool(10);

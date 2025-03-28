@@ -2,7 +2,7 @@ package jvm.methodinvoke;
 
 /**
  * @author lee
- * @date 2022/7/21
+ * @since 2022/7/21
  */
 public class Human {
     public void sayHello(){

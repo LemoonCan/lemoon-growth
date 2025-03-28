@@ -6,7 +6,7 @@ import designpattern.behavior.visitor.WordFile;
 
 /**
  * @author lee
- * @date 2022/10/20
+ * @since 2022/10/20
  */
 public class Compressor implements Vistor{
     @Override

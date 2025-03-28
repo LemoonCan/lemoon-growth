@@ -7,7 +7,7 @@ import algorithm.ListNode;
  * https://leetcode-cn.com/problems/reverse-linked-list/
  *
  * @author lee
- * @date 2021/10/25
+ * @since 2021/10/25
  */
 public class ReverseList {
     public ListNode reverseList(ListNode head) {

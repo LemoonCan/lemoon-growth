@@ -24,7 +24,7 @@ import java.util.Queue;
  * 5   4   7
  *
  * @author lee
- * @date 2021/10/18
+ * @since 2021/10/18
  */
 public class MergeTrees {
     public static void main(String[] args) {

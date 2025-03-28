@@ -2,7 +2,7 @@ package designpattern.behavior.snapshot;
 
 /**
  * @author lee
- * @date 2022/10/21
+ * @since 2022/10/21
  */
 public class InputText {
     private StringBuilder text = new StringBuilder();

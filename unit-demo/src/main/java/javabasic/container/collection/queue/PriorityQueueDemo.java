@@ -11,7 +11,7 @@ import java.util.Set;
 
 /**
  * @author lee
- * @date 2020-09-28
+ * @since 2020-09-28
  * 由 Comparator 排序决定优先级
  */
 public class PriorityQueueDemo {

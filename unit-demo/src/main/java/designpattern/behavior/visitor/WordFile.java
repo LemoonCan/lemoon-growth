@@ -5,7 +5,7 @@ import designpattern.behavior.visitor.other.Extractor;
 
 /**
  * @author lee
- * @date 2022/10/20
+ * @since 2022/10/20
  */
 public class WordFile extends ResourceFile{
     public WordFile(String name) {

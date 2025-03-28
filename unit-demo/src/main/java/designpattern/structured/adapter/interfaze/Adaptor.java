@@ -5,7 +5,7 @@ import designpattern.structured.adapter.ITarget;
 
 /**
  * @author lee
- * @date 2022/10/9
+ * @since 2022/10/9
  */
 public class Adaptor implements ITarget {
     private Adaptee adaptee;

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2022/9/30
+ * @since 2022/9/30
  */
 public class ConsoleReporter extends ScheduleReporter{
 

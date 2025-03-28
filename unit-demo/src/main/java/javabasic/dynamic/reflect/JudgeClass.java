@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 5/27/21
+ * @since 5/27/21
  *
  * 运行时判断一个对象所属的类
  */

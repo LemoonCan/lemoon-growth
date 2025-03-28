@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  * @author lee
- * @date 2020-09-27
+ * @since 2020-09-27
  */
 public class ListSortSearch {
     public static void main(String[] args) {

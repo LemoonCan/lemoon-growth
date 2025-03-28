@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 
 /**
  * @author lee
- * @date 3/31/21
+ * @since 3/31/21
  */
 public class ChargenClient {
     public static int DEFAULT_PORT = 19;

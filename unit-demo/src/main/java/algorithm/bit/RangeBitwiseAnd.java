@@ -5,7 +5,7 @@ package algorithm.bit;
  * https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/
  *
  * @author lee
- * @date 2021/12/29
+ * @since 2021/12/29
  */
 public class RangeBitwiseAnd {
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package javabasic.exception;
 
 /**
  * @author lee
- * @date 2020-09-03
+ * @since 2020-09-03
  */
 public class ExceptionMethods {
     public static void main(String[] args) {

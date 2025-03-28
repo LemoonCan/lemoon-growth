@@ -1,8 +1,8 @@
 package cherry.controller;
 
 import cherry.service.transaction.OrderService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author lee
- * @date 2021/12/21
+ * @since 2021/12/21
  */
 @Component
 @RestController
 @RequestMapping("/transaction")
-@Api(value = "事务测试")
+@Tag(name = "事务测试")
 public class TransactionDemo {
     private final PlatformTransactionManager transactionManager;
 
@@ -43,7 +43,7 @@ public class TransactionDemo {
     }
 
     @RequestMapping(value = "/updateState", method = RequestMethod.POST)
-    @ApiOperation(value = "变更订单状态",httpMethod = "POST")
+    @Operation(description = "变更订单状态",method = "POST")
     public void updateState(){
         orderService.updateState();
     }

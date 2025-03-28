@@ -2,7 +2,7 @@ package jvm.load;
 
 /**
  * @author lee
- * @date 4/28/21
+ * @since 4/28/21
  */
 public class User {
     public void say(){

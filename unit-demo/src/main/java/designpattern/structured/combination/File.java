@@ -2,7 +2,7 @@ package designpattern.structured.combination;
 
 /**
  * @author lee
- * @date 2022/10/10
+ * @since 2022/10/10
  */
 public class File extends FileSystemNode{
     public File(String path) {

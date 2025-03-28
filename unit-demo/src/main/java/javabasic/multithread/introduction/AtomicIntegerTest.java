@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author lee
- * @date 2020-11-22
+ * @since 2020-11-22
  */
 public class AtomicIntegerTest implements Runnable{
     public static void main(String[] args) {

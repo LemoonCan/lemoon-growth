@@ -2,7 +2,7 @@ package javabasic.container.collection;
 
 /**
  * @author lee
- * @date 7/1/21
+ * @since 7/1/21
  */
 public class DynamicArray<E> {
     private E[] elementData;

@@ -7,7 +7,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/triangle/
  *
  * @author lee
- * @date 2021/11/2
+ * @since 2021/11/2
  */
 public class MinimumTotal {
     public static void main(String[] args) {

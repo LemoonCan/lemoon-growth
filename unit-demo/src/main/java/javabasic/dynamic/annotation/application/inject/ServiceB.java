@@ -2,7 +2,7 @@ package javabasic.dynamic.annotation.application.inject;
 
 /**
  * @author lee
- * @date 6/6/21
+ * @since 6/6/21
  */
 @SimpleSingleton
 public class ServiceB implements InterfaceB{

@@ -2,7 +2,7 @@ package javabasic.multithread.introduction.runnable;
 
 /**
  * @author lee
- * @date 2020-11-05
+ * @since 2020-11-05
  */
 public class MoreBasicThreads {
     public static void main(String[] args) {

@@ -8,7 +8,7 @@ package algorithm.doublepointer;
  * 输出：[1,2]
  *
  * @author lee
- * @date 2021/10/12
+ * @since 2021/10/12
  */
 public class TwoSum {
     public int[] twoSum(int[] numbers, int target) {

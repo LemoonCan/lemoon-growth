@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/delete-operation-for-two-strings/
  *
  * @author lee
- * @date 2021/12/24
+ * @since 2021/12/24
  */
 public class MinDistance {
     public static void main(String[] args) {

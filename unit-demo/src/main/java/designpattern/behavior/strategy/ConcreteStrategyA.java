@@ -2,7 +2,7 @@ package designpattern.behavior.strategy;
 
 /**
  * @author lee
- * @date 2022/10/14
+ * @since 2022/10/14
  */
 public class ConcreteStrategyA implements Strategy{
     @Override

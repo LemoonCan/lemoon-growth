@@ -2,7 +2,7 @@ package javabasic.dynamic.generics;
 
 /**
  * @author lee
- * @date 2020-09-14
+ * @since 2020-09-14
  */
 public class WaterColorSets {
     public static void main(String[] args) {

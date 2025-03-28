@@ -8,7 +8,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/
  *
  * @author lee
- * @date 2022/1/13
+ * @since 2022/1/13
  */
 public class KthSmallest {
     /**

@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-11-30
+ * @since 2020-11-30
  * notifyAll 唤醒所有等待相同锁的任务
  * notify 唤醒一个等待相同锁的任务,唤醒的任务由线程调度算法决定
  */

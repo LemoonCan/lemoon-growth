@@ -2,7 +2,7 @@ package javabasic.exception;
 
 /**
  * @author lee
- * @date 2020-09-08
+ * @since 2020-09-08
  */
 public class LostMessage {
     public static void main(String[] args) {

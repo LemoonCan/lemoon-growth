@@ -2,7 +2,7 @@ package algorithm.collection.array;
 
 /**
  * @author lee
- * @date 2020-06-29
+ * @since 2020-06-29
  *
  * 合并两个有序数组nums1、nums2；
  * nums1足够大，合并后的数组存储在nums1。

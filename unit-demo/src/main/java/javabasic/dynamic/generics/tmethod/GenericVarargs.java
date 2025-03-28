@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author lee
- * @date 2020-09-11
+ * @since 2020-09-11
  */
 public class GenericVarargs {
     public static <T> List<T> makeList(T... args){

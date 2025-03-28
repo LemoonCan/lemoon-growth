@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * @author lee
- * @date 6/3/21
+ * @since 6/3/21
  */
 public class Student {
     @Label("姓名")

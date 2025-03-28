@@ -5,7 +5,7 @@ import designpattern.structured.bridge.Notification;
 
 /**
  * @author lee
- * @date 2022/10/8
+ * @since 2022/10/8
  */
 public class UrgencyNotification extends Notification {
     public UrgencyNotification(MsgSender msgSender) {

@@ -2,7 +2,7 @@ package javabasic.dynamic.generics.construct;
 
 /**
  * @author lee
- * @date 2020-09-17
+ * @since 2020-09-17
  */
 public class CreatorGeneric {
     public static void main(String[] args) {

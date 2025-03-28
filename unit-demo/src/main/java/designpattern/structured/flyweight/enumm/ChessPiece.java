@@ -2,7 +2,7 @@ package designpattern.structured.flyweight.enumm;
 
 /**
  * @author lee
- * @date 2022/10/11
+ * @since 2022/10/11
  */
 public class ChessPiece {
     private ChessPieceUnit chessPieceUnit;

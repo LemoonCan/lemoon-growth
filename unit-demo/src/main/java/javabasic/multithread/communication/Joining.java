@@ -2,7 +2,7 @@ package javabasic.multithread.communication;
 
 /**
  * @author lee
- * @date 2020-11-09
+ * @since 2020-11-09
  * t.join() 调用t.join()的线程需等待t线程执行完后才能继续执行
  */
 public class Joining {

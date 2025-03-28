@@ -9,7 +9,7 @@ import java.util.Set;
  * https://leetcode-cn.com/problems/contains-duplicate/
  *
  * @author lee
- * @date 2022/1/6
+ * @since 2022/1/6
  *
  */
 public class ContainsDuplicate {

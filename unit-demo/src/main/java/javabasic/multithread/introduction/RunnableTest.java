@@ -2,7 +2,7 @@ package javabasic.multithread.introduction;
 
 /**
  * @author lee
- * @date 2020-07-13
+ * @since 2020-07-13
  */
 public class RunnableTest {
     public static void main(String[] args) {

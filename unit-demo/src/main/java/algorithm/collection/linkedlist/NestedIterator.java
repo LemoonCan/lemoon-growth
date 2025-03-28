@@ -7,7 +7,7 @@ import java.util.*;
  * https://leetcode-cn.com/problems/flatten-nested-list-iterator/
  *
  * @author lee
- * @date 2022/1/19
+ * @since 2022/1/19
  */
 public class NestedIterator implements Iterator<Integer> {
     Stack<Iterator<NestedInteger>> stack;

@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
  * https://leetcode-cn.com/problems/sliding-window-maximum/
  *
  * @author lee
- * @date 2022/1/16
+ * @since 2022/1/16
  */
 public class MaxSlidingWindow {
     public static void main(String[] args) {

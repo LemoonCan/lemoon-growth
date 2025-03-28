@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * https://leetcode.cn/problems/count-of-smaller-numbers-after-self/
  *
  * @author lee
- * @date 2022/6/8
+ * @since 2022/6/8
  */
 public class CountSmaller {
     public static void main(String[] args) {

@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 6/3/21
+ * @since 6/3/21
  */
 public class MethodDemo {
     @Decorate(value = {1, 2, 3})

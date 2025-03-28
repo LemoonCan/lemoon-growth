@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 双重检查
  * @author lee
- * @date 2022/10/2
+ * @since 2022/10/2
  */
 public class IdGenerator_DoubleCheck {
     private volatile IdGenerator_DoubleCheck instance;

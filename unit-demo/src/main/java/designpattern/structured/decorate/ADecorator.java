@@ -4,7 +4,7 @@ import designpattern.structured.IA;
 
 /**
  * @author lee
- * @date 2022/10/9
+ * @since 2022/10/9
  */
 public class ADecorator implements IA {
     private IA a;

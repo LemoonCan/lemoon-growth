@@ -2,7 +2,7 @@ package javabasic.multithread.terminate;
 
 /**
  * @author lee
- * @date 2/25/21
+ * @since 2/25/21
  */
 public class MultiLock {
     synchronized void f1(int count) {

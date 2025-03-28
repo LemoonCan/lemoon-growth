@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 /**
  * @author lee
- * @date 2020-11-02
+ * @since 2020-11-02
  */
 public class ReversibleArrayList<T> extends ArrayList<T> {
     public ReversibleArrayList(Collection<? extends T> c) {

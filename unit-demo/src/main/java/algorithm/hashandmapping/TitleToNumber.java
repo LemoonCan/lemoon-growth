@@ -5,7 +5,7 @@ package algorithm.hashandmapping;
  * https://leetcode-cn.com/problems/excel-sheet-column-number/
  *
  * @author lee
- * @date 2020-07-09
+ * @since 2020-07-09
  * 给定一个excel表的列名称，返回相应的列序号
  * A -> 1
  * B -> 2

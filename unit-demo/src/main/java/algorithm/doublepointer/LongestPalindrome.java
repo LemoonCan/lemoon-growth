@@ -5,7 +5,7 @@ package algorithm.doublepointer;
  * https://leetcode-cn.com/problems/longest-palindromic-substring/
  *
  * @author lee
- * @date 2021/12/15
+ * @since 2021/12/15
  */
 public class LongestPalindrome {
     public static void main(String[] args) {

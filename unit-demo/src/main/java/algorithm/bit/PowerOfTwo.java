@@ -4,7 +4,7 @@ package algorithm.bit;
  * 2的幂
  * https://leetcode-cn.com/problems/power-of-two/
  * @author lee
- * @date 2021/11/3
+ * @since 2021/11/3
  */
 public class PowerOfTwo {
     public static void main(String[] args) {

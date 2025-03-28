@@ -4,7 +4,7 @@ import redis.clients.jedis.Jedis;
 
 /**
  * @author lee
- * @date 7/12/21
+ * @since 7/12/21
  */
 public class RedisConnect {
     public static void main(String[] args) {

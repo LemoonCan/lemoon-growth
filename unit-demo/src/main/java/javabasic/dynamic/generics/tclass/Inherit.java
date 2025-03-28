@@ -5,7 +5,7 @@ import java.lang.reflect.ParameterizedType;
 
 /**
  * @author lee
- * @date 5/24/21
+ * @since 5/24/21
  *
  * 子类泛型声明不受父类影响
  * extends 后描述的父类的泛型声明，表示父类的泛型应该在子类中如何表现

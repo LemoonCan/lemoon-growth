@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * @author lee
- * @date 2022/10/19
+ * @since 2022/10/19
  */
 public class ArrayIterator<E> implements Iterator<E> {
     private ArrayList<E> list;

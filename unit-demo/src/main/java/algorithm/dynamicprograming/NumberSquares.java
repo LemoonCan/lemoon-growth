@@ -7,7 +7,7 @@ package algorithm.dynamicprograming;
  * 记录 背包问题：https://mp.weixin.qq.com/s/xmgK7SrTnFIM3Owpk-emmg
  *
  * @author lee
- * @date 2022/7/12
+ * @since 2022/7/12
  */
 public class NumberSquares {
 //    int[] nums = {1, 4, 9, 16, 25, 36, 49, 64, 81, 10 ^ 2};

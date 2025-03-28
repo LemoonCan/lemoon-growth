@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * @author lee
- * @date 2022/10/11
+ * @since 2022/10/11
  */
 public class ChessBoard {
     private Map<Integer, ChessPiece> chessPieces;

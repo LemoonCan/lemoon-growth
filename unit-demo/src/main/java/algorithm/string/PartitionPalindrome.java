@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @author lee
- * @date 2020-08-02
+ * @since 2020-08-02
  * 分割回文串，字符串被分割后的所有子串都是回文串
  */
 public class PartitionPalindrome {

@@ -4,7 +4,7 @@ import console.ColorfulPrintln;
 
 /**
  * @author lee
- * @date 3/12/21
+ * @since 3/12/21
  */
 public class BinaryTest {
     public static void main(String[] args) {

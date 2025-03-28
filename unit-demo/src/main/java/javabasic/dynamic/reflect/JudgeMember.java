@@ -8,7 +8,7 @@ import java.lang.reflect.ParameterizedType;
 
 /**
  * @author lee
- * @date 5/27/21
+ * @since 5/27/21
  * 1.Declared可以查询到当前类所有成员变量,非 declared可以查到当前类及父类public变量
  * 2.所有成员变量 accessible 都为 false，
  * public 及 default 成员变量默认可以访问(get/set 都可以)

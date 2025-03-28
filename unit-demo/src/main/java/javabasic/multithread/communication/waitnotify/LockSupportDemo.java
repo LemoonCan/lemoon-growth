@@ -5,7 +5,7 @@ import java.util.concurrent.locks.LockSupport;
 
 /**
  * @author lee
- * @date 3/11/21
+ * @since 3/11/21
  */
 public class LockSupportDemo {
     public static void main(String[] args) throws InterruptedException {

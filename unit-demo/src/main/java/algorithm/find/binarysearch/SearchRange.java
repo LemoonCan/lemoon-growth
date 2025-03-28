@@ -4,7 +4,7 @@ package algorithm.find.binarysearch;
  * 在排序数组中查找元素的第一个和最后一个位置
  * https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/
  * @author lee
- * @date 2021/11/5
+ * @since 2021/11/5
  */
 public class SearchRange {
     public static void main(String[] args) {

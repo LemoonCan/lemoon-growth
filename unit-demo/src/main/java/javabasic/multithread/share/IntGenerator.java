@@ -2,7 +2,7 @@ package javabasic.multithread.share;
 
 /**
  * @author lee
- * @date 2020-11-12
+ * @since 2020-11-12
  */
 public abstract class IntGenerator {
     private volatile boolean canceled = false;

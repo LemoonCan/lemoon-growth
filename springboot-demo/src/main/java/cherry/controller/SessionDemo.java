@@ -1,37 +1,37 @@
 package cherry.controller;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.apache.dubbo.remoting.http12.rest.Operation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 
 /**
  * @author lee
- * @date 8/16/21
+ * @since  2021/6/18
  */
 @RestController
 @RequestMapping("/session")
-@Api(value = "会话测试")
+@Tag(name = "会话测试")
 public class SessionDemo {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    @ApiOperation(value = "登录",httpMethod = "GET")
-    public String login(@RequestParam @ApiParam(name = "name", value = "名称", required = true) String name,
-                        @RequestParam @ApiParam(name = "password", value = "密码", required = true) String password,
+    @Operation(value = "登录",method = "GET")
+    public String login(@RequestParam @Parameter(name = "name", description = "名称", required = true) String name,
+                        @RequestParam @Parameter(name = "password", description = "密码", required = true) String password,
                         HttpSession session) {
         session.setAttribute(session.getId(), new User(name, password));
         return "Login success!😈";
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    @ApiOperation(value = "登出",httpMethod = "GET")
+    @Operation(value = "登出",method = "GET")
     public String logout(HttpSession session) {
         session.removeAttribute(session.getId());
         return "Logout success!😴";

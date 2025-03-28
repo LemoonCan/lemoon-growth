@@ -4,7 +4,7 @@ package algorithm.traverse;
  * 岛屿的最大面积
  * https://leetcode-cn.com/problems/max-area-of-island/
  * @author lee
- * @date 2021/10/17
+ * @since 2021/10/17
  */
 public class MaxAreaOfIsland {
     public static void main(String[] args) {

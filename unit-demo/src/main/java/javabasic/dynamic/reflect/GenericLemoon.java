@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @author lee
- * @date 6/2/21
+ * @since 6/2/21
  */
 public class GenericLemoon<X,Y extends Number> extends Lemoon {
     List<String> list;

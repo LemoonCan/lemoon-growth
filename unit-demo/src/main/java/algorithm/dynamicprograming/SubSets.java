@@ -8,7 +8,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/subsets/
  *
  * @author lee
- * @date 2021/11/28
+ * @since 2021/11/28
  */
 public class SubSets {
     public static void main(String[] args) {

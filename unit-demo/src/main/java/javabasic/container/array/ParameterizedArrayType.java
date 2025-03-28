@@ -2,7 +2,7 @@ package javabasic.container.array;
 
 /**
  * @author lee
- * @date 2020-09-09
+ * @since 2020-09-09
  */
 public class ParameterizedArrayType {
     public static void main(String[] args) {

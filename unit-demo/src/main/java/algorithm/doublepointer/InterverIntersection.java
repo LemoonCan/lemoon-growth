@@ -8,7 +8,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/interval-list-intersections/
  *
  * @author lee
- * @date 2021/11/10
+ * @since 2021/11/10
  */
 public class InterverIntersection {
     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {

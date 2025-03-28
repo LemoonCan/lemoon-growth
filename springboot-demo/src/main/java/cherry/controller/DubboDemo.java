@@ -4,8 +4,8 @@ import cherry.service.dubbo.spi.adaptive.clazz.WheelMaker;
 import cherry.service.dubbo.spi.adaptive.method.Car;
 import cherry.service.dubbo.spi.adaptive.method.CarMaker;
 import cherry.service.dubbo.spi.common.Robot;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.apache.dubbo.common.URL;
 import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.apache.dubbo.common.url.component.ServiceConfigURL;
@@ -18,15 +18,15 @@ import java.util.Map;
 
 /**
  * @author lee
- * @date 2022/6/22
+ * @since 2022/6/22
  */
 @RestController
 @RequestMapping("/dubbo")
-@Api(value = "dubbo-测试")
+@Tag(name = "dubbo-测试")
 public class DubboDemo {
 
     @RequestMapping(method = RequestMethod.GET, value = "/commonspi")
-    @ApiOperation(value = "普通SPI")
+    @Operation(description = "普通SPI")
     public void commonSpi() {
         ExtensionLoader<Robot> extensionLoader =
                 ExtensionLoader.getExtensionLoader(Robot.class);
@@ -37,7 +37,7 @@ public class DubboDemo {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/adaptiveMethodSpi")
-    @ApiOperation(value = "自适应SPI")
+    @Operation(description = "自适应SPI")
     public String adaptiveMethodSpi(String carBrand) {
         CarMaker carMaker = ExtensionLoader.getExtensionLoader(CarMaker.class).getAdaptiveExtension();
         Map<String, String> map = new HashMap<>();
@@ -51,7 +51,7 @@ public class DubboDemo {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/adaptiveClazzSpi")
-    @ApiOperation(value = "自适应SPI")
+    @Operation(description = "自适应SPI")
     public String adaptiveClazzSpi() {
         WheelMaker wheelMaker = ExtensionLoader.getExtensionLoader(WheelMaker.class).getAdaptiveExtension();
 

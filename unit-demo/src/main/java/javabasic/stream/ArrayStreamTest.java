@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author lee
- * @date 6/24/21
+ * @since 6/24/21
  */
 public class ArrayStreamTest {
     public static void main(String[] args) {

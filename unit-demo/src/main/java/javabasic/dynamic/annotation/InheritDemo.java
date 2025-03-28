@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 /**
  * @author lee
- * @date 6/3/21
+ * @since 6/3/21
  * 注解上有@Inherited 子类继承时注解也被继承，否则不被继承
  */
 public class InheritDemo {

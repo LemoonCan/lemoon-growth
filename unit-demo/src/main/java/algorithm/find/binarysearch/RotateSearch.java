@@ -4,7 +4,7 @@ package algorithm.find.binarysearch;
  * 搜索旋转排序数组
  * https://leetcode-cn.com/problems/search-in-rotated-sorted-array/submissions/
  * @author lee
- * @date 2021/11/5
+ * @since 2021/11/5
  */
 public class RotateSearch {
     /**

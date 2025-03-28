@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/longest-common-subsequence/
  *
  * @author lee
- * @date 2021/12/23
+ * @since 2021/12/23
  */
 public class LongestCommonSubsequence {
 

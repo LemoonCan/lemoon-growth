@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /**
  * @author lee
- * @date 7/1/21
+ * @since 7/1/21
  */
 public class DynamicArrayIterator<E> implements Iterator<E> {
     DynamicArray<E> darr;

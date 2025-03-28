@@ -2,7 +2,7 @@ package javabasic.str;
 
 /**
  * @author lee
- * @date 6/25/21
+ * @since 6/25/21
  */
 public class StringTest {
     public static void main(String[] args) {

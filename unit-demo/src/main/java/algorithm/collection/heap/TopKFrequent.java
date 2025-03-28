@@ -6,7 +6,7 @@ import java.util.*;
  * 前K个高频元素
  * https://leetcode-cn.com/problems/top-k-frequent-elements/
  * @author lee
- * @date 2022/1/14
+ * @since 2022/1/14
  */
 public class TopKFrequent {
     public static void main(String[] args) {

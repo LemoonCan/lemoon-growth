@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 /**
  * @author lee
- * @date 2020-12-06
+ * @since 2020-12-06
  */
 public class DeadLockingDiningPhilosophers {
     public static void main(String[] args) throws Exception {

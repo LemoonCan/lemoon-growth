@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 
 /**
  * @author lee
- * @date 2020-09-03
+ * @since 2020-09-03
  */
 public class LoggingExceptions {
     public static void main(String[] args) {

@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 /**
  * @author lee
- * @date 7/1/21
+ * @since 7/1/21
  */
 public class MyCollectionTest {
     public static void main(String[] args) {

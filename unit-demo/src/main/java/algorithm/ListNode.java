@@ -2,7 +2,7 @@ package algorithm;
 
 /**
  * @author lee
- * @date 2021/10/25
+ * @since 2021/10/25
  */
 public class ListNode {
     public int val;

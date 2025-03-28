@@ -2,7 +2,7 @@ package designpattern.behavior.command;
 
 /**
  * @author lee
- * @date 2022/10/25
+ * @since 2022/10/25
  */
 public class Demo {
     public static void main(String[] args) throws InterruptedException {

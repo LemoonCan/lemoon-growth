@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lee
- * @date 2020-11-16
+ * @since 2020-11-16
  */
 public class AttemptLocking {
     private ReentrantLock lock = new ReentrantLock();

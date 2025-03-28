@@ -9,7 +9,7 @@ import org.springframework.beans.factory.support.RootBeanDefinition;
 
 /**
  * @author lee
- * @date 8/31/21
+ * @since 8/31/21
  */
 public class BeanFactoryDemo {
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author lee
- * @date 2020-09-22
+ * @since 2020-09-22
  */
 public class TwoGenericException {
     public static void main(String[] args) {

@@ -7,7 +7,7 @@ import algorithm.TreeNode;
  * https://leetcode.cn/problems/binary-tree-maximum-path-sum/
  *
  * @author lee
- * @date 2022/6/15
+ * @since 2022/6/15
  */
 public class MaxPathSum {
     public static void main(String[] args) {

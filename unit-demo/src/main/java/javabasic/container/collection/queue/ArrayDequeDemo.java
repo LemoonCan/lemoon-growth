@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 
 /**
  * @author lee
- * @date 6/19/21
+ * @since 6/19/21
  */
 public class ArrayDequeDemo {
     public static void main(String[] args) {

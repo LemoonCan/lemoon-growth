@@ -7,7 +7,7 @@ import designpattern.creational.factory.LamborghiniEle;
 
 /**
  * @author lee
- * @date 2022/10/3
+ * @since 2022/10/3
  */
 public class LamborghiniCarFactory implements ICarFactory {
 

@@ -5,7 +5,7 @@ package algorithm.doublepointer;
  * https://leetcode-cn.com/problems/container-with-most-water/
  *
  * @author lee
- * @date 2021/11/10
+ * @since 2021/11/10
  */
 public class MaxArea {
     public int maxArea(int[] height) {

@@ -5,7 +5,7 @@ package algorithm.dynamicprograming;
  * https://leetcode-cn.com/problems/longest-increasing-subsequence/
  *
  * @author lee
- * @date 2021/12/22
+ * @since 2021/12/22
  */
 public class LengthOfLIS {
     public static void main(String[] args) {

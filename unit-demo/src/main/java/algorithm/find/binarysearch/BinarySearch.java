@@ -2,7 +2,7 @@ package algorithm.find.binarysearch;
 
 /**
  * @author lee
- * @date 2021/10/9
+ * @since 2021/10/9
  *
  * 二分查找
  */

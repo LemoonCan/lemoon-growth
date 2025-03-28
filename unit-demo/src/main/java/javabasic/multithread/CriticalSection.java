@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lee
- * @date 2020-11-25
+ * @since 2020-11-25
  */
 public class CriticalSection {
     static void testApproaches(PairManager pman1, PairManager pman2) {

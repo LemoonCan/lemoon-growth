@@ -3,7 +3,7 @@ package jvm.methodinvoke;
 /**
  * 动态分派
  * @author lee
- * @date 2022/7/21
+ * @since 2022/7/21
  */
 public class DynamicDispatch {
     public static void main(String[] args) {

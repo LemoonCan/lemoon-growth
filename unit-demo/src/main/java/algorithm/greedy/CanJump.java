@@ -5,7 +5,7 @@ package algorithm.greedy;
  * https://leetcode-cn.com/problems/jump-game/
  *
  * @author lee
- * @date 2021/12/12
+ * @since 2021/12/12
  */
 public class CanJump {
     public static void main(String[] args) {

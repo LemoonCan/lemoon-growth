@@ -17,7 +17,7 @@ import algorithm.ListNode;
  * 输出：[1]
  *
  * @author lee
- * @date 2021/10/14
+ * @since 2021/10/14
  */
 public class RemoveNthFromEnd {
     /**

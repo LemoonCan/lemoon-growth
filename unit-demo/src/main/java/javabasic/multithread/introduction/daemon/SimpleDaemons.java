@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-11-09
+ * @since 2020-11-09
  * 守护进程
  */
 public class SimpleDaemons implements Runnable {

@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @author lee
- * @date 2022/3/17
+ * @since 2022/3/17
  */
 @Configuration
 public class AsyncConfigure {

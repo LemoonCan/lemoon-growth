@@ -3,7 +3,7 @@ package jvm.gc;
 /**
  * 如何观察 GC?
  * @author lee
- * @date 2022/7/26
+ * @since 2022/7/26
  */
 public class LocalVariableTest {
     public static void main(String[]args){

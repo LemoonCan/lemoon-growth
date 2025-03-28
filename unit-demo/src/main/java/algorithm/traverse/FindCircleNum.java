@@ -7,7 +7,7 @@ import java.util.Queue;
  * 省份数量
  * https://leetcode-cn.com/problems/number-of-provinces/
  * @author lee
- * @date 2021/11/17
+ * @since 2021/11/17
  */
 public class FindCircleNum {
     public static void main(String[] args) {

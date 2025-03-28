@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 饿汉式
  * @author lee
- * @date 2022/10/2
+ * @since 2022/10/2
  */
 public class IdGenerator_Hungry {
     private final IdGenerator_Hungry INSTANCE = new IdGenerator_Hungry();

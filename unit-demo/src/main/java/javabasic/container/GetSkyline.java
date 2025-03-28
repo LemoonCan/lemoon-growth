@@ -7,7 +7,7 @@ import java.util.*;
  * 天际线问题
  *
  * @author lee
- * @date 2022/3/14
+ * @since 2022/3/14
  */
 public class GetSkyline {
     public List<List<Integer>> getSkyline(int[][] buildings) {

@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * @author lee
- * @date 2022/10/8
+ * @since 2022/10/8
  */
 public class DateTimeFormatterTest {
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ package datastructure.tree;
  * https://leetcode-cn.com/problems/implement-trie-prefix-tree/
  *
  * @author lee
- * @date 2022/1/5
+ * @since 2022/1/5
  */
 public class Trie {
     Trie[] children;

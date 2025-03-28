@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author lee
- * @date 2020-11-26
+ * @since 2020-11-26
  * cancel可中断sleep的调用及 ReentrantLock()的阻塞
  * 但对IO阻塞及synchronized阻塞无效
  * (IO资源关闭，可中断；NIO可中断)

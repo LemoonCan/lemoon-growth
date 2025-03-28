@@ -2,7 +2,7 @@ package designpattern.behavior.interpreter;
 
 /**
  * @author lee
- * @date 2022/10/25
+ * @since 2022/10/25
  */
 public class NumberExpression implements Expression {
     private long number;

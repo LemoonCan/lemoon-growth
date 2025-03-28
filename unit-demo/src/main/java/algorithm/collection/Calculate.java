@@ -8,7 +8,7 @@ import java.util.Stack;
  * 基本计算器2
  * https://leetcode-cn.com/problems/basic-calculator-ii/
  * @author lee
- * @date 2022/1/18
+ * @since 2022/1/18
  */
 public class Calculate {
     public static void main(String[] args) {

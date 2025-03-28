@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  * @author lee
- * @date 2022/10/3
+ * @since 2022/10/3
  */
 public class CarFactory_Simple2 {
     private static final Map<String, Car> cachedCars = new HashMap<>();

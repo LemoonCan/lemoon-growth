@@ -3,7 +3,7 @@ package jvm.methodinvoke;
 /**
  * 静态分派
  * @author lee
- * @date 2022/7/21
+ * @since 2022/7/21
  */
 public class StaticDispatch {
     public static void sayHello(Human guy){

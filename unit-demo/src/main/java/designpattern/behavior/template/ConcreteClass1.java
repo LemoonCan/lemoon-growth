@@ -2,7 +2,7 @@ package designpattern.behavior.template;
 
 /**
  * @author lee
- * @date 2022/10/13
+ * @since 2022/10/13
  */
 public class ConcreteClass1 extends AbstractClass{
     @Override

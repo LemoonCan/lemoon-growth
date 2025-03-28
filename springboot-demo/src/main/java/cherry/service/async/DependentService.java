@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author lee
- * @date 2022/3/2
+ * @since 2022/3/2
  */
 @Component
 public class DependentService {
