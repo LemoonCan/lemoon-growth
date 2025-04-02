@@ -10,6 +10,7 @@ public class PathManager {
     public static String SPACECRAFT = "unit-demo/src/main/resource/io/太空船.txt";
     public static String NUMS = "unit-demo/src/main/resource/io/usnumbers.txt";
     public static String OUTPUT_DIR = "unit-demo/target/resource/io/";
+    public static String VISIT_DIR = "unit-demo/target/resource/";
 
     public static void checkOutputDir(){
         File directory = new File(OUTPUT_DIR);
