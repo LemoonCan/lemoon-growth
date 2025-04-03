@@ -18,6 +18,8 @@ import static java.nio.file.FileVisitResult.CONTINUE;
  */
 public class DirectoryDemo {
     public static void main(String[] args) throws IOException {
+        String type = Files.probeContentType(Path.of(PathManager.SPACECRAFT));
+        System.out.println("文件类型：" + type);
         FileSystems.getDefault().getRootDirectories().forEach(System.out::println);
 
         // glob筛选文件
