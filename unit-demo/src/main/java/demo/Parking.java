@@ -4,6 +4,8 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -14,8 +16,36 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Parking {
     public static void main(String[] args) {
+        int threadCount = 20; // 并发数
+        CountDownLatch start = new CountDownLatch(1);
+        CountDownLatch end = new CountDownLatch(threadCount);
+        char[] chars = new char[]{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+
+        for (int i = 0; i < threadCount; i++) {
+            new Thread(() -> {
+                try {
+                    // 等待统一开始
+                    start.await();
+                    int idx = new Random().nextInt(chars.length);
+                    testCarPark("粤" + chars[idx] + new Random().nextInt(10000));
+                } catch (Exception e) {
+                    System.err.println(e);
+                } finally {
+                    end.countDown();
+                }
+            }).start();
+        }
+        start.countDown();
+        try {
+            end.await();
+            System.out.println("所有车辆处理完毕");
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void testCarPark(String carNo) {
         Parking parking = new Parking();
-        String carNo = "粤A12345";
         parking.in(carNo);
         parking.prepareOut(carNo);
         parking.pay(carNo);
@@ -25,6 +55,11 @@ public class Parking {
     private final static Map<String, Bill> bills = new HashMap<>(16);
     private final static ParkCapacity capacity = new ParkCapacity();
 
+    /**
+     * 车辆进入停车场
+     *
+     * @param carNo 车牌号
+     */
     public void in(String carNo) {
         Transaction.start();
         try {
@@ -34,23 +69,23 @@ public class Parking {
 
             int retryTimes = 3;
             while (retryTimes > 0) {
-                int oldCount = capacity.getCapacity();
-                int newCount = capacity.decr(oldCount);
-                synchronized (capacity) {
-                    try {
-                        capacity.update(newCount, oldCount);
-                        break;
-                    } catch (InconsistentException e) {
-                        retryTimes--;
-                        if (retryTimes == 0) {
-                            throw new RuntimeException("更新停车场容量失败，达到最大重试次数");
-                        }
+                int[] oldCount = capacity.getCapacity();
+                int newCount = capacity.decr(oldCount[0]);
+                try {
+                    System.out.printf("车辆%s进入停车场%n", carNo);
+                    capacity.update(newCount, oldCount);
+                    break;
+                } catch (InconsistentException e) {
+                    retryTimes--;
+                    if (retryTimes == 0) {
+                        throw new RuntimeException();
                     }
+                    System.out.printf("车辆%s进入失败，准备重试，剩余重试次数：%s%n", carNo, retryTimes);
                 }
             }
         } catch (Exception e) {
             Transaction.rollback();
-            throw new RuntimeException("无法进入停车场");
+            throw new RuntimeException(String.format("车辆%s无法进入停车场", carNo));
         }
         Transaction.commit();
     }
@@ -59,6 +94,7 @@ public class Parking {
         Transaction.start();
         try {
             ParkingSpace space = park.get(carNo);
+            space.out();
             long fare = space.calFee();
             System.out.println("停车费用：" + fare + "元");
             Bill bill = new Bill(carNo, fare);
@@ -74,8 +110,7 @@ public class Parking {
         try {
             Bill bill = bills.get(carNo);
             bill.pay();
-
-            Async.submit(3, () -> out(carNo));
+            Async.submit(() -> out(carNo));
         } catch (Exception e) {
             Transaction.rollback();
         }
@@ -85,15 +120,19 @@ public class Parking {
     public void out(String carNo) {
         Transaction.start();
         try {
-            ParkingSpace space = park.get(carNo);
-            space.out();
-            int oldCount = capacity.getCapacity();
-            int newCount = capacity.incr(oldCount);
-            synchronized (capacity) {
-                capacity.update(newCount, oldCount);
+            Bill bill = bills.get(carNo);
+            if (!bill.payed()) {
+                throw new RuntimeException("停车费未支付，无法离开停车场");
             }
+            bills.remove(carNo);
+            park.remove(carNo);
+            int[] oldCount = capacity.getCapacity();
+            int newCount = capacity.incr(oldCount[0]);
+            System.out.printf("车辆%s离开%n", carNo);
+            capacity.update(newCount, oldCount);
         } catch (Exception e) {
             Transaction.rollback();
+            System.out.printf("车辆%s离开失败%n", carNo);
             throw new RuntimeException("无法离开停车场");
         }
         Transaction.commit();
@@ -102,17 +141,20 @@ public class Parking {
 
 class ParkCapacity {
     private int capacity = 100;
+    private int version = 0;
 
-    public void update(int value, int expect) {
-        if (capacity != expect) {
+    public synchronized void update(int value, int[] expect) {
+        if (capacity != expect[0] || version != expect[1]) {
             throw new InconsistentException("数据不一致");
         }
         capacity = value;
+        version++;
+        System.out.println("更新停车场容量，当前剩余车位：" + capacity);
     }
 
     public int incr(int count) {
         count++;
-        if (count > capacity) {
+        if (count > 100) {
             throw new RuntimeException("停车场容量计数有误");
         }
         return count;
@@ -126,8 +168,8 @@ class ParkCapacity {
         return count;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public int[] getCapacity() {
+        return new int[]{capacity, version};
     }
 }
 
@@ -147,10 +189,12 @@ class ParkingSpace {
     public void in(String carNo) {
         this.carNo = carNo;
         this.inTime = LocalDateTime.now();
+        System.out.println("车辆" + carNo + "准备进入停车场，时间：" + inTime);
     }
 
     public void out() {
         this.outTime = LocalDateTime.now();
+        System.out.println("车辆" + carNo + "离开停车场，时间：" + outTime);
     }
 }
 
@@ -159,19 +203,28 @@ class Bill {
     private int id;
     private String carNo;
     private long fee;
-    private int state; //0-未支付，1-已支付
+    private volatile int state; //0-未支付，1-已支付
 
     public Bill(String carNo, long fee) {
         this.id = ID_GEN.getAndAdd(1);
         this.carNo = carNo;
         this.fee = fee;
         this.state = 0;
+        System.out.println("生成停车账单，车辆：" + carNo + "，费用：" + fee + "元");
     }
 
     public void pay() {
-        this.state = 1;
+        if (this.state == 0) {
+            this.state = 1;
+        } else {
+            throw new RuntimeException("该账单已支付");
+        }
+        System.out.println("车辆" + carNo + "支付停车费用：" + fee + "元");
     }
 
+    public boolean payed() {
+        return this.state == 1;
+    }
 }
 
 class InconsistentException extends RuntimeException {
@@ -195,7 +248,12 @@ class Transaction {
 }
 
 class Async {
-    private final static ExecutorService executor = Executors.newFixedThreadPool(10);
+    private final static ExecutorService executor = Executors.newFixedThreadPool(5);
+    private final static ExecutorService queuedExecutor = Executors.newSingleThreadExecutor();
+
+    public static void submit(Runnable r) {
+        executor.submit(new RetryTask(r, 2));
+    }
 
     public static void submit(int times, Runnable r) {
         executor.submit(new RetryTask(r, times));
@@ -203,11 +261,11 @@ class Async {
 
     private static class RetryTask implements Runnable {
         private final Runnable task;
-        private int retriesLeft;
+        private int retryLeft;
 
         RetryTask(Runnable task, int retries) {
             this.task = task;
-            this.retriesLeft = retries;
+            this.retryLeft = retries;
         }
 
         @Override
@@ -215,13 +273,12 @@ class Async {
             try {
                 task.run(); // 执行任务
             } catch (Exception e) {
-                retriesLeft--;
-                if (retriesLeft > 0) {
-                    executor.submit(this); // 再提交一次自己
-                } else {
-                    // 记录日志、通知等
-                    System.err.println("任务重试结束，但仍失败");
+                retryLeft--;
+                if (retryLeft == 0) {
+                    System.err.println("任务重试达最大次数，仍失败" + e);
+                    return;
                 }
+                queuedExecutor.submit(this);
             }
         }
     }
